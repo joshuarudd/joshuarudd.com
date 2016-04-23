@@ -1,0 +1,47 @@
+@import url(../icomoon90396/style.css);
+
+body {
+  background: url(../images/killian-jump-golden-gate-bridge.jpg) center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.icon-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  width: 0;
+}
+
+.lets-get-social {
+  background: rgba(0,0,0,.5);
+  color: white;
+  font-size: 42px;
+/*   padding: 24px 10px 16px; */
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  text-align: center;
+}
+
+  .lets-get-social a {
+    color: inherit;
+    display: inline-block;
+    margin: .57em .5em .38em;
+    text-decoration: none;
+    width: 1em;
+  }
+  
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  
+  .lets-get-social {
+    font-size: 21px;
+  }
+  
+}
