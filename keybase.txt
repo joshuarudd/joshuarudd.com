@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/joshuarudd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://joshuarudd.com
+  * I am joshuarudd (https://keybase.io/joshuarudd) on keybase.
+  * I have a public key with fingerprint 19CC 86D4 FE1E D7D4 AEFC  7DD7 F669 504C 0468 3701
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "19cc86d4fe1ed7d4aefc7dd7f669504c04683701",
+            "host": "keybase.io",
+            "key_id": "f669504c04683701",
+            "uid": "d8d6fbde559b772ebdc90eee2e632800",
+            "username": "joshuarudd"
+        },
+        "service": {
+            "hostname": "joshuarudd.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1397664824,
+    "expire_in": 157680000,
+    "prev": "a0956f93eb48308dde3aea6f7f7a5a199161b3cac2f5d8d2637e36fce023ada4",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.8
+Comment: https://keybase.io/crypto
+
+yMHtAnicbZFbSBxXGMdnvUW3UaJIAkYRRmJAXJn7ZWONpD5sghfsIqEksDkz58zO
+6DqzzuyutypFoSluxRLy0IcSElJCMOZBSAyoqZrUhFCID8EUgjZSEwkIkipaa9B6
+Rpqn9Olw/t/v//++j+/X7FTC67k9NhVY8+l/eH6b3owTwfoRqZtULNhJ+rvJFnTw
+aIYZRnbUNswY6SdpWVUlAXIaohEUIQeQpooQipogyDzFqRQnSKxI0WQ5qVuO68Ax
+CnBQhWFhDX9CBsTq//DxgwKUoKApEPG8rIgigxSoyhRCiEECy0gU5YIOsk3QijDd
+bDl6HNhxCMmechLrCUPFevdB80+YCtVqxf6obcUs1Yrgmh6LRf2uNdYZddl2pIT+
+Swkphgnx7tiQQLZjWCbppzGpxgw3lmZlURA4ieHKSdQRNWwUMlyCFwU8JUW5bVAC
+RwJK5gVNZpHCSSwlQYhYgICgiZoIeEDLMi3QCqsCldF4vDwjsCJiBU1FFMMCCDjc
+30FtpkX6WTwmCONIxwibIBa3EdnzaPpiGuHxEhnpKe71CG/WkY83hb5M4l72/ZXR
+gL4wx5awLT8MBryX/qq68LJ2+++Noh8LrdRD8zuDdyI/p8yV7b3Py3p3eMvHF9UO
+B/O/SrZ/vt5x2VP8b4aRPPXsaW5V8Yy1uqZmfvNZE13QWHhl6Nzuk438pRt1w8uB
+pTw90uhhX+lfzE8ebyttWBdLifTISl8vqNyurs+hgsxof/9IYoavW/zuy/P/OF1N
+wd2bCnErmD/3S3Iot6F3K1l5cj6lmvr27lLnwxP9G4GCr1fPji9PTe0MPC57c6bk
+w+Lsesdmzk8FrRmbg6ebXzcvPA+abyfGkt/rzt6DF10VxnXJV3Osr+bq7+Fri5Np
+R//Mqd0DA+OzRRP7qhwT5Q==
+=F6v/
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/joshuarudd
+
+==================================================================
