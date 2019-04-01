@@ -52,11 +52,6 @@
       color: rgba(0,0,0,.8);
       margin: 4.5em auto;
       max-width: 70ex; /* Trying to keep lines approximately 12 words long. */
-
-      /* Baseline grid (for debugging) */
-      background-image: linear-gradient(to bottom, magenta 0, rgba(255, 255, 255, 0) 1px);
-      background-repeat: repeat-y;
-      background-size: 100% 1.5em;
     }
     @supports (font-variation-settings: normal) {
       /* html { font-family: 'Inter var', sans-serif; } */
@@ -74,16 +69,11 @@
       background-color: lavender;
     }
 
-    .typeset p, .typeset h1, .typeset h2, .typeset h3, .typeset h4, .typeset h5, .typeset h6, .typeset li {
-      /* background-color: rgba(0,0,0,.1); */
-    }
-
-
   </style>
 </head>
 
 <body>
-  <article class="typeset">
+  <article class="typeset baseline">
     <header>
       <h1>UserVoice Design System</h1>
       <p>A case study by Joshua Rudd</p>

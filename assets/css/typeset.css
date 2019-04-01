@@ -40,6 +40,16 @@
 }
 
 /*
+  Baseline grid (for debugging)
+*/
+
+.typeset.baseline {
+  background-image: linear-gradient(to bottom, magenta 0, rgba(255, 255, 255, 0) 1px);
+  background-repeat: repeat-y;
+  background-size: 100% 1.5em;
+}
+
+/*
   Initialize spacing and colors
 */
 
