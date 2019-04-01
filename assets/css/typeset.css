@@ -1,9 +1,9 @@
-/* 
+/*
   Typeset.css
   https://github.com/joshuarudd/typeset.css
-  v0.9.4
-  Last updated: 2013-01-18
-  Author: Joshua Rudd - http://joshuarudd.com 
+  v0.9.5
+  Last updated: 2019-04-01
+  Author: Joshua Rudd - https://joshuarudd.com
   Twitter: @joshuarudd
 */
 
@@ -44,13 +44,13 @@
 */
 
 .typeset li, .typeset dt, .typeset dd, .typeset p, .typeset pre, .typeset caption, .typeset th, .typeset td, .typeset figcaption {
-  line-height: 1.4;
+  line-height: 1.5;
 }
 .typeset caption, .typeset dl, .typeset dd, .typeset div, .typeset figcaption, .typeset figure, .typeset h1, .typeset h2, .typeset h3, .typeset h4, .typeset h5, .typeset h6, .typeset p, .typeset pre, .typeset table, .typeset ol, .typeset ul {
-  margin: 1.4em 0;
+  margin: 0 0 1.5em 0;
 }
 .typeset blockquote, .typeset ol, .typeset ul {
-  margin-left: 2.8em;
+  margin-left: 2.5em;
 }
 .typeset code, .typeset pre, .typeset th {
   background-color: #F3F6FA;
@@ -178,34 +178,48 @@
 
 .typeset h1, .typeset h2, .typeset h3, .typeset h4, .typeset h5, .typeset h6 {
   font-weight: bold;
-  /* margin set above */
-  margin-bottom: 0;
 }
 .typeset h1 {
-  font-size: 200%;
+  font-size: 2em;
+  line-height: 1.5;
+  margin: 1.5em 0 .75em 0;
 }
 .typeset h2 {
-  font-size: 160%;
+  font-size: 1.5em;
+  line-height: 2;
+  margin: 2em 0 1em 0;
 }
 .typeset h3 {
-  font-size: 120%;
+  font-size: 1.25em;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
 }
 .typeset h4 {
-  font-size: 100%;
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 1.5em 0 0 0;
 }
 .typeset h5 {
-  font-size: 80%;
+  font-size: .75em;
+  line-height: 2;
+  margin: 2em 0 0 0;
 }
 .typeset h6 {
-  font-size: 80%;
-  font-weight: normal;
+  font-size: .75em;
+  font-weight: inherit;
+  line-height: 2;
+  margin: 2em 0 0 0;
 }
 .typeset p {
   /* line-height set above */
   /* margin set above */
 }
 .typeset blockquote {
+  border-left: .2em solid rgba(0,0,0,.2);
+  margin-left: .2em;
   /* margin-left set above */
+  opacity: .8;
+  padding-left: .8em;
 }
 .typeset pre {
   /* background-color set above */
