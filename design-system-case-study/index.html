@@ -37,16 +37,17 @@
   <link rel="stylesheet" href="/assets/css/typeset.css">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Halant:300,400,500,600">
-  <style media="screen">
+  <style>
 
     body {
+      font-family: 'Inter', sans-serif;
       font-size: 20px;
       margin: 0;
       padding: 0;
     }
 
     article {
-      font-family: 'Halant', 'Inter', sans-serif;
+      font-family: 'Halant', serif;
       font-size: 20px;
       font-weight: 400;
       color: rgba(0,0,0,.8);
@@ -73,11 +74,27 @@
       margin: 0 0 0 1.5em;
     }
 
+    .typeset figure {
+      font-family: 'Inter', sans-serif;
+    }
+    .typeset figcaption {
+      font-size: 12px;
+      text-align: center;
+    }
+
     .highlight {
       background-color: rgba(0, 140, 255, 0.1) !important;
     }
     .placeholder {
       background-color: rgba(255, 153, 0, 0.1) !important;
+    }
+    li:target { /* Highlight selected footnote */
+      background-color: rgba(255, 245, 0, 0.2);
+    }
+
+    a.footnoteBackLink {
+      text-decoration: none;
+      font-size: .75em;
     }
 
 
@@ -163,7 +180,12 @@
 
       <h4>Creating a Source of Truth</h4>
       <p>We tried both Git and Dropbox, but quickly dropped Git because it didn’t handle binary files very efficiently. The challenge with Dropbox was that there was no clear way for multiple people to contribute to the same library without running into conflicts, and it still didn’t solve the problem of ensuring everyone’s separate design projects were using the same components. We also tried creating a component library project with InVision, which we’d already been using since 2011, and using its source files sync, but that was even more cumbersome than Dropbox.</p>
-      <p><mark class="placeholder">[Image of multiple versions of component library files in Dropbox]</mark></p>
+
+      <figure>
+        <img src="multiple-versions-of-files.png" alt="Finder window with multiple working copies of the same file." style="max-height: 18em;">
+        <figcaption>Trying to maintain a source of truth using Dropbox was a nightmare.</figcaption>
+      </figure>
+
       <p>Fortunately, along came Abstract App, a new Git-like version control system for Sketch files. In November 2016 we began testing the private alpha, and committed to adopted it beginning January 2017. With Abstract, we were able to create a different project (repository) for each of our primary applications. Each project consisted of a single Sketch file that contained all the symbols necessary for that application’s component library (again, this was before Sketch introduced external symbol library files).</p>
       <p>Each time a designer began working on a new project, they’d create a new branch based off the Master file and go to town. All the symbols/components they needed to work from were available in their file. When any components were updated in the Master file during the life of a designer’s project, they could easily pull in those changes to their working file and all of the components would be updated to reflect the source of truth. Likewise, any new or modified components they worked on would become available to everyone else once their work was completed.</p>
       <p>Finally, we had all the benefits our developers had with Git. As with our design patterns, the team committed to building out the component library alongside existing projects.</p>
@@ -253,7 +275,7 @@
       <p>At first we tried using an internal Github project, but the learning curve for some designers was a bit high, and it wasn’t familiar to most non-developers. Google Docs was commonplace, but notoriously difficult for people to find and discover things. After a few months, the engineering team began using Confluence for some of their own documentation, so we quickly adopted it for documenting, discussing, and refining design patterns as well.</p>
 
       <h4>Shared documents are not shared understanding</h4>
-      <p>I’m also a firm believer in Jeff Patton’s saying, “Shared documents are not shared understanding.” <sup><a href="#footnote-1" title="Footnote #1">1</a></sup> Essentially, just because you write something down and share it, it doesn’t mean the audience will understand it, agree with it, remember it, or even read it. Communication and understanding require much more than a document, so saying, “Well, it’s documented in the design system!” isn’t an excuse. Essentially, we couldn’t rely on documentation alone to cultivate a shared understanding of our design system.</p>
+      <p>I’m also a firm believer in Jeff Patton’s saying, “Shared documents are not shared understanding.” <sup><a id="fnr1" href="#fn1" title="Footnote #1">1</a></sup> Essentially, just because you write something down and share it, it doesn’t mean the audience will understand it, agree with it, remember it, or even read it. Communication and understanding require much more than a document, so saying, “Well, it’s documented in the design system!” isn’t an excuse. Essentially, we couldn’t rely on documentation alone to cultivate a shared understanding of our design system.</p>
       <figure>
         <img src="shared-understanding.png" alt="Four-panel illustration of people thinking they’re on the same page but aren’t until they draw out what they’re thinking on a whiteboard.">
         <figcaption>Illustration from Jeff Patton’s book, <em><a href="">User Story Mapping</a></em></figcaption>
@@ -298,16 +320,18 @@
       <h3>Ideas for next time</h3>
       <ol>
         <li>Find ways for tighter integration between coded components and design prototypes - <a href="https://www.uxpin.com/merge" target="_blank">UXPin’s forthcoming “Merge” functionality</a> seems particularly interesting.</li>
-        <li><mark class="highlight">Our fourth design principle, <em>Consistency and Structure,</em> became a major point of contention</mark> during early design critiques. Doing or using something once does not make it a pattern, but our conversations often veered towards making designs consistent with other things we’ve designed rather than, as Jared Spool posed, “Will the user’s current knowledge help them understand how to use what I’m designing?” <mark class="highlight">Next time I’d push for removing <em>consistency</em> from the design principles and focus more on <em>familiarity</em>,</mark> with an emphasis on the user’s current knowledge, or “sum of all their previous experiences with relevant products and designs.” <sup><a href="#footnote-2">2</a></sup></li>
+        <li><mark class="highlight">Our fourth design principle, <em>Consistency and Structure,</em> became a major point of contention</mark> during early design critiques. Doing or using something once does not make it a pattern, but our conversations often veered towards making designs consistent with other things we’ve designed rather than, as Jared Spool posed, “Will the user’s current knowledge help them understand how to use what I’m designing?” <mark class="highlight">Next time I’d push for removing <em>consistency</em> from the design principles and focus more on <em>familiarity</em>,</mark> with an emphasis on the user’s current knowledge, or “sum of all their previous experiences with relevant products and designs.” <sup><a id="fnr2" href="#fn2">2</a></sup></li>
       </ol>
     </section>
 
     <footer>
-      <h2>Footnotes</h2>
-      <ol>
-        <li><a href="https://www.jpattonassociates.com/user-story-mapping/" target="_blank">User Story Mapping</a>, by Jeff Patton</li>
-        <li><a href="https://articles.uie.com/consistency-in-design-is-the-wrong-approach/" target="_blank">Consistency in Design is the Wrong Approach</a>, by Jared M. Spool</li>
-      </ol>
+      <section class="footnotes">
+        <h2>Footnotes</h2>
+        <ol>
+          <li id="fn1"><a href="https://www.jpattonassociates.com/user-story-mapping/" target="_blank">User Story Mapping</a>, by Jeff Patton. <a class="footnoteBackLink" href="#fnr1" title="Jump back to footnote 1 in text.">↩︎</a></li>
+          <li id="fn2"><a href="https://articles.uie.com/consistency-in-design-is-the-wrong-approach/" target="_blank">Consistency in Design is the Wrong Approach</a>, by Jared M. Spool. <a class="footnoteBackLink" href="#fnr2" title="Jump back to footnote 2 in text.">↩︎</a></li>
+        </ol>
+      </section>
     </footer>
 
   </article>

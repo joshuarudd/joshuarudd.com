@@ -308,8 +308,8 @@
   /* margin set above */
 }
 .typeset figcaption {
-  font-size: 80%;
-  /* line-height set above */
+  font-size: .75em;
+  line-height: 2;
   /* margin set above */
   text-align: left;
 }
