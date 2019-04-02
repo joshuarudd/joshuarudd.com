@@ -4,13 +4,13 @@
 <head>
   <title>UserVoice Design System - A Case Study by Joshua Rudd</title>
   <link rel="canonical" href="https://joshuarudd.com/design-system-case-study/">
-  <meta name="description" content="Description goes here">
+  <meta name="description" content="As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.">
   <!-- <link rel="image_src" href="http://"> -->
 
   <!-- Schema -->
   <meta itemprop="name" content="UserVoice Design System - A Case Study by Joshua Rudd">
   <meta itemprop="url" content="https://joshuarudd.com/design-system-case-study/">
-  <meta itemprop="description" content="Description goes here">
+  <meta itemprop="description" content="As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.">
   <!-- <meta itemprop="image" content=""> -->
   <!-- <meta itemprop="thumbnailUrl" content="http://"> -->
 
@@ -19,7 +19,7 @@
   <meta property="og:title" content="UserVoice Design System - A Case Study by Joshua Rudd">
   <meta property="og:url" content="https://joshuarudd.com/design-system-case-study/">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Description goes here">
+  <meta property="og:description" content="As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.">
   <!-- <meta property="og:image" content="http://"> -->
   <!-- <meta property="og:image:width" content="1500"> -->
   <!-- <meta property="og:image:height" content="811"> -->
@@ -36,7 +36,7 @@
 
   <link rel="stylesheet" href="/assets/css/typeset.css">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Halant:300,400,600">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Halant:300,400,500,600">
   <style media="screen">
 
     body {
@@ -56,6 +56,29 @@
     @supports (font-variation-settings: normal) {
       /* html { font-family: 'Inter var', sans-serif; } */
     }
+    .typeset h1 {
+      font-weight: 600;
+    }
+    .typeset h3 {
+      font-weight: 500;
+    }
+    .typeset table {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+    }
+    .typeset table th {
+      font-weight: 600;
+    }
+    .typeset table ul {
+      margin: 0 0 0 1.5em;
+    }
+
+    .highlight {
+      background-color: rgba(0, 140, 255, 0.1) !important;
+    }
+    .placeholder {
+      background-color: rgba(255, 153, 0, 0.1) !important;
+    }
 
 
     @media only screen and (max-width: 80ex) {
@@ -73,32 +96,21 @@
 </head>
 
 <body>
-  <article class="typeset baseline">
+  <article class="typeset">
     <header>
       <h1>UserVoice Design System</h1>
       <p>A case study by Joshua Rudd</p>
     </header>
 
     <section>
-      <h2>Abstract</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>[Design system layers illustration]</p>
-
-      <p>Materials List</p>
-      <ol>
-        <li>Sketch</li>
-        <li>Abstract App</li>
-        <li>Confluence</li>
-      </ol>
+      <!-- <h2>Abstract</h2> -->
+      <p>As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.</p>
     </section>
 
     <section>
-      <h2>Challenge</h2>
-      <p>With rapid team growth and a transition towards multiple autonomous feature teams, how might UserVoice continue to deliver cohesive and consistent experiences across its broad platform?</p>
-      <p>For years UserVoice had remained relatively small and didn’t have much turnover. It had been relatively easy to keep things consistent and for everyone to be on the same page. However, as we began to grow and feature development divided between multiple cross-functional teams, it quickly became apparent we needed to a better way to scale our teams while keeping our platform cohesive and consistent.</p>
-
-      <h3>Goals</h3>
+      <h2>The challenge</h2>
+      <p>For years UserVoice had remained relatively small and didn’t have much turnover. It had been relatively easy to keep things consistent and for everyone to be on the same page. However, as we began to grow and feature development divided between multiple cross-functional teams, it quickly became apparent: <mark class="highlight">we needed to a better way to scale our teams while keeping our platform cohesive and consistent.</mark></p>
+      <p>Our objectives were to:</p>
       <ol>
         <li>Empower cross-functional teams to autonomously deliver new features while increasing overall cohesiveness of the platform.</li>
         <li>Speed up feature delivery.</li>
@@ -106,11 +118,7 @@
       </ol>
 
       <h3>Hypothesis</h3>
-      <p>We hypothesized that if we codified our design system and processes, we could reduce… speed up design and delivery cycles as well as increase understanding of design decisions.</p>
-
-      <blockquote cite="https://tannerchristensen.com/blog/2019/1/30/building-design-systems-at-scale">
-        <p>“A healthy design system will make easier to scale design patterns and components alongside a growing design team. It will ensure consistency and quality across all experiences, and increase the speed as well as creativity of designers without losing best practices or consistency within the product.”</p>
-      </blockquote>
+      <p>We hypothesized that if we codified our design system and processes, we could empower autonomous teams to deliver solutions faster while increasing the quality and cohesiveness across all experiences.</p>
 
       <h3>Constraints</h3>
       <ol>
@@ -125,6 +133,8 @@
 
     <section>
       <h2>Process</h2>
+      <p>For this initiative, we focussed on three aspects (or layers) to our design system: <em>design principles, design patterns, and the component library.</em> Once those were established, we then focussed on how to deliver and maintain the design system.</p>
+      <p><mark class="placeholder">[Illustration of design system layers]</mark></p>
 
       <h3>Layer 1: Design Principles</h3>
       <p>It’s always tempting to start at the end first—in this case, creating a bunch of styled UI components and usage guidelines—but we quickly learned that we needed to agree upon our design principles to guide the process and output of work being done.</p>
@@ -139,39 +149,40 @@
       <p>Now we had something that could guide our design decisions.</p>
 
       <h3>Layer 2: Design Patterns</h3>
-      <p>As with any product that exists in the world, there were already countless inconsistencies across the UserVoice platform—such as how to display date and time formats, capitalization rules, and form validation and behavior. Each time a feature team set out to tackle a new problem, the same questions would come up: How should we format this? and How should this behave?</p>
-      <p>To address this, we set out to describe UserVoice’s design patterns. Similar to software design patterns, these were not specific visual styles or implementation details, but rather formalized best practices describing how to solve common and repeated problems in many different situations—universal quality criteria for broad design mental models, content, and behavior. (In contrast, the component library detailed product-specific styles and implementation of these patterns.)</p>
+      <p>As with any product that exists in the world, there were already countless inconsistencies across the UserVoice platform—such as how to display date and time formats, capitalization rules, and form validation and behavior. Each time a feature team set out to tackle a new problem, the same questions would come up: <em>How should we format this?</em> and <em>How should this behave?</em></p>
+      <p>To address this, we set out to describe UserVoice’s design patterns. Similar to software design patterns, <mark class="highlight">these were not specific visual styles or implementation details, but rather formalized best practices describing how to solve common and repeated problems in many different situations—universal quality criteria for broad design mental models, content, and behavior.</mark> (In contrast, the component library detailed product-specific styles and implementation of these patterns.)</p>
       <p>One example is Forms & Validation, which describes best practices, proper use of labels, validation behavior for fields and submit buttons, keyboard controls, and other accessibility requirements.</p>
-      <p>[Example design pattern: Forms & Validation]</p>
+      <p><mark class="placeholder">[Example design pattern: Forms & Validation]</mark></p>
       <p>Additional patterns included Capitalization, Confirmations, Date & Timestamps, Flash Messages, Keyboard Controls, Hidden & Disabled Features, Page Titles, Undo, and more.</p>
-      <p>Unlike our design principles, which were finite and less likely to change as often, our set of design patterns were a much larger set of living documents. Because of this, the design team committed to defining patterns over the course of several months as part of their ongoing work. For example, when a project called for a form, if there wasn’t already a “Forms and Validation” pattern document, the designer and I would work together to document existing form patterns and behaviors and refine them as necessary. The next time a form was created, the feature team could reference the existing “Forms and Validation” design pattern.</p>
+      <p>Unlike our finite set of design principles, our design patterns were a much larger set of living documents. Because of this, the design team committed to defining patterns as part of their ongoing work. For example, when a project needed a form, if pattern documentation for forms didn’t exist we’d work together to audit existing patterns and behaviors, refine them as necessary, and document the desired pattern. The next time a form was created, the designers and developers could reference the existing “Forms and Validation” design pattern.</p>
 
       <h3>Layer 3: Component Library</h3>
-      <p>With our principles and process for documenting patterns in place, our next challenge was to unify our visual design toolbox, or component library. Because each application (e.g., Admin Console, Sidebar, Widget, etc.) targeted different audiences, contexts and had different styles, we created separate libraries for each.</p>
-      <p>For the previous 6 years at UserVoice mockups had been primarily designed with Adobe Illustrator. Sometimes designers would share files with each other to reuse the same objects someone else had created (buttons, menus, dialogs, etc.), but there was no central management, and oftentimes it was easier for each person to recreate these on the fly, creating small inconsistencies between each designer. If someone needed a form field, they created it from scratch, trying to make it look like the others. This resulted in an inconsistent and incomplete set of components to work from, and often led to developers wondering how representative the designs were to how they should actually be implemented.</p>
+      <p>With our principles and foundation for documented patterns in place, our next challenge was to unify our visual design toolbox, or component library. Because each application in the UserVoice platform targeted different audiences, contexts and had different styles, we created separate libraries for each (e.g., Admin Console, Sidebar, Widget, Mobile SDKs).</p>
+      <p>For the previous 6 years at UserVoice mockups had been primarily designed with Adobe Illustrator. Sometimes designers would share files with each other to reuse the same objects someone else had created (buttons, menus, dialogs, etc.), but there was no central management, and oftentimes it was easier for each person to recreate these on the fly, creating small inconsistencies between each designer. If someone needed a form field, they created it from scratch, <em>trying</em> to make it look like the others. <mark class="highlight">This resulted in an inconsistent and incomplete set of components to work from, and often led to developers wondering how representative the designs were to how they should actually be implemented.</mark></p>
       <p>By 2016 Sketch had not only gained the admiration of designers everywhere, its performance, nested symbol handling, and transition to using single files (rather than packaged contents) finally made the switch from Illustrator very compelling. Still, we had to figure out how might we create a source of truth for our common components and make it really easy for designers to both use and contribute to the component library. This was still long before Sketch had released external symbol library files.</p>
 
       <h4>Creating a Source of Truth</h4>
       <p>We tried both Git and Dropbox, but quickly dropped Git because it didn’t handle binary files very efficiently. The challenge with Dropbox was that there was no clear way for multiple people to contribute to the same library without running into conflicts, and it still didn’t solve the problem of ensuring everyone’s separate design projects were using the same components. We also tried creating a component library project with InVision, which we’d already been using since 2011, and using its source files sync, but that was even more cumbersome than Dropbox.</p>
-      <p>[Image of multiple versions of component library files in Dropbox]</p>
-      <p>Fortunately, along came Abstract App, a new Git-like version control system for Sketch files. In November 2016 we began testing the private alpha, and committed to adopted it starting January 2017. With Abstract, we were able to create a different project (repository) for each of our primary applications. Each project consisted of a single Sketch file that contained all the symbols necessary for that application’s component library (again, this was before Sketch introduced external symbol library files).</p>
-      <p>Each time a designer began working on a new project, they’d create a new branch based off the Master file and go to town. All the symbols/components they needed to work from were available in their file. When any components were updated in the Master file during the life of a designer’s project, they could easily pull in those changes to their working file and all of the components would be updated to reflect the source of truth. Likewise, any new or modified components they worked on would become available to everyone else once their work was completed. Finally, we had all the benefits our developers had with Git. As with our design patterns, the team committed to building out the component library alongside existing projects.</p>
-      <p>[Image of form fields components]</p>
-      <p>An unexpected benefit of having full version control of our component library with Abstract was that changes and conflicts were easy to track, discuss, and resolve (if necessary). In addition to our regular critiques, when a designer’s project was ready to merge back into Master the whole team would come together for a design merge ceremony to review changes to the component library. It kept everyone mentally in sync of how each designer’s work would affect the others’.</p>
+      <p><mark class="placeholder">[Image of multiple versions of component library files in Dropbox]</mark></p>
+      <p>Fortunately, along came Abstract App, a new Git-like version control system for Sketch files. In November 2016 we began testing the private alpha, and committed to adopted it beginning January 2017. With Abstract, we were able to create a different project (repository) for each of our primary applications. Each project consisted of a single Sketch file that contained all the symbols necessary for that application’s component library (again, this was before Sketch introduced external symbol library files).</p>
+      <p>Each time a designer began working on a new project, they’d create a new branch based off the Master file and go to town. All the symbols/components they needed to work from were available in their file. When any components were updated in the Master file during the life of a designer’s project, they could easily pull in those changes to their working file and all of the components would be updated to reflect the source of truth. Likewise, any new or modified components they worked on would become available to everyone else once their work was completed.</p>
+      <p>Finally, we had all the benefits our developers had with Git. As with our design patterns, the team committed to building out the component library alongside existing projects.</p>
+      <p><mark class="placeholder">[Image of form fields components]</mark></p>
+      <p><mark class="highlight">A huge benefit of having full version control of our component library was that changes and conflicts were easy to track, discuss, and resolve (if necessary).</mark> In addition to our regular critiques, when a designer’s project was ready to merge back into Master the whole team would come together for a design merge ceremony to review changes to the component library. It kept everyone mentally in sync of how each designer’s work would affect the others’.</p>
 
       <h3>Pulling it all together</h3>
       <p>So where did we publish and share our design philosophy, patterns, and component libraries?</p>
-      <p><mark>Documentation is only useful if the people it is intended for know about it, reference it, and it remains relevant.</mark> Since the audience for these were primarily designers and developers, it needed to be somewhere both parties would remember to access it.</p>
+      <p><mark class="highlight">Documentation is only useful it helps people get their job done. If they don’t know about it or reference it, there’s no point in having it.</mark> Since the audience for these were primarily designers and developers, it needed to be somewhere both parties would remember to access it and easily contribute to it.</p>
       <p>After some informal discussions, I came up with this list of must-haves:</p>
       <ol>
         <li>Available to anyone at the company</li>
         <li>Easy to search, browse and link to specific documentation</li>
         <li>Easy for designers to update and maintain</li>
         <li>Changes can be tracked</li>
-        <li>People can be notified of changes and additions</li>
+        <li>People can subscribe to changes and additions</li>
       </ol>
-      <p>At first we tried using an internal Github project, but the learning curve for some designers was a bit high. Google Docs was commonplace, but notoriously difficult for people to find and discover things. After a few months, the engineering team began using Confluence for some of their own documentation, so we quickly adopted it for documenting, discussing, and refining design patterns as well.</p>
-      <p>[ANI Chart – Should we use ____ to document and share our design system?]</p>
+
+      <p><mark class="placeholder">[ANI Chart – Should we use ____ to document and share our design system?]</mark></p>
 
       <table>
         <tr>
@@ -239,49 +250,63 @@
         </tr>
       </table>
 
+      <p>At first we tried using an internal Github project, but the learning curve for some designers was a bit high, and it wasn’t familiar to most non-developers. Google Docs was commonplace, but notoriously difficult for people to find and discover things. After a few months, the engineering team began using Confluence for some of their own documentation, so we quickly adopted it for documenting, discussing, and refining design patterns as well.</p>
+
       <h4>Shared documents are not shared understanding</h4>
-      <p>I’m also a firm believer in Jeff Patton’s saying, “Shared documents are not shared understanding.” [1] Essentially, just because you write something down and share it, it doesn’t mean the audience will understand it, agree with it, remember it, or even read it. Communication and understanding require much more than a document, so saying, “Well, it’s documented in the design system!” isn’t an excuse. Understanding happens through conversation and, as Patton also says, “By the time you get tired of saying something, others are just beginning to hear it.” Essentially, we couldn’t rely on documentation along to cultivate a shared understanding of our design system.</p>
-      <p>To address this, we had to make habits of discussing …</p>
+      <p>I’m also a firm believer in Jeff Patton’s saying, “Shared documents are not shared understanding.” <sup><a href="#footnote-1" title="Footnote #1">1</a></sup> Essentially, just because you write something down and share it, it doesn’t mean the audience will understand it, agree with it, remember it, or even read it. Communication and understanding require much more than a document, so saying, “Well, it’s documented in the design system!” isn’t an excuse. Essentially, we couldn’t rely on documentation alone to cultivate a shared understanding of our design system.</p>
+      <figure>
+        <img src="shared-understanding.png" alt="Four-panel illustration of people thinking they’re on the same page but aren’t until they draw out what they’re thinking on a whiteboard.">
+        <figcaption>Illustration from Jeff Patton’s book, <em><a href="">User Story Mapping</a></em></figcaption>
+      </figure>
+      <p><mark class="highlight">I believe shared understanding happens through conversation</mark>, so we started making a habit of referencing our design system during design exercises and development sprints. During design critiques, we began discussing design decisions in light of our philosophy and patterns. Slowly, over time, it became a resource we could pull from and contribute to as a team.</p>
     </section>
 
     <section>
       <h2>Outcomes</h2>
+      <p>So, did the design system help us achieve our objectives? <strong>No.</strong></p>
+      <p>But we <em>did</em> achieve our objectives.* While we saw significant improvments in sprint velocity, improved platform cohesiveness, and bonding of the design team over the course of the year we developed the UserVoice Design System, <mark class="highlight">these achivements could not be attributed to the design system itself — but rather to the habits and process of conversation.</mark> The documented design system was simply a recorded artifact of that work.</p>
+      <aside>
+        <p><em>* (You’ll have to take my word for this because we relied more on anecdotal evidence rather than performing quantitative analyisis — something I’d do differently next time.)</em></p>
+      </aside>
 
-      <h3>Vision</h3>
-      <p>Our vision is to create a cohesive user experience that unites the UserVoice platform across development teams, applications, and devices. The UserVoice Design System is where you’ll find the guidance needed to build upon the UserVoice ecosystem using our design principles, design patterns, and established components. As a living set of documents, this design system will be updated as our platform evolves.</p>
-
-      <h3>Processes</h3>
+      <h4>Established habits</h4>
       <ol>
-        <li>Weekly design merge ceremony</li>
         <li>Weekly design critiques</li>
+        <li>Weekly design merge ceremonies</li>
       </ol>
 
-      <h3>Artifacts</h3>
+      <h4>Design system artifacts</h4>
       <ol>
         <li>Design Principles</li>
         <li>Design Patterns</li>
         <li>Component Library</li>
       </ol>
-      <p>Did use Google Sheets for some Truth Sheets.</p>
+
+      <h4>Tools</h4>
+      <ol>
+        <li><a href="https://www.atlassian.com/software/confluence" target="_blank">Confluence</a> – for documenting design philosophy, patterns, and component library references</li>
+        <li><a href="https://www.google.com/sheets/about/" target="_blank">Google Sheets</a> – for larger “Truth Sheets”</li>
+        <li><a href="https://www.abstract.com" target="_blank">Abstract App</a> – Sketch version control system for component library</li>
+      </ol>
 
       <h3>Insights</h3>
       <ol>
-        <li>Separating design patterns from the styled components helped us separate form from function, making it much easier to update our styles and components over time, and apply different ones to different applications—much like how CSS can apply radically different styles to well formed HTML without changing the structure of the content.</li>
-        <li>No design system or process is perfect. While having a design system helps reduce the number of decisions that need to be made, it is not infallible. New problems and challenges can’t always be solved with existing solutions, so it’s important to recognize when …</li>
-        <li>Our fourth design principle, Consistency and Structure, became a major point of contention during early design critiques. Doing or using something once does not make it a pattern, and our conversations often veered towards making designs consistent with other things we’ve designed rather than, as Jared Spool posed, “Will the user’s current knowledge help them understand how to use what I’m designing?” Next time I’d push for removing “consistency” from the design principles, and focused more on Familiarity, with an emphasis on the user’s current knowledge, or “sum of all their previous experiences with relevant products and designs.” [2]</li>
+        <li><mark class="highlight">Separating design patterns from the styled components helped us separate form from function,</mark> making it much easier to update our styles and components over time, and apply different ones to different applications—much like how CSS can apply radically different styles to well formed HTML without changing the structure of the content.</li>
+        <li><mark class="highlight">No design system or process is perfect.</mark> While having a design system helps reduce the number of decisions that need to be made, it is not infallible. New problems and challenges can’t always be solved with existing solutions, so it’s important to recognize when …</li>
       </ol>
 
-      <h3>Ideas for future iterations</h3>
+      <h3>Ideas for next time</h3>
       <ol>
-        <li>Find ways for tighter integration between coded components and design prototypes - UXPin’s forthcoming “Merge” functionality seems particularly interesting.</li>
+        <li>Find ways for tighter integration between coded components and design prototypes - <a href="https://www.uxpin.com/merge" target="_blank">UXPin’s forthcoming “Merge” functionality</a> seems particularly interesting.</li>
+        <li><mark class="highlight">Our fourth design principle, <em>Consistency and Structure,</em> became a major point of contention</mark> during early design critiques. Doing or using something once does not make it a pattern, but our conversations often veered towards making designs consistent with other things we’ve designed rather than, as Jared Spool posed, “Will the user’s current knowledge help them understand how to use what I’m designing?” <mark class="highlight">Next time I’d push for removing <em>consistency</em> from the design principles and focus more on <em>familiarity</em>,</mark> with an emphasis on the user’s current knowledge, or “sum of all their previous experiences with relevant products and designs.” <sup><a href="#footnote-2">2</a></sup></li>
       </ol>
     </section>
 
     <footer>
       <h2>Footnotes</h2>
       <ol>
-        <li>User Story Mapping, by Jeff Patton</li>
-        <li>Consistency in Design is the Wrong Approach, by Jared M. Spool</li>
+        <li><a href="https://www.jpattonassociates.com/user-story-mapping/" target="_blank">User Story Mapping</a>, by Jeff Patton</li>
+        <li><a href="https://articles.uie.com/consistency-in-design-is-the-wrong-approach/" target="_blank">Consistency in Design is the Wrong Approach</a>, by Jared M. Spool</li>
       </ol>
     </footer>
 
