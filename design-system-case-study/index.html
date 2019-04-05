@@ -109,6 +109,28 @@
       background-color: lavender;
     }
 
+    .horizontal-scroll {
+       overflow-x: scroll;
+       /* position: relative; */
+       /* left: -3em; */
+       /* width: calc(100% + 6em); */
+    }
+
+    .horizontal-scroll::-webkit-scrollbar {
+      -webkit-appearance: none;
+      height: 10px;
+    }
+    .horizontal-scroll::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgba(0,0,0,.25);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+
+    figure table td {
+      /* width: 1000px; */
+      width: 250px;
+    }
+
   </style>
 </head>
 
@@ -151,10 +173,13 @@
     <section>
       <h2>Process</h2>
       <p>For this initiative, we focussed on three aspects (or layers) to our design system: <em>design principles, design patterns, and the component library.</em> Once those were established, we then focussed on how to deliver and maintain the design system.</p>
-      <p><mark class="placeholder">[Illustration of design system layers]</mark></p>
+      <figure>
+        <img src="DesignSystemLayers.png" alt="Design system layer pyramid. On the bottom are Design Principles, middle is Design Patterns, and on top is the Component Library." style="max-width: 420px; margin: 0 auto; display: block;">
+        <figcaption>Design System layers</figcaption>
+      </figure>
 
       <h3>Layer 1: Design Principles</h3>
-      <p>It’s always tempting to start at the end first—in this case, creating a bunch of styled UI components and usage guidelines—but we quickly learned that we needed to agree upon our design principles to guide the process and output of work being done.</p>
+      <p>It’s always tempting to start with what’s visible first, but we quickly learned that <mark class="highlight">we needed to figure out what our <em>design principles</em> were in order to guide the process and output of work being done.</mark></p>
       <p>To start, each member of the design team did their own research and compiled ideas for our design principles. We then came together to share, find similarities and differences between them, and discuss which ones interested us most as a team. I then took these and compiled a single Google document, combining and incorporating the ideas that resonated most.</p>
       <p>At this point we had about two dozen principles—way more than we needed! Through a couple of follow-up discussions—both in person and via comments on the doc—and some heavy editing, we were able to narrow them down to four primary design principles (each had additional notes and examples):</p>
       <ol>
@@ -168,9 +193,7 @@
       <h3>Layer 2: Design Patterns</h3>
       <p>As with any product that exists in the world, there were already countless inconsistencies across the UserVoice platform—such as how to display date and time formats, capitalization rules, and form validation and behavior. Each time a feature team set out to tackle a new problem, the same questions would come up: <em>How should we format this?</em> and <em>How should this behave?</em></p>
       <p>To address this, we set out to describe UserVoice’s design patterns. Similar to software design patterns, <mark class="highlight">these were not specific visual styles or implementation details, but rather formalized best practices describing how to solve common and repeated problems in many different situations—universal quality criteria for broad design mental models, content, and behavior.</mark> (In contrast, the component library detailed product-specific styles and implementation of these patterns.)</p>
-      <p>One example is Forms & Validation, which describes best practices, proper use of labels, validation behavior for fields and submit buttons, keyboard controls, and other accessibility requirements.</p>
-      <p><mark class="placeholder">[Example design pattern: Forms & Validation]</mark></p>
-      <p>Additional patterns included Capitalization, Confirmations, Date & Timestamps, Flash Messages, Keyboard Controls, Hidden & Disabled Features, Page Titles, Undo, and more.</p>
+      <p>One example is Forms & Validation, which describes best practices, proper use of labels, validation behavior for fields and submit buttons, keyboard controls, and other accessibility requirements. Additional patterns included Capitalization, Confirmations, Date & Timestamps, Flash Messages, Keyboard Controls, Hidden & Disabled Features, Page Titles, Undo, and more.</p>
       <p>Unlike our finite set of design principles, our design patterns were a much larger set of living documents. Because of this, the design team committed to defining patterns as part of their ongoing work. For example, when a project needed a form, if pattern documentation for forms didn’t exist we’d work together to audit existing patterns and behaviors, refine them as necessary, and document the desired pattern. The next time a form was created, the designers and developers could reference the existing “Forms and Validation” design pattern.</p>
 
       <h3>Layer 3: Component Library</h3>
@@ -182,18 +205,26 @@
       <p>We tried both Git and Dropbox, but quickly dropped Git because it didn’t handle binary files very efficiently. The challenge with Dropbox was that there was no clear way for multiple people to contribute to the same library without running into conflicts, and it still didn’t solve the problem of ensuring everyone’s separate design projects were using the same components. We also tried creating a component library project with InVision, which we’d already been using since 2011, and using its source files sync, but that was even more cumbersome than Dropbox.</p>
 
       <figure>
-        <img src="multiple-versions-of-files.png" alt="Finder window with multiple working copies of the same file." style="max-height: 18em;">
+        <img src="multiple-versions-of-files.png" alt="Finder window with multiple working copies of the same file." style="max-height: 18em; margin: 0 auto; display: block;">
         <figcaption>Trying to maintain a source of truth using Dropbox was a nightmare.</figcaption>
       </figure>
 
-      <p>Fortunately, along came Abstract App, a new Git-like version control system for Sketch files. In November 2016 we began testing the private alpha, and committed to adopted it beginning January 2017. With Abstract, we were able to create a different project (repository) for each of our primary applications. Each project consisted of a single Sketch file that contained all the symbols necessary for that application’s component library (again, this was before Sketch introduced external symbol library files).</p>
+      <p>Fortunately, along came <a href="https://www.abstract.com" target="_blank">Abstract App</a>, a new Git-like version control system for Sketch files. In November 2016 we began testing the private alpha, and committed to adopted it beginning January 2017. With Abstract, we were able to create a different project (repository) for each of our primary applications. Each project consisted of a single Sketch file that contained all the symbols necessary for that application’s component library (again, this was before Sketch introduced external symbol library files).</p>
       <p>Each time a designer began working on a new project, they’d create a new branch based off the Master file and go to town. All the symbols/components they needed to work from were available in their file. When any components were updated in the Master file during the life of a designer’s project, they could easily pull in those changes to their working file and all of the components would be updated to reflect the source of truth. Likewise, any new or modified components they worked on would become available to everyone else once their work was completed.</p>
       <p>Finally, we had all the benefits our developers had with Git. As with our design patterns, the team committed to building out the component library alongside existing projects.</p>
-      <p><mark class="placeholder">[Image of form fields components]</mark></p>
+
+      <figure>
+        <img src="Abstract - Branches@2x.png" alt="">
+        <img src="Abstract - Commenting@2x.png" alt="">
+        <img src="Abstract - Component Library@2x.png" alt="">
+        <img src="Sketch - Componont Library@2x.png" alt="">
+        <figcaption>With Sketch and Abstract app, we were able to create a version controlled system of truth for our component library assets.</figcaption>
+      </figure>
+
       <p><mark class="highlight">A huge benefit of having full version control of our component library was that changes and conflicts were easy to track, discuss, and resolve (if necessary).</mark> In addition to our regular critiques, when a designer’s project was ready to merge back into Master the whole team would come together for a design merge ceremony to review changes to the component library. It kept everyone mentally in sync of how each designer’s work would affect the others’.</p>
 
       <h3>Pulling it all together</h3>
-      <p>So where did we publish and share our design philosophy, patterns, and component libraries?</p>
+      <p>So where did we publish and share our design principles, patterns, and component libraries?</p>
       <p><mark class="highlight">Documentation is only useful it helps people get their job done. If they don’t know about it or reference it, there’s no point in having it.</mark> Since the audience for these were primarily designers and developers, it needed to be somewhere both parties would remember to access it and easily contribute to it.</p>
       <p>After some informal discussions, I came up with this list of must-haves:</p>
       <ol>
@@ -204,94 +235,106 @@
         <li>People can subscribe to changes and additions</li>
       </ol>
 
-      <p><mark class="placeholder">[ANI Chart – Should we use ____ to document and share our design system?]</mark></p>
-
-      <table>
-        <tr>
-          <th>Should we use ____ to document and share our design system?</th>
-          <th>Affirmative</th>
-          <th>Negative</th>
-          <th>Interesting</th>
-        </tr>
-        <tr>
-          <td>GitHub</td>
-          <td>
-            <ul>
-              <li>Great version control</li>
-              <li>Key audience (engineering) uses GitHub continuously</li>
-              <li>Built-in notification of changes</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>High learning curve for designers</li>
-              <li>No good method for providing feedback directly on master branch</li>
-              <li>Not easily accessible by everyone</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>We found that proposed changes became stale</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>Google Docs</td>
-          <td>
-            <ul>
-              <li>Ubiquitous usage at UserVoice</li>
-              <li>Contextual comments</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>Difficult to find needed documents, or browse and discover</li>
-              <li>No good method to “publish” and notify others about new versions of docs</li>
-            </ul>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Confluence</td>
-          <td>
-            <ul>
-              <li>Multiple departments interested in using it</li>
-              <li>Contextual comments</li>
-              <li>Version control</li>
-              <li>Two-way linking with Jira issues</li>
-              <li>Built-in notifications of published changes</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>Unproven whether general usage of Confluence would increase</li>
-              <li>Tables not as good as Google spreadsheets</li>
-            </ul>
-          </td>
-          <td></td>
-        </tr>
-      </table>
+      <figure>
+        <div class="horizontal-scroll">
+          <table style="width: calc(4 * 250px)">
+            <tr>
+              <th>Should we use ____ to document and share our design system?</th>
+              <th>Affirmative</th>
+              <th>Negative</th>
+              <th>Interesting</th>
+            </tr>
+            <tr>
+              <td>GitHub</td>
+              <td>
+                <ul>
+                  <li>Great version control</li>
+                  <li>Key audience (engineering) uses GitHub continuously</li>
+                  <li>Built-in notification of changes</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>High learning curve for designers</li>
+                  <li>No good method for providing feedback directly on master branch</li>
+                  <li>Not easily accessible by everyone</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>We found that proposed changes became stale</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Google Docs</td>
+              <td>
+                <ul>
+                  <li>Ubiquitous usage at UserVoice</li>
+                  <li>Contextual comments</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Difficult to find needed documents, or browse and discover</li>
+                  <li>No good method to “publish” and notify others about new versions of docs</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Confluence</td>
+              <td>
+                <ul>
+                  <li>Multiple departments interested in using it</li>
+                  <li>Contextual comments</li>
+                  <li>Version control</li>
+                  <li>Two-way linking with Jira issues</li>
+                  <li>Built-in notifications of published changes</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Unproven whether general usage of Confluence would increase</li>
+                  <li>Tables not as good as Google spreadsheets</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <figcaption>ANI Chart: Should we use X to document and share our design system?</figcaption>
+      </figure>
 
       <p>At first we tried using an internal Github project, but the learning curve for some designers was a bit high, and it wasn’t familiar to most non-developers. Google Docs was commonplace, but notoriously difficult for people to find and discover things. After a few months, the engineering team began using Confluence for some of their own documentation, so we quickly adopted it for documenting, discussing, and refining design patterns as well.</p>
 
-      <h4>Shared documents are not shared understanding</h4>
-      <p>I’m also a firm believer in Jeff Patton’s saying, “Shared documents are not shared understanding.” <sup><a id="fnr1" href="#fn1" title="Footnote #1">1</a></sup> Essentially, just because you write something down and share it, it doesn’t mean the audience will understand it, agree with it, remember it, or even read it. Communication and understanding require much more than a document, so saying, “Well, it’s documented in the design system!” isn’t an excuse. Essentially, we couldn’t rely on documentation alone to cultivate a shared understanding of our design system.</p>
       <figure>
-        <img src="shared-understanding.png" alt="Four-panel illustration of people thinking they’re on the same page but aren’t until they draw out what they’re thinking on a whiteboard.">
-        <figcaption>Illustration from Jeff Patton’s book, <em><a href="">User Story Mapping</a></em></figcaption>
+        <img src="Design System - Design Philosophy@2x.png" alt="">
+        <img src="Design System - Colors@2x.png" alt="">
+        <img src="Design System - Forms & Validation@2x.png" alt="">
+        <img src="Design System - Form Fields Component@2x.png" alt="">
+        <figcaption>We used Confluence to pull all the documentation and assets together.</figcaption>
       </figure>
-      <p><mark class="highlight">I believe shared understanding happens through conversation</mark>, so we started making a habit of referencing our design system during design exercises and development sprints. During design critiques, we began discussing design decisions in light of our philosophy and patterns. Slowly, over time, it became a resource we could pull from and contribute to as a team.</p>
+
     </section>
 
     <section>
       <h2>Outcomes</h2>
       <p>So, did the design system help us achieve our objectives? <strong>No.</strong></p>
-      <p>But we <em>did</em> achieve our objectives.* While we saw significant improvments in sprint velocity, improved platform cohesiveness, and bonding of the design team over the course of the year we developed the UserVoice Design System, <mark class="highlight">these achivements could not be attributed to the design system itself — but rather to the habits and process of conversation.</mark> The documented design system was simply a recorded artifact of that work.</p>
+      <p>But we <em>did</em> achieve our objectives.* While we saw significant improvements in sprint velocity, improved platform cohesiveness, and bonding of the design team over the course of the year we developed the UserVoice Design System, <mark class="highlight">these achivements could not be attributed to the design system itself — but rather to the habits and process of conversation.</mark> The documented design system was simply a recorded artifact of that work.</p>
       <aside>
         <p><em>* (You’ll have to take my word for this because we relied more on anecdotal evidence rather than performing quantitative analyisis — something I’d do differently next time.)</em></p>
       </aside>
 
-      <h4>Established habits</h4>
+      <h4>Shared documents are not shared understanding</h4>
+      <p>I’m a firm believer in Jeff Patton’s saying, “Shared documents are not shared understanding.” <sup><a id="fnr1" href="#fn1" title="Footnote #1">1</a></sup> Essentially, just because you write something down and share it, it doesn’t mean the audience will understand it, agree with it, remember it, or even read it. Communication and understanding require much more than a document, so saying, “Well, it’s documented in the design system!” isn’t an excuse. Essentially, we couldn’t rely on documentation alone to cultivate a shared understanding of our design system.</p>
+      <figure>
+        <img src="shared-understanding.png" alt="Four-panel illustration of people thinking they’re on the same page but aren’t until they draw out what they’re thinking on a whiteboard.">
+        <figcaption>Illustration from Jeff Patton’s book, <em><a href="">User Story Mapping</a></em></figcaption>
+      </figure>
+      <p><mark class="highlight">I believe shared understanding happens through conversation</mark>, so we started making a habit of referencing our design system during design exercises and development sprints. During design critiques, we began discussing design decisions in light of our principles and patterns. Slowly, over time, it became a resource we could pull from and contribute to as a team.</p>
+
+      <h4>New habits</h4>
       <ol>
         <li>Weekly design critiques</li>
         <li>Weekly design merge ceremonies</li>
@@ -306,16 +349,14 @@
 
       <h4>Tools</h4>
       <ol>
-        <li><a href="https://www.atlassian.com/software/confluence" target="_blank">Confluence</a> – for documenting design philosophy, patterns, and component library references</li>
+        <li><a href="https://www.atlassian.com/software/confluence" target="_blank">Confluence</a> – for documenting design principles, patterns, and component library references</li>
         <li><a href="https://www.google.com/sheets/about/" target="_blank">Google Sheets</a> – for larger “Truth Sheets”</li>
         <li><a href="https://www.abstract.com" target="_blank">Abstract App</a> – Sketch version control system for component library</li>
       </ol>
 
-      <h3>Insights</h3>
-      <ol>
-        <li><mark class="highlight">Separating design patterns from the styled components helped us separate form from function,</mark> making it much easier to update our styles and components over time, and apply different ones to different applications—much like how CSS can apply radically different styles to well formed HTML without changing the structure of the content.</li>
-        <li><mark class="highlight">No design system or process is perfect.</mark> While having a design system helps reduce the number of decisions that need to be made, it is not infallible. New problems and challenges can’t always be solved with existing solutions, so it’s important to recognize when …</li>
-      </ol>
+      <h3>Learnings and insights</h3>
+      <p><mark class="highlight">Separating design patterns from the styled components helped us separate form from function,</mark> making it much easier to update our styles and components over time, and apply different ones to different applications—much like how CSS can apply radically different styles to well formed HTML without changing the structure of the content.</p>
+      <p>Also, it probably goes without saying, but no design system or process is perfect. While having a design system helps reduce the number of decisions that need to be made, it is not infallible. New problems and challenges can’t always be solved with existing solutions, so <mark class="highlight">it’s important to recognize when you’re trying to force an existing pattern or component to do things it wasn’t intended to.</mark> We ran into this a couple of times, and the results weren’t great.</p>
 
       <h3>Ideas for next time</h3>
       <ol>
@@ -325,6 +366,7 @@
     </section>
 
     <footer>
+      <hr>
       <section class="footnotes">
         <h2>Footnotes</h2>
         <ol>
