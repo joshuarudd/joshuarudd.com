@@ -4,13 +4,13 @@
 <head>
   <title>UserVoice Design System - A Case Study by Joshua Rudd</title>
   <link rel="canonical" href="https://joshuarudd.com/design-system-case-study/">
-  <meta name="description" content="As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.">
+  <meta name="description" content="As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of design and devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.">
   <!-- <link rel="image_src" href="http://"> -->
 
   <!-- Schema -->
   <meta itemprop="name" content="UserVoice Design System - A Case Study by Joshua Rudd">
   <meta itemprop="url" content="https://joshuarudd.com/design-system-case-study/">
-  <meta itemprop="description" content="As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.">
+  <meta itemprop="description" content="As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of design and devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.">
   <!-- <meta itemprop="image" content=""> -->
   <!-- <meta itemprop="thumbnailUrl" content="http://"> -->
 
@@ -19,7 +19,7 @@
   <meta property="og:title" content="UserVoice Design System - A Case Study by Joshua Rudd">
   <meta property="og:url" content="https://joshuarudd.com/design-system-case-study/">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.">
+  <meta property="og:description" content="As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of design and devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.">
   <!-- <meta property="og:image" content="http://"> -->
   <!-- <meta property="og:image:width" content="1500"> -->
   <!-- <meta property="og:image:height" content="811"> -->
@@ -35,120 +35,42 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <link rel="stylesheet" href="/assets/css/typeset.css">
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Halant:300,400,500,600">
-  <style>
+  <link rel="stylesheet" href="styles.css">
 
-    body {
-      font-family: 'Inter', sans-serif;
-      font-size: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    article {
-      font-family: 'Halant', serif;
-      font-size: 20px;
-      font-weight: 400;
-      color: rgba(0,0,0,.8);
-      margin: 4.5em auto;
-      max-width: 70ex; /* Trying to keep lines approximately 12 words long. */
-    }
-    @supports (font-variation-settings: normal) {
-      /* html { font-family: 'Inter var', sans-serif; } */
-    }
-    .typeset h1 {
-      font-weight: 600;
-    }
-    .typeset h3 {
-      font-weight: 500;
-    }
-    .typeset table {
-      font-family: 'Inter', sans-serif;
-      font-size: 12px;
-    }
-    .typeset table th {
-      font-weight: 600;
-    }
-    .typeset table ul {
-      margin: 0 0 0 1.5em;
-    }
-
-    .typeset figure {
-      font-family: 'Inter', sans-serif;
-    }
-    .typeset figcaption {
-      font-size: 12px;
-      text-align: center;
-    }
-
-    .highlight {
-      background-color: rgba(0, 140, 255, 0.1) !important;
-    }
-    .placeholder {
-      background-color: rgba(255, 153, 0, 0.1) !important;
-    }
-    li:target { /* Highlight selected footnote */
-      background-color: rgba(255, 245, 0, 0.2);
-    }
-
-    a.footnoteBackLink {
-      text-decoration: none;
-      font-size: .75em;
-    }
-
-
-    @media only screen and (max-width: 80ex) {
-      html {
-        font-size: 18px;
-        margin: 25px;
-      }
-    }
-
-    .typeset mark {
-      background-color: lavender;
-    }
-
-    .horizontal-scroll {
-       overflow-x: scroll;
-       /* position: relative; */
-       /* left: -3em; */
-       /* width: calc(100% + 6em); */
-    }
-
-    .horizontal-scroll::-webkit-scrollbar {
-      -webkit-appearance: none;
-      height: 10px;
-    }
-    .horizontal-scroll::-webkit-scrollbar-thumb {
-      border-radius: 5px;
-      background-color: rgba(0,0,0,.25);
-      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-    }
-
-    figure table td {
-      /* width: 1000px; */
-      width: 250px;
-    }
-
-  </style>
+  <script>
+    // I see you! Thanks for checking out my site.
+    console.log('👋 Hey, thanks for checking out my site!\n\nAll the HTML and CSS you see were hand-written by me. I don’t really consider myself a front-end developer anymore, but I’ve always enjoyed the craft. You can find the source at https://github.com/joshuarudd/joshuarudd.github.io\n\nKind regards,\nJoshua Rudd (@joshuarudd)\n\n');
+  </script>
+  <script src="/assets/js/analytics.js" charset="utf-8"></script>
 </head>
 
 <body>
   <article class="typeset">
     <header>
       <h1>UserVoice Design System</h1>
-      <p>A case study by Joshua Rudd</p>
+      <p class="byline">A case study by Joshua Rudd</p>
+      <p>As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of design and devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.</p>
+      <!-- <div class="hero"></div> -->
+      <figure class="grid x4">
+        <a href="design-system-design-philosophy@2x.png" class="cell"><img src="design-system-design-philosophy@2x.png" alt=""></a>
+        <a href="design-system-colors@2x.png" class="cell"><img src="design-system-colors@2x.png" alt=""></a>
+        <a href="design-system-forms-and-validation@2x.png" class="cell"><img src="design-system-forms-and-validation@2x.png" alt=""></a>
+        <a href="design-system-form-fields-component@2x.png" class="cell"><img src="design-system-form-fields-component@2x.png" alt=""></a>
+        <a class="cell" href="abstract-branches@2x.png"><img src="abstract-branches@2x.png" alt=""></a>
+        <a class="cell" href="abstract-commenting@2x.png"><img src="abstract-commenting@2x.png" alt=""></a>
+        <a class="cell" href="abstract-component-library@2x.png"><img src="abstract-component-library@2x.png" alt=""></a>
+        <a class="cell" href="sketch-componont-library@2x.png"><img src="sketch-componont-library@2x.png" alt=""></a>
+      </figure>
     </header>
 
-    <section>
+    <!-- <section> -->
       <!-- <h2>Abstract</h2> -->
-      <p>As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.</p>
-    </section>
+      <!-- <p>As UserVoice began growing its product, design, and engineering teams, we needed to find a way to increase the speed and efficiency of devlopment cycles while also delivering quality user experiences across a broad platform. To do this, we began an initiative to formalize our design system using Confluence, Abstract App, and conversation.</p> -->
+    <!-- </section> -->
 
     <section>
       <h2>The challenge</h2>
-      <p>For years UserVoice had remained relatively small and didn’t have much turnover. It had been relatively easy to keep things consistent and for everyone to be on the same page. However, as we began to grow and feature development divided between multiple cross-functional teams, it quickly became apparent: <mark class="highlight">we needed to a better way to scale our teams while keeping our platform cohesive and consistent.</mark></p>
+      <p>For years UserVoice had remained small and didn’t have much turnover. It had been relatively easy to keep the design and user experience consistent and for everyone to be on the same page. However, as we began to grow and feature development divided between multiple cross-functional teams, it quickly became apparent: <mark class="highlight">we needed to a better way to scale our teams while keeping our platform cohesive and consistent.</mark></p>
       <p>Our objectives were to:</p>
       <ol>
         <li>Empower cross-functional teams to autonomously deliver new features while increasing overall cohesiveness of the platform.</li>
@@ -174,7 +96,7 @@
       <h2>Process</h2>
       <p>For this initiative, we focussed on three aspects (or layers) to our design system: <em>design principles, design patterns, and the component library.</em> Once those were established, we then focussed on how to deliver and maintain the design system.</p>
       <figure>
-        <img src="DesignSystemLayers.png" alt="Design system layer pyramid. On the bottom are Design Principles, middle is Design Patterns, and on top is the Component Library." style="max-width: 420px; margin: 0 auto; display: block;">
+        <img src="design-system-layers.png" alt="Design system layer pyramid. On the bottom are Design Principles, middle is Design Patterns, and on top is the Component Library." style="max-width: 420px; margin: 0 auto; display: block;">
         <figcaption>Design System layers</figcaption>
       </figure>
 
@@ -205,7 +127,7 @@
       <p>We tried both Git and Dropbox, but quickly dropped Git because it didn’t handle binary files very efficiently. The challenge with Dropbox was that there was no clear way for multiple people to contribute to the same library without running into conflicts, and it still didn’t solve the problem of ensuring everyone’s separate design projects were using the same components. We also tried creating a component library project with InVision, which we’d already been using since 2011, and using its source files sync, but that was even more cumbersome than Dropbox.</p>
 
       <figure>
-        <img src="multiple-versions-of-files.png" alt="Finder window with multiple working copies of the same file." style="max-height: 18em; margin: 0 auto; display: block;">
+        <img src="dropbox-multiple-versions-of-files.png" alt="Finder window with multiple working copies of the same file." style="max-height: 18em; margin: 0 auto; display: block;">
         <figcaption>Trying to maintain a source of truth using Dropbox was a nightmare.</figcaption>
       </figure>
 
@@ -213,11 +135,11 @@
       <p>Each time a designer began working on a new project, they’d create a new branch based off the Master file and go to town. All the symbols/components they needed to work from were available in their file. When any components were updated in the Master file during the life of a designer’s project, they could easily pull in those changes to their working file and all of the components would be updated to reflect the source of truth. Likewise, any new or modified components they worked on would become available to everyone else once their work was completed.</p>
       <p>Finally, we had all the benefits our developers had with Git. As with our design patterns, the team committed to building out the component library alongside existing projects.</p>
 
-      <figure>
-        <img src="Abstract - Branches@2x.png" alt="">
-        <img src="Abstract - Commenting@2x.png" alt="">
-        <img src="Abstract - Component Library@2x.png" alt="">
-        <img src="Sketch - Componont Library@2x.png" alt="">
+      <figure class="grid x2">
+        <a class="cell" href="abstract-branches@2x.png"><img src="abstract-branches@2x.png" alt=""></a>
+        <a class="cell" href="abstract-commenting@2x.png"><img src="abstract-commenting@2x.png" alt=""></a>
+        <a class="cell" href="abstract-component-library@2x.png"><img src="abstract-component-library@2x.png" alt=""></a>
+        <a class="cell" href="sketch-componont-library@2x.png"><img src="sketch-componont-library@2x.png" alt=""></a>
         <figcaption>With Sketch and Abstract app, we were able to create a version controlled system of truth for our component library assets.</figcaption>
       </figure>
 
@@ -308,11 +230,11 @@
 
       <p>At first we tried using an internal Github project, but the learning curve for some designers was a bit high, and it wasn’t familiar to most non-developers. Google Docs was commonplace, but notoriously difficult for people to find and discover things. After a few months, the engineering team began using Confluence for some of their own documentation, so we quickly adopted it for documenting, discussing, and refining design patterns as well.</p>
 
-      <figure>
-        <img src="Design System - Design Philosophy@2x.png" alt="">
-        <img src="Design System - Colors@2x.png" alt="">
-        <img src="Design System - Forms & Validation@2x.png" alt="">
-        <img src="Design System - Form Fields Component@2x.png" alt="">
+      <figure class="grid x2">
+        <a href="design-system-design-philosophy@2x.png" class="cell"><img src="design-system-design-philosophy@2x.png" alt=""></a>
+        <a href="design-system-colors@2x.png" class="cell"><img src="design-system-colors@2x.png" alt=""></a>
+        <a href="design-system-forms-and-validation@2x.png" class="cell"><img src="design-system-forms-and-validation@2x.png" alt=""></a>
+        <a href="design-system-form-fields-component@2x.png" class="cell"><img src="design-system-form-fields-component@2x.png" alt=""></a>
         <figcaption>We used Confluence to pull all the documentation and assets together.</figcaption>
       </figure>
 
@@ -329,7 +251,7 @@
       <h4>Shared documents are not shared understanding</h4>
       <p>I’m a firm believer in Jeff Patton’s saying, “Shared documents are not shared understanding.” <sup><a id="fnr1" href="#fn1" title="Footnote #1">1</a></sup> Essentially, just because you write something down and share it, it doesn’t mean the audience will understand it, agree with it, remember it, or even read it. Communication and understanding require much more than a document, so saying, “Well, it’s documented in the design system!” isn’t an excuse. Essentially, we couldn’t rely on documentation alone to cultivate a shared understanding of our design system.</p>
       <figure>
-        <img src="shared-understanding.png" alt="Four-panel illustration of people thinking they’re on the same page but aren’t until they draw out what they’re thinking on a whiteboard.">
+        <img src="jeff-patton-shared-understanding.png" alt="Four-panel illustration of people thinking they’re on the same page but aren’t until they draw out what they’re thinking on a whiteboard.">
         <figcaption>Illustration from Jeff Patton’s book, <em><a href="">User Story Mapping</a></em></figcaption>
       </figure>
       <p><mark class="highlight">I believe shared understanding happens through conversation</mark>, so we started making a habit of referencing our design system during design exercises and development sprints. During design critiques, we began discussing design decisions in light of our principles and patterns. Slowly, over time, it became a resource we could pull from and contribute to as a team.</p>

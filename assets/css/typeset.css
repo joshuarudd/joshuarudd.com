@@ -303,7 +303,7 @@
   max-width: 100%;
 }
 .typeset figure {
-  display: block;
+  /* display: block; */
   max-width: 100%;
   /* margin set above */
 }
