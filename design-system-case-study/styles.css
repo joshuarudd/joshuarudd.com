@@ -1,0 +1,151 @@
+/* @import url('https://rsms.me/inter/inter.css'); */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600,700|Noto+Sans');
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+@media all and (max-width: calc(600px)) {
+  body { font-size: 18px; }
+}
+@media all and (max-width: calc(400px)) {
+  body { font-size: 16px; }
+}
+/* @supports (font-variation-settings: normal) { */
+  /* body { font-family: 'Inter var', sans-serif; } */
+/* } */
+
+article {
+  color: rgba(0,0,0,.8);
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+header {
+  font-size: 24px;
+  padding: 6em 0 2em 0;
+}
+
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.typeset header > * {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 70ex;
+  padding: 0 1.5em;
+}
+
+.typeset header h1, .byline {
+  text-align: center;
+  margin: 0;
+}
+
+.typeset .hero {
+  background-image: url('design-system-colors@2x.png');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 400px;
+  margin: 0 auto !important;
+  max-width: 1267px;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 70ex; /* Trying to keep lines approximately 12 words long. */
+  padding: 0 1.5em;
+}
+
+.typeset h1 {
+  font-weight: 500;
+  /* font-size: 4em; */
+}
+.typeset h3 {
+  font-weight: 700;
+}
+.typeset table {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+.typeset table th {
+  font-weight: 600;
+}
+.typeset table ul {
+  margin: 0 0 0 1.5em;
+}
+
+.typeset figure {
+  font-family: 'Inter', sans-serif;
+}
+.typeset figcaption {
+  font-size: 12px;
+  text-align: center;
+}
+
+.highlight {
+  background-color: rgba(0, 140, 255, 0.1) !important;
+}
+.placeholder {
+  background-color: rgba(255, 153, 0, 0.1) !important;
+}
+li:target { /* Highlight selected footnote */
+  background-color: rgba(255, 245, 0, 0.2);
+}
+
+a.footnoteBackLink {
+  text-decoration: none;
+  font-size: .75em;
+}
+
+.typeset mark {
+  background-color: lavender;
+}
+
+.horizontal-scroll {
+   overflow-x: scroll;
+   /* position: relative; */
+   /* left: -3em; */
+   /* width: calc(100% + 6em); */
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  -webkit-appearance: none;
+  height: 10px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.25);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+figure table td {
+  /* width: 1000px; */
+  width: 250px;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+  .x2 .cell {
+    flex: calc(100% / 2);
+  }
+  .x4 .cell {
+    flex: calc(100% / 4);
+  }
+  @media all and (max-width: calc(600px)) {
+    .x4 .cell { flex: calc(100% / 2); }
+  }
+
+  .grid figcaption {
+    flex: 100%;
+  }
