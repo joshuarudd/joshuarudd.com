@@ -7,6 +7,14 @@
   Twitter: @joshuarudd
 */
 
+/* Color variables */
+:root {
+  --typeset-background-color: #F3F6FA;
+  --typeset-border-color: #DBE2F2;
+  --typeset-color: #324354;
+  --typeset-blockquote-color: rgba(0,0,0,.2);
+}
+
 /*
   Reset .typeset element styles to avoid unwanted inheritance
 */
@@ -61,13 +69,13 @@
   margin-left: 2.5em;
 }
 .typeset code, .typeset pre, .typeset th {
-  background-color: #F3F6FA;
+  background-color: var(--typeset-background-color);
 }
 .typeset code, .typeset pre, .typeset th, .typeset td {
-  color: #324354;
+  color: var(--typeset-color);
 }
 .typeset pre, .typeset table, .typeset th, .typeset td {
-  border: 1px solid #dbe2f2;
+  border: 1px solid var(--typeset-border-color);
 }
 
 /*
@@ -229,7 +237,7 @@
   /* margin set above */
 }
 .typeset blockquote {
-  border-left: .2em solid rgba(0,0,0,.2);
+  border-left: .2em solid var(--typeset-blockquote-color);
   margin-left: .2em;
   /* margin-left set above */
   opacity: .8;
@@ -237,9 +245,6 @@
 }
 .typeset pre {
   /* background-color set above */
-  /* border set above */
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   /* color set above */
   display: block;
@@ -249,14 +254,8 @@
   margin: 0 0 2em 0;
   max-width: 100%;
   overflow: scroll;
-  padding: 1em 1.5em;
-  /* Mozilla, since 1999 */
-  white-space: -moz-pre-wrap !important;
-  /* css-3 */
+  padding: calc(1em - 1px) 1.5em;
   white-space: pre-wrap;
-
-  /* border: none; */
-  border: none;
 }
 
 /*
@@ -290,7 +289,8 @@
   /* border set above */
   /* color set above */
   /* line-height set above */
-  padding: .7em;
+  padding: calc(.75em - .5px);
+  /* padding: .75em; */
   text-align: left;
 }
 .typeset th {
