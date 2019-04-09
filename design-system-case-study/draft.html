@@ -37,11 +37,20 @@
   <link rel="stylesheet" href="/assets/css/typeset.css">
   <link rel="stylesheet" href="styles.css">
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1722632-1"></script>
   <script>
-    // I see you! Thanks for checking out my site.
     console.log('👋 Hey, thanks for checking out my site!\n\nAll the HTML and CSS you see were hand-written by me. I don’t really consider myself a front-end developer anymore, but I’ve always enjoyed the craft. You can find the source at https://github.com/joshuarudd/joshuarudd.github.io\n\nKind regards,\nJoshua Rudd (@joshuarudd)\n\n');
+
+    // Analytics
+    if (location.hostname == 'joshuarudd.com') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-1722632-1');
+    } else {
+      console.warn('Analytics not loaded (on purpose).');
+    }
   </script>
-  <script src="/assets/js/analytics.js" charset="utf-8"></script>
 </head>
 
 <body>
