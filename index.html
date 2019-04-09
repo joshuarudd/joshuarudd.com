@@ -11,11 +11,14 @@
   <link rel="stylesheet" href="/assets/css/joshuarudd.css" title="Teh CSS" type="text/css" media="screen" charset="utf-8">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1722632-1"></script>
   <script>
+    // Analytics
     if (location.hostname == 'joshuarudd.com') {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-1722632-1');
+    } else {
+      console.warn('Analytics not loaded (on purpose).');
     }
   </script>
 </head>
