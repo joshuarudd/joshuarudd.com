@@ -16,10 +16,8 @@
   text-rendering: optimizeLegibility;
 }
 
-/* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* Adapted from http://paulirish.com/2012/box-sizing-border-box-ftw/ */
 .typeset * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -40,10 +38,10 @@
 }
 
 /*
-  Baseline grid (for debugging)
+  Baseline grid (for debugging baseline grid)
 */
 
-.typeset.baseline {
+.typeset.typeset-baseline {
   background-image: linear-gradient(to bottom, magenta 0, rgba(255, 255, 255, 0) 1px);
   background-repeat: repeat-y;
   background-size: 100% 1.5em;
@@ -190,9 +188,12 @@
   font-weight: bold;
 }
 .typeset h1 {
+  /* font-size: 2em;
+  line-height: 2.25;
+  margin: 2.25em 0 .75em 0; */
   font-size: 2em;
   line-height: 1.5;
-  margin: 1.5em 0 .75em 0;
+  margin: 2.25em 0 .75em 0;
 }
 .typeset h2 {
   font-size: 1.5em;
@@ -200,9 +201,12 @@
   margin: 2em 0 1em 0;
 }
 .typeset h3 {
-  font-size: 1.25em;
+  /* font-size: 1.25em;
   line-height: 1.2;
-  margin: 1.2em 0 1.2em 0;
+  margin: 1.2em 0 1.2em 0; */
+  font-size: 1.25em;
+  line-height: 2.4;
+  margin: 1.2em 0 0 0;
 }
 .typeset h4 {
   font-size: 1em;
@@ -240,16 +244,19 @@
   /* color set above */
   display: block;
   font-family: monospace;
-  font-size: 12px;
-  /* line-height set above */
-  /* margin set above */
+  font-size: .75em;
+  line-height: 2;
+  margin: 0 0 2em 0;
   max-width: 100%;
   overflow: scroll;
-  padding: .7em;
+  padding: 1em 1.5em;
   /* Mozilla, since 1999 */
   white-space: -moz-pre-wrap !important;
   /* css-3 */
   white-space: pre-wrap;
+
+  /* border: none; */
+  border: none;
 }
 
 /*
