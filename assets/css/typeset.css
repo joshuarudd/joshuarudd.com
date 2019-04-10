@@ -2,12 +2,15 @@
   Typeset.css
   https://github.com/joshuarudd/typeset.css
   v0.9.5
-  Last updated: 2019-04-01
+  Last updated: 2019-04-10
   Author: Joshua Rudd - https://joshuarudd.com
   Twitter: @joshuarudd
 */
 
-/* Color variables */
+/*
+  Color variables
+*/
+
 :root {
   --typeset-background-color: #F3F6FA;
   --typeset-border-color: #DBE2F2;
@@ -196,9 +199,6 @@
   font-weight: bold;
 }
 .typeset h1 {
-  /* font-size: 2em;
-  line-height: 2.25;
-  margin: 2.25em 0 .75em 0; */
   font-size: 2em;
   line-height: 1.5;
   margin: 2.25em 0 .75em 0;
@@ -209,9 +209,6 @@
   margin: 2em 0 1em 0;
 }
 .typeset h3 {
-  /* font-size: 1.25em;
-  line-height: 1.2;
-  margin: 1.2em 0 1.2em 0; */
   font-size: 1.25em;
   line-height: 2.4;
   margin: 1.2em 0 0 0;
@@ -239,7 +236,6 @@
 .typeset blockquote {
   border-left: .2em solid var(--typeset-blockquote-color);
   margin-left: .2em;
-  /* margin-left set above */
   opacity: .8;
   padding-left: .8em;
 }
@@ -290,7 +286,6 @@
   /* color set above */
   /* line-height set above */
   padding: calc(.75em - .5px);
-  /* padding: .75em; */
   text-align: left;
 }
 .typeset th {
@@ -310,7 +305,6 @@
   max-width: 100%;
 }
 .typeset figure {
-  /* display: block; */
   max-width: 100%;
   /* margin set above */
 }
@@ -324,7 +318,6 @@
 /*
   Cleanup
 */
-
 
 /* Remove top-margin from first element in typeset block so that it can align with other parts of the page */
 .typeset > :first-child {
