@@ -1,17 +1,36 @@
 # Case Study: UserVoice Sidebar
 
 ## Abstract
+… Become system of record for all product feedback.
 
-**Problem:** A significant amount of customer feedback was coming through channels other than UserVoice.
 
-**Opportunity:** Provide a method to capture important feedback from other sources (e.g., support tickets, sales opportunities) into UserVoice.
 
-**Solution:** Create a browser plugin that would allow company employees to capture customer feedback from any webpage, attribute it to the person who gave the feedback, and make it available for other team members in UserVoice.
+#### Problem
+A significant amount of customer feedback was coming through channels other than UserVoice.
 
-// required new license type and supporting user management
+- [ ] When product and support/sales would get together to discuss priorities, it would be difficult to determine how much recency bias played in to the feedback they were conveying.
+	* “We’re losing sales because we don’t have X.”
+	* “The biggest problem customers have is X.”
+
+1. What are the top issues Sales teams are encountering?
+2. What
+
+#### Desired Outcome
+…
+
+#### Opportunity
+Provide a method to capture important feedback from other sources (e.g., support tickets, sales opportunities) into UserVoice.
+
+#### Solution
+Create a browser plugin that would allow company employees to capture customer feedback from any webpage, attribute it to the person who gave the feedback, and make it available for other team members in UserVoice.
+
+- [ ] required new license type and supporting user management
+
 
 ## Challenge
-UserVoice is a platform for gathering user feedback and making sense of it. From 2008 to 2015, the primary way UserVoice gathered feedback was by allowing companies to set up forums and embed widgets that their end-users could use to submit feedback and vote on ideas. The more feedback is in UserVoice, the easier it is for teams to discover the top unmet needs of their customers.
+UserVoice is a platform for gathering user feedback and making sense of it. From 2008 to 2015, the primary way UserVoice gathered feedback was by allowing companies to set up forums and embed widgets that their end-users could use to submit feedback and vote on ideas.
+
+The more feedback is in UserVoice, the easier it is for teams to discover the top unmet needs of their customers.
 
 However, *UserVoice wasn’t the only way users were submitting feedback.* A significant amount of feedback companies were receiving was coming from channels other than UserVoice – most often through support tickets, chat, sales calls, as well as social media, online reviews, blog comments, etc.
 
@@ -21,80 +40,142 @@ However, *UserVoice wasn’t the only way users were submitting feedback.* A sig
 
 When a person would give feedback to a sales or support agent, we observed two primary workarounds team members would use to get that feedback into UserVoice:
 
-One method was to tell their customer to go to the UserVoice forum to post the same feedback they’d already given. However, telling customers that had already given feedback to give it again using the forum was frustrating to both the customer and the team member. Their customers felt like their feedback was just going to a black hole since the person they were trying to get help from was just redirecting them, and team members reported to us that their customers would often no end up giving the feedback again in UserVoice.
-
-Another method we saw was for the team member to create an idea in UserVoice themselves with that customer’s feedback. Unfortunately, the current tools did not allow that feedback to be attributed to the customer who actually gave it (it was instead attributed to the team member who created it), making it difficult to differentiate between internal vs. customer feedback, reducing the value of other insights and segmentation tools.
+1. One method was to tell their customer to go to the UserVoice forum to post the same feedback they’d already given. However, telling customers that had already given feedback to give it again using the forum was frustrating to both the customer and the team member. Their customers felt like their feedback was just going to a black hole since the person they were trying to get help from was just redirecting them, and team members reported to us that their customers would often no end up giving the feedback again in UserVoice.
+2. Another method we saw was for the team member to create an idea in UserVoice themselves with that customer’s feedback. Unfortunately, the current tools did not allow that feedback to be attributed to the customer who actually gave it (it was instead attributed to the team member who created it), making it difficult to differentiate between internal vs. customer feedback, reducing the value of other insights and segmentation tools.
 
 #### Problem
+
 UserVoice’s customers *wanted* their end-users’ feedback in UserVoice, but did not have effective ways to redirect feedback they were receiving into UserVoice.
 
-#### Hypothesis
-Rather than
+How might we allow team members to continue using their existing tools and channels to communicate with customers, while giving them a quick way to add this feedback to UserVoice?
 
-#### Business Goals
-1. Increase revenue through new business by addressing sales blockers.
+#### Hypothesis
+
+We saw an opportunity to *become the system of record for all product feedback.*
+
+We believed that if we could provide a method for team members capture important customer feedback from within the tools they were already using to communicate with customers, we would see an increase in the amount of customer feedback coming into UserVoice as well as improved quality of that data, giving us the ability to provide better insights for our customers.
+
+##### Business Goals
+
+1. Increase revenue through new business by addressing sales blockers related to capturing customer feedback.
 2. Increase renewals by expanding value of UserVoice beyond product teams and into sales and support teams.
 
-#### UX Goals
-1. Customers can continue to give feedback using whatever channels are at their disposal.
-2. Feedback is always attributed to the person who gave it.
-3. Become of system of record of all feedback.
+##### UX Goals
 
-#### Constraints
-(Emerged) Cannot rewrite core data model (yet) - still needed to require linking feedback to a related idea. This became a big challenge because it required additional steps for the person capturing the feedback.
+1. Be invisible to the end-user. People can continue to give feedback using whatever channels are at their disposal, and not have to get redirected to UserVoice in order to make sure their feedback is recorded.
+2. Feedback is always attributed to the person who gave it, allowing companies to leverage that data for greater insights.
 
-## Role & Team
+##### Constraints
 
-My role changed during this project. First I was the product manager. We then went through a company restructuring and I transitioned to the lead designer.
-Single development team…
+Constraints were not known at the beginning of the project, but we soon realized that our initial solution could not require us to rewrite our core data model (yet). This became a big challenge because it resulted in requiring additional steps for the team member capturing the customer’s feedback.
+
+
+## Roles
+This project was unique experience for me because my role changed (due to product and engineering team restructuring) from product manager—where I performed generative research and opportunity assessment for this project—to lead designer as we began ideating, prototyping, and testing our solutions.
+
+As we moved towards building and testing, we formed a team of three engineers, a new product manager, and myself as lead designer. We committed to weekly sprints.
+
 
 ## Process
+Generative Research -> Opportunity Assessment -> Discovery -> User Story Mapping -> Prototyping -> Testing -> Iteration
 
-### Overview
-1. User Story Mapping
-2. Wireflows
-3. Weekly sprints
+[Illustration of process flow]
 
-### Research
-1. Quantitative
-2. Generative
-3. Used UserVoice to identify customers with related problems, and used that list to set up customer calls.
-4. What channels were people primarily using?
-  1. Zendesk, Salesforce, UserVoice Tickets, Intercom,
+### Generative Research
 
-### Materials list
-1. LucidChart - User Story Mapping [fn] & User flows
-2. Sketch - Wireframes & Mockups
-3. InVision - Internal Feedback & Prototyping
-4. Principle for Mac - Prototyping & Animation
+We didn’t set out to solve this problem, but through dozens of ongoing customer interviews discussing how they used the product, what their desired outcomes were, and what challenges they had along the way, some common themes began to emerge. At the time, we were getting close to releasing a major overhaul of our admin tools.
 
-### Experimental Procedure
+As some patterns emerged, I also met with our Sales and Support execs to see if they’d heard similar feedback from customers and prospects. They did, and offered some valuable insights about how they were trying to achieve the same results using other tools and processes.
+
+### Opportunity Assessment
+
+Once I had a general idea of the unmet needs our customers were having, we needed to decide if this was a problem we should tackle. I’m a huge Marty Cagan fan, and used his template for Product Opportunity Assessments.
+
+> The purpose of a good product opportunity assessment is either to a) prevent the company from wasting time and money on poor opportunities; or b) for those that are good opportunities, to understand what will be required to succeed.
+
+[Assessing Product Opportunities](https://svpg.com/assessing-product-opportunities/), by Marty Cagan
+
+Our assessment set out to answer these 10 questions:
+
+1. Exactly what problem will this solve? (value proposition)
+2. For whom do we solve that problem? (target market)
+3. How big is the opportunity? (market size)
+4. What alternatives are out there? (competitive landscape)
+5. Why are we best suited to pursue this? (our differentiator)
+6. Why now? (market window)
+7. How will we get this product to market? (go-to-market strategy)
+8. How will we measure success/make money from this product? (metrics/revenue strategy)
+9. What factors are critical to success? (solution requirements)
+10. Given the above, what’s the recommendation? (go or no-go)
+
+After reviewing this assessment with the executive team, we decided the project was a go.
+
+### Further discovery
+
+Now that we had decided to tackle this problem, we had an endless stream of questions. Each ended up being a series of
+
+Used UserVoice to identify customers with related problems, and used that list to set up customer calls and on-site interviews.
+
+![alt](image.png)
+
+
+
+- [ ] What channels were people primarily using?
+	* Zendesk, Salesforce, UserVoice Tickets, Intercom, bespoke solutions
+
+### User Story Mapping
+
+One exercise I use to help get everyone on the same page and is User Story Maps, a concept coined by Jeff Patton. <sup>[1](#fn1)</sup>
+
+While usually done on a whiteboard or wall with sticky notes, because some of our team members were remote we decided to user LucidChart to capture and reference the story map.
+
+![User Story Map](tmp-storymap.png)
+
+
+
+### Prototypes
+
+* What do we need to learn next?
 
 #### Simple form
-	* This approach would require significant restructuring of our data model, and would also need new admin-facing tools to leverage this data. We decided we’d need to require customers to link related idea. **Challenge:** this adds a significant step for team members capturing feedback.
-	* While this approach seemed ideal (and we would later come back to this)…
-		2. Determine interaction flow - 2 approaches:
-			1. Multi-screen: User submits data each step of the way, drilling into each step
-			2. Form Builder: Single page form that includes all necessary steps
-		3. Autofill as much data as possible
-			1. Email
-			2. Source URL
-			3. Feedback
-		4.
-		5. Defensive Design
-			1. Validation, server-side errors
+This approach would require significant restructuring of our data model, and would also need new admin-facing tools to leverage this data. We decided we’d need to require customers to link related idea.
+
+**Challenge:** this adds a significant step for team members capturing feedback.
+
+While this approach seemed ideal (and we would later come back to this)…
+
+#### Determine interaction flow - 2 approaches:
+1. Multi-screen: User submits data each step of the way, drilling into each step
+2. Form Builder: Single page form that includes all necessary steps
+
+Autofill as much data as possible:
+1. Email
+2. Source URL
+3. Feedback
+
+#### Defensive Design
+Validation, server-side errors
+
+
+
 ## Outcomes
+
 #### New functionality
 1. Bookmarklet
 2. Improved user management & invitation flow
 3. New license type
+
 #### New source of revenue
 UserVoice was losing lots of sales opportunities where prospective customers wanted a tools for sales teams to capture feedback rather than providing a customer-facing feedback tool.
-	1. Doubled size of new deals. Rather than a handful of user licenses for new business, we started getting deals for hundreds of licenses.
-	2. Expansion/revenue model. Lead to new deals and expansion.
+
+1. Doubled size of new deals. Rather than a handful of user licenses for new business, we started getting deals for hundreds of licenses.
+2. Expansion/revenue model. Lead to new deals and expansion.
+
 #### Foundation for new features
 New channel that opened up opportunities for UserVoice to provide additional value to customers - internal status, roadmap, etc.
+
 ## Learnings and insights
+
 1. Employees didn’t have time to figure out how to organize the feedback. Only ask for what the team member knows.
 2. MVP bookmarklet was not enough. Difficulty installing. Users didn’t remember to open it.
 3. Ideas for next time
@@ -103,5 +184,22 @@ New channel that opened up opportunities for UserVoice to provide additional val
 	3. Rethink data model - not requiring ideas, ability to attribute feedback to organizations rather than just individuals…
 	4. Standalone UI - capturing feedback from phone calls didn’t originate from a webpage, so invoking a bookmarklet didn’t make sense.
 	5. SSO - sales and support teammates were already signed in to tools like Zendesk and Salesforce. Requiring them to also sign in to UserVoice with separate credentials seemed like an unnecessary step and a barrier for entry for some.
-## Acknowledgements / Footnotes
+
+
+## Appendix
+
+*For each customer call, I’d summarize learnings and create ideas in UserVoice but, just like the problems our customers expressing, I wasn’t able to easily capture quotes and feedback from those calls in UserVoice in a way that would make it easy to attribute that feedback to the customer.*
+
+*Internally, we were also running into our own issue for how to prioritize our product initiatives. When the leadership team would get together to discuss the top product improvements each team wanted, it was difficult to determine what was biased by recency. Sales would say they were losing deals because of “X”, and Support would say the biggest problem customers had was “Y”, but none of these could be backed up by the feedback we had in our system that customers had submitted directly.*
+
+
+- [ ] Timeline, year
+
+### Materials list
+1. LucidChart - User Story Mapping [1] & User flows
+2. Sketch - Wireframes & Mockups
+3. InVision - Internal Feedback & Prototyping
+4. Principle for Mac - Prototyping & Animation
+
+### Footnotes
 1. User Story Mapping - Jeff Patton
