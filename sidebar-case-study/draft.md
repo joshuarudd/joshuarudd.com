@@ -1,22 +1,23 @@
 # Case Study: UserVoice Sidebar
 
 ## Abstract
-… Become system of record for all product feedback.
-
-
+- [ ] … Become system of record for all product feedback.
 
 #### Problem
 A significant amount of customer feedback was coming through channels other than UserVoice.
 
 - [ ] When product and support/sales would get together to discuss priorities, it would be difficult to determine how much recency bias played in to the feedback they were conveying.
-	* “We’re losing sales because we don’t have X.”
-	* “The biggest problem customers have is X.”
+	- “We’re losing sales because we don’t have X.”
+	-  “The biggest problem customers have is X.”
 
 1. What are the top issues Sales teams are encountering?
 2. What
 
 #### Desired Outcome
-…
+
+- [ ] …
+
+
 
 #### Opportunity
 Provide a method to capture important feedback from other sources (e.g., support tickets, sales opportunities) into UserVoice.
@@ -112,11 +113,11 @@ After reviewing this assessment with the executive team, we decided the project 
 
 ### Further discovery
 
-Now that we had decided to tackle this problem, we had an endless stream of questions. Each ended up being a series of
+- [ ] Now that we had decided to tackle this problem, we had an endless stream of questions. Each ended up being a series of…
 
 Used UserVoice to identify customers with related problems, and used that list to set up customer calls and on-site interviews.
 
-![alt](image.png)
+![alt](feedback-flows.png)
 
 
 
@@ -125,45 +126,165 @@ Used UserVoice to identify customers with related problems, and used that list t
 
 ### User Story Mapping
 
-One exercise I use to help get everyone on the same page and is User Story Maps, a concept coined by Jeff Patton. <sup>[1](#fn1)</sup>
+One exercise I use to help get everyone on the same page and is User Story Mapping, a concept coined by Jeff Patton. [^1] I like user story mapping because it helps us focus on the steps necessary for a person to achieve a desired outcome.
+
+We created several user story maps for this project, each for a each person’s job to be done, but the primary one was to answer *How might a team member log a customer’s feedback?*
+
+
+
+![User Story Map](user-story-map-v1.png)
+
+
 
 While usually done on a whiteboard or wall with sticky notes, because some of our team members were remote we decided to user LucidChart to capture and reference the story map.
 
-![User Story Map](tmp-storymap.png)
+- [ ] Slice story map into releasable/testable chunks.
 
 
 
-### Prototypes
+### Concept Testing
 
 * What do we need to learn next?
+* Focus on most important workflow - getting information into UserVoice
 
-#### Simple form
+
+
+#### Concept 1: Simple form
+
+3 pieces of information
+
+1. Who the feedback was from
+2. What their feedback was
+3. Where they feedback came from (optional)
+
+
+
+
+
+##### Bad news from some key customers
+
 This approach would require significant restructuring of our data model, and would also need new admin-facing tools to leverage this data. We decided we’d need to require customers to link related idea.
 
 **Challenge:** this adds a significant step for team members capturing feedback.
 
 While this approach seemed ideal (and we would later come back to this)…
 
-#### Determine interaction flow - 2 approaches:
-1. Multi-screen: User submits data each step of the way, drilling into each step
-2. Form Builder: Single page form that includes all necessary steps
+
+
+![Revised User Story Map](user-story-map-v2.png)
+
+[Revised User Story Map]
+
+
+
+
+
+#### Concept 2: Multi-step form
+
+User submits data each step of the way, advancing to a new screen for each step
+
+Benefit of form builder was we could automatically display matching ideas based on the feedback rather than the team member clicking *Next.*
+
+![Multi-step form](multi-step-form@2x.png)
+
+[Multi-step form]
+
+#### Concept 3: Dynamic form
+
+Single page form that that includes all necessary steps, revealing new ones only if necessary
+
+![Dynamic form](dynamic-form@2x.png)
+
+[Dynamic form]
+
+* Combined benefit of initial form
+* Potential complexity
+
+
+
+
+
+### Iterative Design & Development
+
+#### Functional Prototype
+
+The purpose of the functional prototype was for the engineering team get a basic walking skeleton [^2] in place as fast as possible. This would give us the basis to start testing our assumptions as quickly as possible, and highlight any risk areas that might require increased effort.
+
+![flowchart](flowchart.png)
+
+![Functional Prototype – Annotated Interactions](functional-prototype-annotations@2x.png)
+
+[Annotated wireframes for functional prototype]
+
+![Functional Prototype – Validation](functional-prototype-validation@2x.png)
+
+[Validation scenarios for functional prototype]
+
+#### Interaction and Visual Design Iterations
+
+While engineering team was building the functional prototype, I began working on iterations for capturing feedback from within existing websites.
 
 Autofill as much data as possible:
 1. Email
 2. Source URL
 3. Feedback
 
-#### Defensive Design
-Validation, server-side errors
+![Feedback form visual design](mockup-form-states@2x.png)
+
+#### 
+
+![User Picker interaction design mockups](mockup-user-picker@2x.png)
+
+
+
+#### Navigation
+
+![Navigation Mockups](mockup-navigation@2x.png)
+
+![Navigation Animation](menu-animation.gif)
+
+
+
+
+
+### ~~MVP~~ MMP
+
+Minimum Marketable Product
+
+
+
+Needed to not only allow any employee at a company to capture customer feedback, but to also create value for our customers with this data.
+
+#### Top Ideas
+
+![Ranked Ideas Chart](idea-rank-chart@2x.png)
+
+![Top Ideas - First Pass](top-ideas-v1@2x.png)
+
+![Top Ideas - Second Pass](top-ideas-v2@2x.png)
+
+
+
+
+
+
+
+#### User Management
+
+…
 
 
 
 ## Outcomes
 
+
+
 #### New functionality
 1. Bookmarklet
 2. Improved user management & invitation flow
 3. New license type
+
+
 
 #### New source of revenue
 UserVoice was losing lots of sales opportunities where prospective customers wanted a tools for sales teams to capture feedback rather than providing a customer-facing feedback tool.
@@ -202,4 +323,4 @@ New channel that opened up opportunities for UserVoice to provide additional val
 4. Principle for Mac - Prototyping & Animation
 
 ### Footnotes
-1. User Story Mapping - Jeff Patton
+[^1]: [User Story Mapping](https://www.jpattonassociates.com/user-story-mapping/) by Jeff Patton
