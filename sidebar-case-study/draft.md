@@ -28,18 +28,34 @@ Create a browser plugin that would allow company employees to capture customer f
 - [ ] required new license type and supporting user management
 
 
+
+#### Role
+
+Product Manager & Lead Designer
+
+
+
+#### Timeline
+
+2015 - 2016
+
+
+
+
 ## Challenge
+#### Background
+
 UserVoice is a platform for gathering user feedback and making sense of it. From 2008 to 2015, the primary way UserVoice gathered feedback was by allowing companies to set up forums and embed widgets that their end-users could use to submit feedback and vote on ideas.
 
-The more feedback is in UserVoice, the easier it is for teams to discover the top unmet needs of their customers.
+The more feedback companies have in UserVoice, the easier it is for them to discover the top unmet needs of their customers.
 
-However, *UserVoice wasn’t the only way users were submitting feedback.* A significant amount of feedback companies were receiving was coming from channels other than UserVoice – most often through support tickets, chat, sales calls, as well as social media, online reviews, blog comments, etc.
+However, *UserVoice wasn’t the only way users were submitting feedback.* A significant amount of feedback companies were receiving was coming from channels other than UserVoice – most often through support tickets and sales calls, but also through chat, social media, online reviews, blog comments, and more.
 
 **Insight:** People are going to use whatever method is most accessible and convenient to them in the moment to give feedback.
 
 #### Observations
 
-When a person would give feedback to a sales or support agent, we observed two primary workarounds team members would use to get that feedback into UserVoice:
+When someone would request a feature or give feedback directly to a sales or support agent rather than submitting it through UserVoice, we observed two primary workarounds team members would use to get that feedback into UserVoice.
 
 1. One method was to tell their customer to go to the UserVoice forum to post the same feedback they’d already given. However, telling customers that had already given feedback to give it again using the forum was frustrating to both the customer and the team member. Their customers felt like their feedback was just going to a black hole since the person they were trying to get help from was just redirecting them, and team members reported to us that their customers would often no end up giving the feedback again in UserVoice.
 2. Another method we saw was for the team member to create an idea in UserVoice themselves with that customer’s feedback. Unfortunately, the current tools did not allow that feedback to be attributed to the customer who actually gave it (it was instead attributed to the team member who created it), making it difficult to differentiate between internal vs. customer feedback, reducing the value of other insights and segmentation tools.
@@ -54,14 +70,17 @@ How might we allow team members to continue using their existing tools and chann
 
 We saw an opportunity to *become the system of record for all product feedback.*
 
-We believed that if we could provide a method for team members capture important customer feedback from within the tools they were already using to communicate with customers, we would see an increase in the amount of customer feedback coming into UserVoice as well as improved quality of that data, giving us the ability to provide better insights for our customers.
+We believed that if we could provide a method for team members capture important feedback from customers within the same tools they were already using to communicate with customers, we would see 1) an increase in the amount of product feedback coming into UserVoice, and 2) improved quality of that data. With these, we could provide better insights for product teams, and empower them to make data-driven decisions.
+
+![alt](feedback-flows.png)
 
 ##### Business Goals
 
-1. Increase revenue through new business by addressing sales blockers related to capturing customer feedback.
-2. Increase renewals by expanding value of UserVoice beyond product teams and into sales and support teams.
+1. Increase revenue through new business by addressing the increasing number of sales blockers related to capturing customer feedback.
+2. Increase UserVoice’s average selling price (ASP)
+3. Reduce churn by expanding the value and usage of UserVoice beyond product teams.
 
-##### UX Goals
+##### Design Goals
 
 1. Be invisible to the end-user. People can continue to give feedback using whatever channels are at their disposal, and not have to get redirected to UserVoice in order to make sure their feedback is recorded.
 2. Feedback is always attributed to the person who gave it, allowing companies to leverage that data for greater insights.
@@ -71,22 +90,46 @@ We believed that if we could provide a method for team members capture important
 Constraints were not known at the beginning of the project, but we soon realized that our initial solution could not require us to rewrite our core data model (yet). This became a big challenge because it resulted in requiring additional steps for the team member capturing the customer’s feedback.
 
 
-## Roles
+
+
+## Role
 This project was unique experience for me because my role changed (due to product and engineering team restructuring) from product manager—where I performed generative research and opportunity assessment for this project—to lead designer as we began ideating, prototyping, and testing our solutions.
 
 As we moved towards building and testing, we formed a team of three engineers, a new product manager, and myself as lead designer. We committed to weekly sprints.
 
 
-## Process
-Generative Research -> Opportunity Assessment -> Discovery -> User Story Mapping -> Prototyping -> Testing -> Iteration
 
-[Illustration of process flow]
+## Process
+
+1. Generative research
+2. Opportunity assessment
+3. Further discovery
+4. User Story Mapping
+5. Concept testing
+6. Iterative design and development
+7. MMP
+
+![Illustration of process flow]()
+
+
 
 ### Generative Research
 
-We didn’t set out to solve this problem, but through dozens of ongoing customer interviews discussing how they used the product, what their desired outcomes were, and what challenges they had along the way, some common themes began to emerge. At the time, we were getting close to releasing a major overhaul of our admin tools.
+In the spring and summer of 2015, while testing a major overhaul of our admin tools, I spent a considerable amount of time conducting customer interviews to learn how they used the product, what their teams’ workflows were, how UserVoice helped them get their job done, and what challenges they had along the way. 
 
-As some patterns emerged, I also met with our Sales and Support execs to see if they’d heard similar feedback from customers and prospects. They did, and offered some valuable insights about how they were trying to achieve the same results using other tools and processes.
+When a customer would bring up an issue or make a request, I’d follow up with some questions:
+
+- What is your suggested solution? 
+- What goal does this help you achieve? 
+- What are you doing today to achieve/overcome it? 
+
+
+
+While customers’ suggested solutions were most often not how we’d address their problems, it did give us big insight into what *they* thought would be helpful. Additional *why* questions helped reveal the root of the issue – but ==the biggest eye openers were always *learning what their goals were,* and *what they were doing today to achieve their goals.*== If we could help them achieve their goals faster and more effectively, then there might be an opportunity for us.
+
+Several themes emerged very quickly during this research. Our sales and support execs said they’d heard similar feedback from customers and prospects, and offered valuable insights about how additional customers were trying to achieve the same results using other tools and processes.
+
+
 
 ### Opportunity Assessment
 
@@ -94,7 +137,7 @@ Once I had a general idea of the unmet needs our customers were having, we neede
 
 > The purpose of a good product opportunity assessment is either to a) prevent the company from wasting time and money on poor opportunities; or b) for those that are good opportunities, to understand what will be required to succeed.
 
-[Assessing Product Opportunities](https://svpg.com/assessing-product-opportunities/), by Marty Cagan
+*[Assessing Product Opportunities](https://svpg.com/assessing-product-opportunities/), by Marty Cagan*
 
 Our assessment set out to answer these 10 questions:
 
@@ -109,36 +152,48 @@ Our assessment set out to answer these 10 questions:
 9. What factors are critical to success? (solution requirements)
 10. Given the above, what’s the recommendation? (go or no-go)
 
+
+
 After reviewing this assessment with the executive team, we decided the project was a go.
 
-### Further discovery
-
-- [ ] Now that we had decided to tackle this problem, we had an endless stream of questions. Each ended up being a series of…
-
-Used UserVoice to identify customers with related problems, and used that list to set up customer calls and on-site interviews.
-
-![alt](feedback-flows.png)
 
 
+### Further Discovery
 
-- [ ] What channels were people primarily using?
-	* Zendesk, Salesforce, UserVoice Tickets, Intercom, bespoke solutions
+Now that we had decided to tackle this opportunity, we had an endless stream of questions. Using the feedback we already had in our own UserVoice account I was able to identify customers with related unmet needs, and used that list to set up customer calls and on-site interviews.
+
+One of the primary questions we had was, **What tools are sales and support teams already using to communicate with customers?**
+
+We learned that Zendesk and Salesforce were at the most common tools, but there were so many others (including UserVoice Tickets, Intercom, Gmail, and bespoke solutions) that we felt like creating an integration with a single product might limit the number of customers we could deliver a solution for.
+
+We decided to build a basic solution that could work anywhere, and focus on tighter integrations later. Now we just needed to figure out what that experience would be.
+
+
 
 ### User Story Mapping
 
-One exercise I use to help get everyone on the same page and is User Story Mapping, a concept coined by Jeff Patton. [^1] I like user story mapping because it helps us focus on the steps necessary for a person to achieve a desired outcome.
+One exercise I use to help get PMs, designers, and engineers on the same page is User Story Mapping, a concept coined by Jeff Patton. [^1] ==I like user story mapping because it helps the team focus on the steps necessary for a person to achieve a desired outcome.==
 
-We created several user story maps for this project, each for a each person’s job to be done, but the primary one was to answer *How might a team member log a customer’s feedback?*
+We identified four primary personas/roles impacted by this project:
+
+1. The Customer
+2. The Support Agent
+3. The Support Manager
+4. The Product Manager
 
 
+
+We created several user story maps for this project, one for each person’s job to be done, but the primary one was to answer *How might a support agent log customer feedback?*
 
 ![User Story Map](user-story-map-v1.png)
 
+*User Story Map – Support Agent*
 
 
-While usually done on a whiteboard or wall with sticky notes, because some of our team members were remote we decided to user LucidChart to capture and reference the story map.
 
-- [ ] Slice story map into releasable/testable chunks.
+(I prefer to create user story maps on a whiteboard or wall with sticky notes, but because some of our team members were remote we decided to use LucidChart so everyone could contribute and reference it.)
+
+Once we got all the tasks down, we “sliced” them into releasable/testable chunks.
 
 
 
@@ -151,13 +206,15 @@ While usually done on a whiteboard or wall with sticky notes, because some of ou
 
 #### Concept 1: Simple form
 
-3 pieces of information
+The first concept I came up focussed on what we believed to be only the most essential information needed:
 
-1. Who the feedback was from
-2. What their feedback was
-3. Where they feedback came from (optional)
+1. **Who** the feedback was from.
+2. **What** their feedback was.
+3. **Where** they feedback came from (optional).
 
+Behind the scenes, we also knew who was logging the feedback on behalf of the customer, but we didn’t need to ask for this information.
 
+![Simple Form Concept](concept-simple-form@2x.png)
 
 
 
@@ -185,15 +242,17 @@ User submits data each step of the way, advancing to a new screen for each step
 
 Benefit of form builder was we could automatically display matching ideas based on the feedback rather than the team member clicking *Next.*
 
-![Multi-step form](multi-step-form@2x.png)
+![Multi-step form](concept-multi-step-form@2x.png)
 
-[Multi-step form]
+[Concept 2: Multi-step form]
+
+
 
 #### Concept 3: Dynamic form
 
 Single page form that that includes all necessary steps, revealing new ones only if necessary
 
-![Dynamic form](dynamic-form@2x.png)
+![Dynamic form](concept-dynamic-form@2x.png)
 
 [Dynamic form]
 
@@ -215,6 +274,10 @@ The purpose of the functional prototype was for the engineering team get a basic
 ![Functional Prototype – Annotated Interactions](functional-prototype-annotations@2x.png)
 
 [Annotated wireframes for functional prototype]
+
+
+
+![Functional Prototype](functional-prototype@2x.png)
 
 ![Functional Prototype – Validation](functional-prototype-validation@2x.png)
 
