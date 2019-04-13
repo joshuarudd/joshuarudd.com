@@ -117,7 +117,7 @@ As we moved towards building and testing, we formed a team of three engineers, a
 
 In the spring and summer of 2015, while testing a major overhaul of our admin tools, I spent a considerable amount of time conducting customer interviews to learn how they used the product, what their teams’ workflows were, how UserVoice helped them get their job done, and what challenges they had along the way. 
 
-When a customer would bring up an issue or make a request, I’d follow up with some questions:
+When a customer would bring up an issue or make a request, I’d follow up with the following questions:
 
 - What is your suggested solution? 
 - What goal does this help you achieve? 
@@ -127,17 +127,17 @@ When a customer would bring up an issue or make a request, I’d follow up with 
 
 While customers’ suggested solutions were most often not how we’d address their problems, it did give us big insight into what *they* thought would be helpful. Additional *why* questions helped reveal the root of the issue – but ==the biggest eye openers were always *learning what their goals were,* and *what they were doing today to achieve their goals.*== If we could help them achieve their goals faster and more effectively, then there might be an opportunity for us.
 
-Several themes emerged very quickly during this research. Our sales and support execs said they’d heard similar feedback from customers and prospects, and offered valuable insights about how additional customers were trying to achieve the same results using other tools and processes.
+Several themes emerged very quickly during this research. Our sales and support execs said they’d heard similar feedback from customers and prospects, and offered valuable insights about how additional customers and prospective buyers were trying to achieve similar results.
 
 
 
 ### Opportunity Assessment
 
-Once I had a general idea of the unmet needs our customers were having, we needed to decide if this was a problem we should tackle. I’m a huge Marty Cagan fan, and used his template for Product Opportunity Assessments.
-
 > The purpose of a good product opportunity assessment is either to a) prevent the company from wasting time and money on poor opportunities; or b) for those that are good opportunities, to understand what will be required to succeed.
 
 *[Assessing Product Opportunities](https://svpg.com/assessing-product-opportunities/), by Marty Cagan*
+
+Once I had a general idea of the unmet needs our customers were having, we needed to decide if this was a problem we should tackle. I’m a huge Marty Cagan fan, and used his template for Product Opportunity Assessments.
 
 Our assessment set out to answer these 10 questions:
 
@@ -158,11 +158,13 @@ After reviewing this assessment with the executive team, we decided the project 
 
 
 
-### Further Discovery
+### What do we need to learn next?
 
-Now that we had decided to tackle this opportunity, we had an endless stream of questions. Using the feedback we already had in our own UserVoice account I was able to identify customers with related unmet needs, and used that list to set up customer calls and on-site interviews.
+Now that we had decided to tackle this opportunity, we had an endless stream of questions.
 
-One of the primary questions we had was, **What tools are sales and support teams already using to communicate with customers?**
+Using the feedback we already had in our own UserVoice account I was able to identify customers with related unmet needs, and used that list to set up customer calls and on-site interviews.
+
+One of the initial questions we had was, **What tools are sales and support teams already using to communicate with customers?**
 
 We learned that Zendesk and Salesforce were at the most common tools, but there were so many others (including UserVoice Tickets, Intercom, Gmail, and bespoke solutions) that we felt like creating an integration with a single product might limit the number of customers we could deliver a solution for.
 
@@ -172,9 +174,11 @@ We decided to build a basic solution that could work anywhere, and focus on tigh
 
 ### User Story Mapping
 
-One exercise I use to help get PMs, designers, and engineers on the same page is User Story Mapping, a concept coined by Jeff Patton. [^1] ==I like user story mapping because it helps the team focus on the steps necessary for a person to achieve a desired outcome.==
+One exercise I use to help get PMs, designers, and engineers on the same page is User Story Mapping, a concept coined by Jeff Patton. [^1] ==I like user story mapping because it helps the team focus on the steps necessary for a person to achieve their desired outcome.==
 
-We identified four primary personas/roles impacted by this project:
+[^1]: [User Story Mapping](https://www.jpattonassociates.com/user-story-mapping/) by Jeff Patton
+
+We identified four primary personas/roles impacted by this project and created user story maps for each:
 
 1. The Customer
 2. The Support Agent
@@ -183,83 +187,111 @@ We identified four primary personas/roles impacted by this project:
 
 
 
-We created several user story maps for this project, one for each person’s job to be done, but the primary one was to answer *How might a support agent log customer feedback?*
+The primary one was to answer *How might a support agent log customer feedback?*
 
 ![User Story Map](user-story-map-v1.png)
 
 *User Story Map – Support Agent*
 
-
-
 (I prefer to create user story maps on a whiteboard or wall with sticky notes, but because some of our team members were remote we decided to use LucidChart so everyone could contribute and reference it.)
 
-Once we got all the tasks down, we “sliced” them into releasable/testable chunks.
+Once we got all the tasks, risks, and questions down, we “sliced” them into releasable/testable chunks, prioritized by what we needed to learn next.
 
 
 
 ### Concept Testing
 
-* What do we need to learn next?
-* Focus on most important workflow - getting information into UserVoice
+Once we had the user story map, our engineers were able to start exploring a lot of the technical requirements needed to deliver a solution, and I set out to put together some quick wireframe concepts to test both internally and with select customers.
 
 
 
 #### Concept 1: Simple form
 
-The first concept I came up focussed on what we believed to be only the most essential information needed:
+The first concept focussed on only asking support agents for the most essential information needed: [^2]
+
+[^2]: Behind the scenes, we also knew who was logging the feedback on behalf of the customer, but we didn’t need to ask for this information.
 
 1. **Who** the feedback was from.
 2. **What** their feedback was.
 3. **Where** they feedback came from (optional).
 
-Behind the scenes, we also knew who was logging the feedback on behalf of the customer, but we didn’t need to ask for this information.
-
 ![Simple Form Concept](concept-simple-form@2x.png)
 
+*Concept 1: Simple form*
 
+##### Pros
 
-##### Bad news from some key customers
+1. This experience required minimal interaction and could be delivered very quickly.
+2. Support agents only had to provide information they already had.
+3. In many cases we could automatically populate every field for them.
 
-This approach would require significant restructuring of our data model, and would also need new admin-facing tools to leverage this data. We decided we’d need to require customers to link related idea.
+##### Cons
 
-**Challenge:** this adds a significant step for team members capturing feedback.
+However, this direction would introduce some risk factors with the existing data model that would also require us to create new admin-facing tools. While we ultimately felt we needed to also simplify our data model, we weren’t confident this was the right time to do it. [^3]
 
-While this approach seemed ideal (and we would later come back to this)…
+[^3]: Up to this point, the primary object in UserVoice were aggregate *ideas,* which were essentially forum topics that could be voted and commented on by others. The kind of feedback support agents would be logging were private and would not be visible to other customers. And at the time, there wasn’t any UI for managing large sets of uncategorized bits of feedback.
 
+In addition, two of our key customers wanted their support agents to link the feedback they were logging to existing ideas in their UserVoice accounts. Without other admin-facing tools to leverage feedback not linked to ideas This approach would require significant restructuring of our data model, and would also need new admin-facing tools to leverage this data. 
 
+##### Takeaway
+
+While we preferred the UX of this direction most, we would have to rework a lot of our infrastructure to deliver valuable insights for our customers. We ultimately wanted to do this work, but it wasn’t the right time.
+
+We decided to require support agents to link feedback to a related idea, so we went back to our user story map and added some additional tasks.
 
 ![Revised User Story Map](user-story-map-v2.png)
 
-[Revised User Story Map]
-
-
+*Revised User Story Map*
 
 
 
 #### Concept 2: Multi-step form
 
-User submits data each step of the way, advancing to a new screen for each step
+For the next concept, we tried to keep the simplicity of the first one, but add a second step which would ask the support agent to link to a related idea, or create a new idea if an existing one didn’t exist.
 
-Benefit of form builder was we could automatically display matching ideas based on the feedback rather than the team member clicking *Next.*
+This flow was somewhat similar to our end-user-facing widget, which would ask the person to enter their feedback, click next, and then display a list of related ideas (if any existed). If one did, they could vote for it instead of creating a new idea in the system.
 
 ![Multi-step form](concept-multi-step-form@2x.png)
 
-[Concept 2: Multi-step form]
+*Concept 2: Multi-step form*
+
+##### Pros
+
+1. Similar experience to end-user-facing widget.
+2. Less visual complexity than Concept 3 on each step of the form.
+
+##### Cons
+
+1. It wasn’t obvious to testers that there was a second step, or how many more steps there would be.
+2. Initial engineering estimates were higher than we hoped.
+
+##### Takeaway
+
+…
 
 
 
 #### Concept 3: Dynamic form
 
-Single page form that that includes all necessary steps, revealing new ones only if necessary
+The third concept was created in tandem with the second, but focussed on providing a single-page form that displayed related ideas on the same screen as the feedback field.
 
 ![Dynamic form](concept-dynamic-form@2x.png)
 
-[Dynamic form]
+*Concept 3: Dynamic form*
 
-* Combined benefit of initial form
-* Potential complexity
+##### Pros
 
+1. Agent could see all fields they needed to enter on a single screen.
+2. In cases where the feedback field was auto-populated, we could immediately display related ideas rather than the support agent having advance the form (in Concept 2).
 
+##### Cons
+
+1. Would require a lot more fitness and conditional logic to get the interaction and experience just right.
+2. Potentially confusing experience switching between linking an existing idea and creating a new one.
+
+##### Takeaway
+
+Based on positive tests both internally and with customers, we decided to give this direction a try despite the added complexity.
 
 
 
@@ -267,30 +299,37 @@ Single page form that that includes all necessary steps, revealing new ones only
 
 #### Functional Prototype
 
-The purpose of the functional prototype was for the engineering team get a basic walking skeleton [^2] in place as fast as possible. This would give us the basis to start testing our assumptions as quickly as possible, and highlight any risk areas that might require increased effort.
+Alongside the concept work, the engineering team starting working on a “walking skeleton” [^4] version of the support agent’s experience. It included only the functionality necessary for the support agent to successfully log their customer’s feedback, and gave us the basis to start testing our assumptions as quickly as possible, and highlight any risk areas.
 
-![flowchart](flowchart.png)
+[^4]: (Define walking skeleton…)
 
 ![Functional Prototype – Annotated Interactions](functional-prototype-annotations@2x.png)
 
-[Annotated wireframes for functional prototype]
+*Annotated wireframes for functional prototype*
 
 
 
 ![Functional Prototype](functional-prototype@2x.png)
 
+*Caption…*
+
 ![Functional Prototype – Validation](functional-prototype-validation@2x.png)
 
-[Validation scenarios for functional prototype]
+*Validation scenarios for functional prototype*
+
+
 
 #### Interaction and Visual Design Iterations
 
 While engineering team was building the functional prototype, I began working on iterations for capturing feedback from within existing websites.
 
-Autofill as much data as possible:
-1. Email
-2. Source URL
-3. Feedback
+1. Available on any website - settled on a “sidebar” experience.
+2. Autofill as much data as possible:
+   1. Email
+   2. Source URL
+   3. Feedback
+
+![flowchart](flowchart.png)
 
 ![Feedback form visual design](mockup-form-states@2x.png)
 
@@ -386,4 +425,3 @@ New channel that opened up opportunities for UserVoice to provide additional val
 4. Principle for Mac - Prototyping & Animation
 
 ### Footnotes
-[^1]: [User Story Mapping](https://www.jpattonassociates.com/user-story-mapping/) by Jeff Patton
