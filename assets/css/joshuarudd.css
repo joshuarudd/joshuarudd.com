@@ -1,5 +1,5 @@
 @import url('https://rsms.me/inter/inter.css');
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600,700');
+/* @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600,700'); */
 
 html {
   box-sizing: border-box;
@@ -15,22 +15,62 @@ body {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 36em) {
+  body {
+    font-size: 14px;
+  }
+}
 
+a {
+  color: rgba(29,34,36,1);
+}
 
-
-.wrapper {
+.container {
   margin: 0 auto;
   padding: 0 1em;
-  max-width: 105ex;
+  max-width: 1028px;
 }
 
 header {
-  /* display: flex; */
-  /* flex-flow: row wrap; */
-  /* font-size: 18px; */
-  /* font-weight: 300; */
-  /* max-width: 105ex; */
-  margin: 3em auto;
+  margin: 6rem auto;
+}
+
+  header h1 {
+    display: none;
+  }
+
+  .bio a {
+    font-weight: 400;
+  }
+
+  .bio p:first-child {
+    font-size: 1.25em;
+  }
+
+  .avatar {
+    border-radius: 100%;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 228px;
+  }
+
+@media (max-width: 36em) {
+  header {
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+  .avatar {
+    max-width: 120px;
+  }
+  .bio {
+    font-size: 16px;
+    padding-top: 2rem;
+  }
+}
+
+section {
+  margin-bottom: 3rem;
 }
 
 footer {
@@ -38,37 +78,11 @@ footer {
   padding: 1px;
 }
 
-section {
-  margin-bottom: 3em;
-}
-
-a:link {
-  color: rgba(29,34,36,1);
-  /* font-weight: 400; */
-}
-
-header .avatar {
-  border-radius: 100%;
-  margin: 0 auto;
-  display: block;
-  width: 100%;
-  max-width: 228px;
-}
-
-.bio {
-  padding-top: 3.5em;
-}
-
-
-  .bio p:first-child {
-    font-size: 24px;
-  }
-
 .microheader {
   color: rgba(58,118,156,1);
   font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: .75px;
   text-transform: uppercase;
   margin: 0 0 .5em 0;
 }
@@ -76,12 +90,16 @@ header .avatar {
 .tinylist {
   font-size: 12px;
   list-style: none;
-  margin: 0 0 60px 0;
+  margin: 0 0 3rem 0;
   padding: 0;
+}
+@media (max-width: 36em) {
+  .tinylist {
+    font-size: 14px;
+  }
 }
 
   .tinylist li {
-    /* padding: 0; */
     margin-bottom: .5em;
   }
 
@@ -92,37 +110,19 @@ header .avatar {
 .experience {
   font-size: 14px;
   list-style: none;
-  margin: 1em 0 60px 0;
+  margin: 2rem 0 3rem 0;
   padding: 0;
 }
 
   .experience li {
     background-image: linear-gradient(90deg, rgba(0, 135, 143, .1) 2px, rgba(255, 255, 255, 0) 0);
     background-position: calc(1.5em - 1px);
-    /* background-size: 3px 3px; */
-    padding: 0 0 4em 4em;
+    padding: 0 0 3rem 4em;
     position: relative;
   }
   .experience li:last-child {
     background: none;
-  }
-
-  .experience .role {
-    font-size: 14px;
-  }
-  .experience .duration,
-  .experience .location {
-    font-size: 14px;
-    line-height: 1.5em;
-    color: rgba(58,118,156,1);
-  }
-  .experience .summary,
-  .experience .org {
-    font-size: 14px;
-  }
-
-  .summary {
-    margin-top: 1em;
+    padding-bottom: 0;
   }
 
   .experience img {
@@ -133,6 +133,15 @@ header .avatar {
     left: 0;
     height: 3em;
     width: 3em;
+  }
+
+  .experience .duration,
+  .experience .location {
+    color: rgba(58,118,156,1);
+  }
+
+  .summary {
+    margin-top: 1em;
   }
 
 
