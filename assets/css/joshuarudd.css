@@ -87,8 +87,9 @@ header .avatar {
 }
 
   .experience li {
-    background-image: linear-gradient(90deg, rgba(250,184,31,.33) 1px, rgba(255, 255, 255, 0) 1px);
-    background-position: 1.5em;
+    background-image: linear-gradient(90deg, rgba(0, 135, 143, .1) 2px, rgba(255, 255, 255, 0) 0);
+    background-position: calc(1.5em - 1px);
+    /* background-size: 3px 3px; */
     padding: 0 0 60px 72px;
     position: relative;
   }
