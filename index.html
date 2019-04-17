@@ -39,6 +39,7 @@
   <link href="https://www.google.com/accounts/o8/ud" rel="openid.server">
   <link href="https://www.google.com/profiles/joshuarudd" rel="openid.delegate">
   <link rel="icon" type="image/png" href="http://www.gravatar.com/avatar/703b0153c2074b56b9bc34f37ee2b986.png?s=16">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
   <link rel="stylesheet" href="/assets/css/typeset.css">
   <link rel="stylesheet" href="/assets/css/joshuarudd.css">
 
@@ -60,11 +61,11 @@
 
 <body>
   <header>
-    <div class="row">
-      <div class="column _33">
+    <div class="grid wrapper">
+      <div class="col-4 _xs-12">
         <img class="avatar" src="/assets/images/joshua-rudd-silvertone.png" alt="Joshua Rudd">
       </div>
-      <div class="bio column _66 typeset">
+      <div class="bio typeset col-8 _xs-12">
         <p>Hi, I’m Joshua Rudd, an outcome-driven strategist and designer focussed on helping people identify and solve real&nbsp;problems.</p>
         <p>For over 20 years I’ve helped organizations created products, processes, and deliver products lorem ipsum dolor sit amet, focus on accessibility scalability, communication consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat.</p>
         <p>You can find me on <a href="https://www.linkedin.com/in/joshuarudd/">LinkedIn</a>, <a href="https://twitter.com/joshuarudd">Twitter</a>, <a href="https://github.com/joshuarudd">GitHub</a>, or out and about in Cary, North Carolina. Feel free to get in touch with me via&nbsp;<a href="javascript:location='mailto:\u006a\u006f\u0073\u0068\u0075\u0061\u0040\u006a\u006f\u0073\u0068\u0075\u0061\u0072\u0075\u0064\u0064\u002e\u0063\u006f\u006d';void 0">email</a>.</p>
@@ -72,47 +73,46 @@
     </div>
   </header>
 
-  <section>
+  <!-- <section>
     <h2 class="microheader centered">Selected Work</h2>
-    <div class="row">
-      <figure class="column">
+    <div class="grid wrapper">
+      <figure class="col">
         <a href="#">
           <img src="https://imgplaceholder.com/420x320" alt="">
           <figcaption>UserVoice Design System</figcaption>
         </a>
       </figure>
-      <figure class="column">
+      <figure class="col">
         <a href="#">
           <img src="https://imgplaceholder.com/420x320" alt="">
           <figcaption>UserVoice Sidebar</figcaption>
         </a>
       </figure>
-      <figure class="column">
+      <figure class="col">
         <a href="#">
           <img src="https://imgplaceholder.com/420x320" alt="">
           <figcaption>Typeset.css</figcaption>
         </a>
       </figure>
     </div>
-  </section>
+  </section> -->
 
-  <div class="row _reverse">
-    <section class="column _66">
+  <div class="grid-reverse wrapper">
+    <section class="col-7 _xs-12" data-push-right="off-1 _xs-0">
       <h2 class="microheader">Experience</h2>
       <ul class="experience">
         <li>
           <div class="role">
-            <a href="javascript:location='mailto:\u006a\u006f\u0073\u0068\u0075\u0061\u0040\u006a\u006f\u0073\u0068\u0075\u0061\u0072\u0075\u0064\u0064\u002e\u0063\u006f\u006d';void 0">
-              <strong>Contact me!</strong>
-              <img class="org-img" src="/assets/images/new.svg" alt="">
-            </a>
+            <strong>Available for hire</strong>
+            <img class="org-img" src="/assets/images/new.svg" alt="">
           </div>
-          <div class="location">Available for hire.</div>
-          <p>Let’s do great things together.</p>
+          <!-- <div class="location">Available for hire.</div> -->
+          <div class="typeset">
+            <p>Together we can do great things. <a href="javascript:location='mailto:\u006a\u006f\u0073\u0068\u0075\u0061\u0040\u006a\u006f\u0073\u0068\u0075\u0061\u0072\u0075\u0064\u0064\u002e\u0063\u006f\u006d';void 0">Contact me!</a></p>
+          </div>
           <!-- <div class="location">I prefer working either remotely with a fully distributed team, or co-located in Raleigh/Durham, North Carolina</div> -->
         </li>
         <li>
-          <!-- <div class="role"><strong>VP, Product</strong></div> -->
           <div>
             Sabbatical
             <img class="org-img" src="/assets/images/noun_Energy_1646073.svg" alt="">
@@ -129,7 +129,9 @@
           </div>
           <div class="duration">Nov 2015 – Dec 2018 (3 yrs 2 mos)</div>
           <div class="location">Raleigh, North Carolina</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <!-- <div class="summary typeset">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div> -->
         </li>
         <li>
           <div class="role"><strong>VP, Product</strong></div>
@@ -213,7 +215,7 @@
         </li>
       </ul>
     </section>
-    <section class="column _33">
+    <section class="col-3 _xs-12" data-push-right="off-1 _xs-0">
       <h2 class="microheader">Methods</h2>
       <ul class="tinylist">
         <li>Design Thinking</li>
@@ -246,15 +248,15 @@
         <li>HTML, CSS, Javascript</li>
         <li>PHP, Ruby on Rails</li>
       </ul>
-      <h2 class="microheader">Download</h2>
+      <!-- <h2 class="microheader">Download</h2>
       <ul class="tinylist">
         <li><a href="#">Download resume</a></li>
-      </ul>
+      </ul> -->
     </section>
   </div>
 
-  <footer>
+  <!-- <footer>
     <p>Sharing is good. Stealing is bad.</p>
-  </footer>
+  </footer> -->
 
 </body>
