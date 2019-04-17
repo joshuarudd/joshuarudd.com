@@ -1,47 +1,176 @@
-@import url(../icomoon90396/style.css);
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600,700');
+
+html {
+  box-sizing: border-box;
+}
 
 body {
-  background: url(../images/killian-jump-golden-gate-bridge.jpg) center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  border-top: 12px solid rgba(250,184,31,1);
+  color: rgba(29,34,36,1);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
-.icon-text {
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  display: inline-block;
-  width: 0;
+
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 105ex;
 }
 
-.lets-get-social {
-  background: rgba(0,0,0,.5);
-  color: white;
-  font-size: 42px;
-/*   padding: 24px 10px 16px; */
-  position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+header {
+  /* display: flex; */
+  /* flex-flow: row wrap; */
+  /* font-size: 18px; */
+  /* font-weight: 300; */
+  /* max-width: 105ex; */
+  margin: 3em auto;
+}
+
+footer {
+  background: rgba(240, 240, 240, 1);
+  padding: 1px;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+a:link {
+  color: rgba(29,34,36,1);
+  /* font-weight: 400; */
+}
+
+header .avatar {
+  border-radius: 100%;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 228px;
+}
+
+.bio {
+  padding-top: 3.5em;
+}
+
+
+  .bio p:first-child {
+    font-size: 24px;
+  }
+
+.microheader {
+  color: rgba(58,118,156,1);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 .5em 0;
+}
+
+.tinylist {
+  font-size: 12px;
+  list-style: none;
+  margin: 0 0 60px 0;
+  padding: 0;
+}
+
+  .tinylist li {
+    /* padding: 0; */
+    margin-bottom: .5em;
+  }
+
+.centered {
   text-align: center;
 }
 
-  .lets-get-social a {
-    color: inherit;
-    display: inline-block;
-    margin: .57em .5em .38em;
-    text-decoration: none;
-    width: 1em;
-  }
-  
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-  
-  .lets-get-social {
-    font-size: 21px;
-  }
-  
+.experience {
+  font-size: 14px;
+  list-style: none;
+  margin: 1em 0 60px 0;
+  padding: 0;
 }
+
+  .experience li {
+    background-image: linear-gradient(90deg, rgba(0, 135, 143, .1) 2px, rgba(255, 255, 255, 0) 0);
+    background-position: calc(1.5em - 1px);
+    /* background-size: 3px 3px; */
+    padding: 0 0 4em 4em;
+    position: relative;
+  }
+  .experience li:last-child {
+    background: none;
+  }
+
+  .experience .role {
+    font-size: 14px;
+  }
+  .experience .duration,
+  .experience .location {
+    font-size: 14px;
+    line-height: 1.5em;
+    color: rgba(58,118,156,1);
+  }
+  .experience .summary,
+  .experience .org {
+    font-size: 14px;
+  }
+
+  .summary {
+    margin-top: 1em;
+  }
+
+  .experience img {
+    background: white;
+    padding: .5em 0;
+    position: absolute;
+    top: -.5em;
+    left: 0;
+    height: 3em;
+    width: 3em;
+  }
+
+
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+  figure img {
+    display: block;
+    width: 100%;
+  }
+
+figcaption {
+  font-size: 12px;
+  text-align: center;
+}
+
+
+
+/* .row {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.row._reverse {
+  flex-flow: row-reverse nowrap;
+}
+
+.column {
+  flex-basis: 100%;
+  margin: 0 1rem;
+}
+.column._33 {
+  flex-basis: 33%;
+}
+.column._66 {
+  flex-basis: 66%;
+} */
