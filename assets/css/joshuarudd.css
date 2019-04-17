@@ -1,6 +1,10 @@
 @import url('https://rsms.me/inter/inter.css');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600,700');
 
+html {
+  box-sizing: border-box;
+}
+
 body {
   border-top: 12px solid rgba(250,184,31,1);
   color: rgba(29,34,36,1);
@@ -13,11 +17,11 @@ body {
 }
 
 header {
-  display: flex;
-  flex-flow: row wrap;
+  /* display: flex; */
+  /* flex-flow: row wrap; */
   /* font-size: 18px; */
   /* font-weight: 300; */
-  max-width: 105ex;
+  /* max-width: 105ex; */
   margin: 3em auto;
 }
 
@@ -131,52 +135,29 @@ figcaption {
   text-align: center;
 }
 
-.grid {
+
+
+.row {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+/*   justify-content: space-between; */
+  /* max-width: calc(140ex); */
+  max-width: 960px;
+  margin: 0 auto;
 }
-.grid.reverse {
-  flex-flow: row-reverse wrap;
+.row._reverse {
+  flex-flow: row-reverse nowrap;
 }
 
-  .cell {
-    display: block;
-  }
-
-  .x2 .cell {
-    flex: calc(100% / 2);
-  }
-  .x3 .cell {
-    flex: calc(100% / 3);
-  }
-  .x3 .cell.w2 {
-    flex: calc(100% / 3 * 2);
-  }
-  .x4 .cell {
-    flex: calc(100% / 4);
-  }
-  @media all and (max-width: calc(600px)) {
-    .x4 .cell { flex: calc(100% / 2); }
-  }
-
-
-  .g1-3 {
-    flex: calc(100% / 3);
-    max-width: 35ex;
-    /* padding: 0 10px; */
-  }
-
-  .g2-3 {
-    flex: calc(100% / 3 * 2);
-    max-width: 70ex;
-    /* margin: 0 10px; */
-  }
-
-
-
-
-
-
-  .grid figcaption {
-    flex: 100%;
-  }
+.column {
+  flex-basis: 100%;
+  /* background: gray; */
+  margin: 0 1rem;
+/*   min-width: 70ex */
+}
+.column._33 {
+  flex-basis: 33%;
+}
+.column._66 {
+  flex-basis: 66%;
+}
