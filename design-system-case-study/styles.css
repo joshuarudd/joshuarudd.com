@@ -1,32 +1,38 @@
 /* @import url('https://rsms.me/inter/inter.css'); */
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600,700|Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700|Noto+Sans');
 
 body {
-  font-family: 'Inter', sans-serif;
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
+  /* font-family: 'Inter', sans-serif; */
+  /* font-size: 20px; */
+  /* font-weight: 300; */
+  /* margin: 0; */
+  /* padding: 0; */
 }
 @media all and (max-width: calc(600px)) {
-  body { font-size: 18px; }
+  /* body { font-size: 18px; } */
 }
 @media all and (max-width: calc(400px)) {
-  body { font-size: 16px; }
+  /* body { font-size: 16px; } */
 }
 /* @supports (font-variation-settings: normal) { */
   /* body { font-family: 'Inter var', sans-serif; } */
 /* } */
 
 article {
-  color: rgba(0,0,0,.8);
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 400;
+  /* color: rgba(0,0,0,.8); */
+  /* font-family: 'Noto Serif TC', serif; */
+  /* font-weight: 300; */
   margin: 0 auto;
 }
 
 header {
-  font-size: 24px;
-  padding: 6em 0 2em 0;
+  /* font-size: 24px; */
+  /* padding: 6em 0 2em 0; */
+}
+
+.hr {
+  border-top: 1px solid lightgray;
+  padding-top: 2rem;
 }
 
 figure {
@@ -43,12 +49,12 @@ figure {
   padding: 0 1.5em;
 }
 
-.typeset header h1, .byline {
+.title {
   text-align: center;
-  margin: 0;
+  /* margin: 0; */
 }
 
-.typeset .hero {
+/* .typeset .hero {
   background-image: url('design-system-colors@2x.png');
   background-position: 50% 0;
   background-repeat: no-repeat;
@@ -56,20 +62,36 @@ figure {
   height: 400px;
   margin: 0 auto !important;
   max-width: 1267px;
-}
+} */
 
-section {
-  margin: 0 auto;
-  max-width: 70ex; /* Trying to keep lines approximately 12 words long. */
-  padding: 0 1.5em;
+/* section { */
+  /* margin: 0 auto; */
+  /* max-width: 70ex; */
+  /* padding: 0 1.5em; */
+/* } */
+
+.typeset {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 20px;
+  font-weight: 200;
 }
 
 .typeset h1 {
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
   /* font-size: 4em; */
 }
+.typeset h2,
+h2 {
+  font-family: 'Inter', sans-serif;
+  margin-top: 0;
+}
 .typeset h3 {
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
+}
+.typeset h4 {
+  font-family: 'Inter', sans-serif;
 }
 .typeset table {
   font-family: 'Inter', sans-serif;

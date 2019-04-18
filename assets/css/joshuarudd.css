@@ -21,8 +21,13 @@ body {
   }
 }
 
-a {
-  color: rgba(29,34,36,1);
+a:link {
+  /* color: rgba(29,34,36,1); */
+  color: black;
+  font-weight: bolder;
+}
+a:visited {
+  color: black;
 }
 
 .container {
@@ -35,15 +40,15 @@ header {
   margin: 6rem auto;
 }
 
-  header h1 {
-    display: none;
+.hide {
+  display: none;
+}
+
+  .summary a {
+    /* font-weight: 400; */
   }
 
-  .bio a {
-    font-weight: 400;
-  }
-
-  .bio p:first-child {
+  .summary .bigger {
     font-size: 1.25em;
   }
 
@@ -63,7 +68,7 @@ header {
   .avatar {
     max-width: 120px;
   }
-  .bio {
+  .summary {
     font-size: 16px;
     padding-top: 2rem;
   }
@@ -78,6 +83,13 @@ footer {
   padding: 1px;
 }
 
+.title {
+  font-size: 1.75em;
+  font-weight: 800;
+  margin: 0 0 .25em 0;
+}
+
+.subtitle,
 .microheader {
   color: rgba(58,118,156,1);
   font-size: 12px;
@@ -85,6 +97,9 @@ footer {
   letter-spacing: .75px;
   text-transform: uppercase;
   margin: 0 0 .5em 0;
+}
+.subtitle {
+  margin-bottom: 3rem;
 }
 
 .tinylist {
@@ -140,7 +155,7 @@ footer {
     color: rgba(58,118,156,1);
   }
 
-  .summary {
+  .description {
     margin-top: 1em;
   }
 
