@@ -1,38 +1,7 @@
-/* @import url('https://rsms.me/inter/inter.css'); */
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700|Noto+Sans');
-
-body {
-  /* font-family: 'Inter', sans-serif; */
-  /* font-size: 20px; */
-  /* font-weight: 300; */
-  /* margin: 0; */
-  /* padding: 0; */
-}
-@media all and (max-width: calc(600px)) {
-  /* body { font-size: 18px; } */
-}
-@media all and (max-width: calc(400px)) {
-  /* body { font-size: 16px; } */
-}
-/* @supports (font-variation-settings: normal) { */
-  /* body { font-family: 'Inter var', sans-serif; } */
-/* } */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:200,500');
 
 article {
-  /* color: rgba(0,0,0,.8); */
-  /* font-family: 'Noto Serif TC', serif; */
-  /* font-weight: 300; */
   margin: 0 auto;
-}
-
-header {
-  /* font-size: 24px; */
-  /* padding: 6em 0 2em 0; */
-}
-
-.hr {
-  border-top: 1px solid lightgray;
-  padding-top: 2rem;
 }
 
 figure {
@@ -42,36 +11,12 @@ figure {
   margin-inline-end: 0;
 }
 
-.typeset header > * {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 70ex;
-  padding: 0 1.5em;
-}
-
 .title {
   text-align: center;
-  /* margin: 0; */
 }
 
-/* .typeset .hero {
-  background-image: url('design-system-colors@2x.png');
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  height: 400px;
-  margin: 0 auto !important;
-  max-width: 1267px;
-} */
-
-/* section { */
-  /* margin: 0 auto; */
-  /* max-width: 70ex; */
-  /* padding: 0 1.5em; */
-/* } */
-
 .typeset {
-  font-family: 'Noto Serif TC', serif;
+  font-family: 'Noto Serif KR', serif;
   font-size: 20px;
   font-weight: 200;
 }
@@ -106,8 +51,10 @@ h2 {
 
 .typeset figure {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
 }
 .typeset figcaption {
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -132,10 +79,14 @@ a.footnoteBackLink {
 }
 
 .horizontal-scroll {
-   overflow-x: scroll;
-   /* position: relative; */
-   /* left: -3em; */
-   /* width: calc(100% + 6em); */
+  overflow-x: scroll;
+  /* Following scroll shadows from https://jsbin.com/kodabupozu/edit?html,css,output */
+  /* background-image: -webkit-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0)), -webkit-linear-gradient(right, #ffffff, rgba(255, 255, 255, 0)), -webkit-linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), -webkit-linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
+  background-position: 0 0, 100% 0, 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
+  background-attachment: local, local, scroll, scroll; */
 }
 
 .horizontal-scroll::-webkit-scrollbar {
@@ -149,7 +100,6 @@ a.footnoteBackLink {
 }
 
 figure table td {
-  /* width: 1000px; */
   width: 250px;
 }
 

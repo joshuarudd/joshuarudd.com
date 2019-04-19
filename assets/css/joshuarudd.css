@@ -1,5 +1,4 @@
 @import url('https://rsms.me/inter/inter.css');
-/* @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600,700'); */
 
 html {
   box-sizing: border-box;
@@ -14,6 +13,9 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+}
+@supports (font-variation-settings: normal) {
+  body { font-family: 'Inter var', sans-serif; }
 }
 @media (max-width: 36em) {
   body {
