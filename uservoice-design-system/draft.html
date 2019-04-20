@@ -68,15 +68,17 @@
           </div>
         </div>
       </div>
-      <figure class="grid-4 _sm-2 container">
-        <a class="col" href="design-system-design-philosophy@2x.png"><img src="design-system-design-philosophy@2x.png" alt=""></a>
-        <a class="col" href="design-system-colors@2x.png"><img src="design-system-colors@2x.png" alt=""></a>
-        <a class="col" href="design-system-forms-and-validation@2x.png"><img src="design-system-forms-and-validation@2x.png" alt=""></a>
-        <a class="col" href="design-system-form-fields-component@2x.png"><img src="design-system-form-fields-component@2x.png" alt=""></a>
-        <a class="col" href="abstract-branches@2x.png"><img src="abstract-branches@2x.png" alt=""></a>
-        <a class="col" href="abstract-commenting@2x.png"><img src="abstract-commenting@2x.png" alt=""></a>
-        <a class="col" href="abstract-component-library@2x.png"><img src="abstract-component-library@2x.png" alt=""></a>
-        <a class="col" href="sketch-componont-library@2x.png"><img src="sketch-componont-library@2x.png" alt=""></a>
+      <figure>
+        <div class="grid-4 _sm-2 container">
+          <a class="col" href="design-system-design-philosophy@2x.png"><img src="design-system-design-philosophy@2x.png" alt=""></a>
+          <a class="col" href="design-system-colors@2x.png"><img src="design-system-colors@2x.png" alt=""></a>
+          <a class="col" href="design-system-forms-and-validation@2x.png"><img src="design-system-forms-and-validation@2x.png" alt=""></a>
+          <a class="col" href="design-system-form-fields-component@2x.png"><img src="design-system-form-fields-component@2x.png" alt=""></a>
+          <a class="col" href="abstract-branches@2x.png"><img src="abstract-branches@2x.png" alt=""></a>
+          <a class="col" href="abstract-commenting@2x.png"><img src="abstract-commenting@2x.png" alt=""></a>
+          <a class="col" href="abstract-component-library@2x.png"><img src="abstract-component-library@2x.png" alt=""></a>
+          <a class="col" href="sketch-componont-library@2x.png"><img src="sketch-componont-library@2x.png" alt=""></a>
+        </div>
       </figure>
       <div class="grid-4 _sm-2 container">
         <div class="col _sm-6">
@@ -179,10 +181,14 @@
           <p>We tried both Git and Dropbox, but quickly dropped Git because it didn’t handle binary files very efficiently. The challenge with Dropbox was that there was no clear way for multiple people to contribute to the same library without running into conflicts, and it still didn’t solve the problem of ensuring everyone’s separate design projects were using the same components. We also tried creating a component library project with InVision, which we’d already been using since 2011, and using its source files sync, but that was even more cumbersome than Dropbox.</p>
         </div>
       </div>
-      <figure class="grid">
-        <span class="col"><img src="dropbox-multiple-versions-of-files.png" alt="Finder window with multiple working copies of the same file." style="display: block; margin: 0 auto; max-width: 759px;"></span>
-        <figcaption class="col-12">Trying to maintain a source of truth using Dropbox was a nightmare.</figcaption>
-      </figure>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img src="dropbox-multiple-versions-of-files.png" alt="Finder window with multiple working copies of the same file." style="display: block; margin: 0 auto; max-width: 759px;">
+            <figcaption>Trying to maintain a source of truth using Dropbox was a nightmare.</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <p>Fortunately, along came <a href="https://www.abstract.com" target="_blank">Abstract App</a>, a new Git-like version control system for Sketch files. In November 2016 we began testing the private alpha, and committed to adopted it beginning January 2017. With Abstract, we were able to create a different project (repository) for each of our primary applications. Each project consisted of a single Sketch file that contained all the symbols necessary for that application’s component library (again, this was before Sketch introduced external symbol library files).</p>
@@ -190,13 +196,19 @@
           <p>Finally, we had all the benefits our developers had with Git. As with our design patterns, the team committed to building out the component library alongside existing projects.</p>
         </div>
       </div>
-      <figure class="grid-2">
-        <a class="col" href="abstract-branches@2x.png"><img src="abstract-branches@2x.png" alt=""></a>
-        <a class="col" href="abstract-commenting@2x.png"><img src="abstract-commenting@2x.png" alt=""></a>
-        <a class="col" href="abstract-component-library@2x.png"><img src="abstract-component-library@2x.png" alt=""></a>
-        <a class="col" href="sketch-componont-library@2x.png"><img src="sketch-componont-library@2x.png" alt=""></a>
-        <figcaption class="col-12">With Sketch and Abstract app, we were able to create a version controlled system of truth for our component library assets.</figcaption>
-      </figure>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <div class="grid-2">
+              <a class="col" href="abstract-branches@2x.png"><img src="abstract-branches@2x.png" alt=""></a>
+              <a class="col" href="abstract-commenting@2x.png"><img src="abstract-commenting@2x.png" alt=""></a>
+              <a class="col" href="abstract-component-library@2x.png"><img src="abstract-component-library@2x.png" alt=""></a>
+              <a class="col" href="sketch-componont-library@2x.png"><img src="sketch-componont-library@2x.png" alt=""></a>
+            </div>
+            <figcaption>With Sketch and Abstract app, we were able to create a version controlled system of truth for our component library assets.</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <p><mark class="highlight">A huge benefit of having full version control of our component library was that changes and conflicts were easy to track, discuss, and resolve (if necessary).</mark> In addition to our regular critiques, when a designer’s project was ready to merge back into Master the whole team would come together for a design merge ceremony to review changes to the component library. It kept everyone mentally in sync of how each designer’s work would affect the others’.</p>
@@ -296,12 +308,14 @@
         </div>
       </div>
 
-      <figure class="grid-2">
-        <a class="col" href="design-system-design-philosophy@2x.png"><img src="design-system-design-philosophy@2x.png" alt=""></a>
-        <a class="col" href="design-system-colors@2x.png"><img src="design-system-colors@2x.png" alt=""></a>
-        <a class="col" href="design-system-forms-and-validation@2x.png"><img src="design-system-forms-and-validation@2x.png" alt=""></a>
-        <a class="col" href="design-system-form-fields-component@2x.png"><img src="design-system-form-fields-component@2x.png" alt=""></a>
-        <figcaption class="col-12">We used Confluence to pull all the documentation and assets together.</figcaption>
+      <figure>
+        <div class="grid-2">
+          <a class="col" href="design-system-design-philosophy@2x.png"><img src="design-system-design-philosophy@2x.png" alt=""></a>
+          <a class="col" href="design-system-colors@2x.png"><img src="design-system-colors@2x.png" alt=""></a>
+          <a class="col" href="design-system-forms-and-validation@2x.png"><img src="design-system-forms-and-validation@2x.png" alt=""></a>
+          <a class="col" href="design-system-form-fields-component@2x.png"><img src="design-system-form-fields-component@2x.png" alt=""></a>
+        </div>
+        <figcaption>We used Confluence to pull all the documentation and assets together.</figcaption>
       </figure>
 
     </section>

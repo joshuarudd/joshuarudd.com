@@ -137,10 +137,14 @@
           <p><mark>We saw an opportunity to <em>become the system of record for all product feedback.</mark></em></p>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img src="feedback-flows.png" alt="Diagram of multiple ways feedback flows from customers into UserVoice"></div>
-        <figcaption class="col-12">The multiple ways feedback gets into UserVoice</figcaption>
-      </figure>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img src="feedback-flows.png" alt="Diagram of multiple ways feedback flows from customers into UserVoice">
+            <figcaption class="col-12">The multiple ways feedback gets into UserVoice</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <p>We believed that if we could provide a method for team members capture important feedback from customers within the same tools they were already using to communicate with customers, we would see 1) an increase in the amount of product feedback coming into UserVoice, and 2) improved quality of that data. With these, we could provide better insights for product teams, and empower them to make data-driven decisions.</p>
@@ -174,9 +178,13 @@
           </ol>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img src="" alt="Illustration of process flow"></div>
-      </figure>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img src="" alt="Illustration of process flow">
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <h3 id="generative-research">Generative Research</h3>
@@ -228,11 +236,15 @@
           <p>The primary one was to answer <em>How might a support agent log customer feedback?</em></p>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="User Story Map" src="user-story-map-v1.png"></div>
-        <figcaption class="col-12">User Story Map – Support Agent</figcaption>
-      </figure>
-      <div class="grid-center-noBottom">
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="User Story Map" src="user-story-map-v1.png">
+            <figcaption class="col-12">User Story Map – Support Agent</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="grid-center">
         <div class="col-8 _sm-12 typeset">
           <p>(I prefer to create user story maps on a whiteboard with sticky notes, but because some of our team members were remote we decided to use LucidChart so everyone could contribute and reference it.)</p>
           <p>Once we got all the tasks, risks, and questions down, we “sliced” them into releasable/testable chunks, prioritized by what we needed to learn next.</p>
@@ -248,31 +260,39 @@
           </ol>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="Simple Form Concept" src="concept-simple-form@2x.png"></div>
-        <figcaption class="col-12">Concept 1: Simple form</figcaption>
-      </figure>
-      <div class="grid-center-noBottom">
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="Simple Form Concept" src="concept-simple-form@2x.png">
+            <figcaption>Concept 1: Simple form</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="grid-center">
         <div class="col-8 _sm-12 typeset">
-          <h5 id="pros">Pros</h5>
+          <h5>Pros</h5>
           <ol>
             <li>This experience required minimal interaction and could be delivered very quickly.</li>
             <li>Support agents only had to provide information they already had.</li>
             <li>In many cases we could automatically populate every field for them.</li>
           </ol>
-          <h5 id="cons">Cons</h5>
+          <h5>Cons</h5>
           <p>However, this direction would introduce some risk factors with the existing data model that would also require us to create new admin-facing tools. While we ultimately felt we needed to also simplify our data model, we weren’t confident this was the right time to do it. [^3]</p>
           <p>[^3]: Up to this point, the primary object in UserVoice were aggregate <em>ideas,</em> which were essentially forum topics that could be voted and commented on by others. The kind of feedback support agents would be logging were private and would not be visible to other customers. And at the time, there wasn’t any UI for managing large sets of uncategorized bits of feedback.</p>
           <p>In addition, two of our key customers wanted their support agents to link the feedback they were logging to existing ideas in their UserVoice accounts. Without other admin-facing tools to leverage feedback not linked to ideas This approach would require significant restructuring of our data model, and would also need new admin-facing tools to leverage this data. </p>
-          <h5 id="takeaway">Takeaway</h5>
+          <h5>Decision</h5>
           <p>While we preferred the UX of this direction most, we would have to rework a lot of our infrastructure to deliver valuable insights for our customers. We ultimately wanted to do this work, but it wasn’t the right time.</p>
           <p>We decided to require support agents to link feedback to a related idea, so we went back to our user story map and added some additional tasks.</p>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="Revised User Story Map" src="user-story-map-v2.png"></div>
-        <figcaption class="col-12">Revised User Story Map</figcaption>
-      </figure>
+      <div class="grid-noBottom">
+        <div class="col">
+          <figure>
+            <img alt="Revised User Story Map" src="user-story-map-v2.png">
+            <figcaption class="col-12">Revised User Story Map</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <h4 id="concept-2-multi-step-form">Concept 2: Multi-step form</h4>
@@ -280,10 +300,14 @@
           <p>This flow was somewhat similar to our end-user-facing widget, which would ask the person to enter their feedback, click next, and then display a list of related ideas (if any existed). If one did, they could vote for it instead of creating a new idea in the system.</p>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="Multi-step form" src="concept-multi-step-form@2x.png"></div>
-        <figcaption class="col-12">Concept 2: Multi-step form</figcaption>
-      </figure>
+      <div class="grid-noBottom">
+        <div class="col">
+          <figure>
+            <img alt="Multi-step form" src="concept-multi-step-form@2x.png">
+            <figcaption>Concept 2: Multi-step form</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <h5 id="pros">Pros</h5>
@@ -296,16 +320,20 @@
             <li>It wasn’t obvious to testers that there was a second step, or how many more steps there would be.</li>
             <li>Initial engineering estimates were higher than we hoped.</li>
           </ol>
-          <h5 id="takeaway">Takeaway</h5>
+          <h5>Decision</h5>
           <p>…</p>
           <h4 id="concept-3-dynamic-form">Concept 3: Dynamic form</h4>
           <p>The third concept was created in tandem with the second, but focussed on providing a single-page form that displayed related ideas on the same screen as the feedback field.</p>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="Dynamic form" src="concept-dynamic-form@2x.png"></div>
-        <figcaption class="col-12">Concept 3: Dynamic form</figcaption>
-      </figure>
+      <div class="grid-noBottom">
+        <div class="col">
+          <figure>
+            <img alt="Dynamic form" src="concept-dynamic-form@2x.png">
+            <figcaption>Concept 3: Dynamic form</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <h5 id="pros">Pros</h5>
@@ -318,30 +346,40 @@
             <li>Would require a lot more fitness and conditional logic to get the interaction and experience just right.</li>
             <li>Potentially confusing experience switching between linking an existing idea and creating a new one.</li>
           </ol>
-          <h5 id="takeaway">Takeaway</h5>
+          <h5>Decision</h5>
           <p>Based on positive tests both internally and with customers, we decided to give this direction a try despite the added complexity.</p>
           <h3 id="iterative-design-and-development">Iterative Design &amp; Development</h3>
         </div>
       </div>
       <div class="grid-noBottom">
-        <figure class="col-3">
-          <img alt="Functional Prototype" src="functional-prototype@2x.png">
-          <figcaption class="col-12">Caption…</figcaption>
-        </figure>
+        <div class="col-3">
+          <figure>
+            <img alt="Functional Prototype" src="functional-prototype@2x.png">
+            <figcaption class="col-12">Caption…</figcaption>
+          </figure>
+        </div>
         <div class="col-8 _sm-12 typeset">
           <h4 id="functional-prototype">Functional Prototype</h4>
           <p>Alongside the concept work, the engineering team starting working on a “walking skeleton” [^4] version of the support agent’s experience. It included only the functionality necessary for the support agent to successfully log their customer’s feedback, and gave us the basis to start testing our assumptions as quickly as possible, and highlight any risk areas.</p>
           <p>[^4]: (Define walking skeleton…)</p>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="Functional Prototype – Annotated Interactions" src="functional-prototype-annotations@2x.png"></div>
-        <figcaption class="col-12">Annotated wireframes for functional prototype</figcaption>
-      </figure>
-      <figure class="grid">
-        <div class="col"><img alt="Functional Prototype – Validation" src="functional-prototype-validation@2x.png"></div>
-        <figcaption class="col-12">Validation scenarios for functional prototype</figcaption>
-      </figure>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="Functional Prototype – Annotated Interactions" src="functional-prototype-annotations@2x.png">
+            <figcaption>Annotated wireframes for functional prototype</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="Functional Prototype – Validation" src="functional-prototype-validation@2x.png">
+            <figcaption>Validation scenarios for functional prototype</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <h4 id="interaction-and-visual-design-iterations">Interaction and Visual Design Iterations</h4>
@@ -355,31 +393,51 @@
           </ol>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="flowchart" src="flowchart.png"></div>
-        <figcaption class="col-12">Agent Experience Flowchart</figcaption>
-      </figure>
-      <figure class="grid">
-        <div class="col"><img alt="Feedback form visual design" src="mockup-form-states@2x.png"></div>
-        <figcaption class="col-12">Feedback form visual design</figcaption>
-      </figure>
-      <figure class="grid">
-        <div class="col"><img alt="User Picker interaction design mockups" src="mockup-user-picker@2x.png"></div>
-        <figcaption class="col-12">User Picker interaction design mockups</figcaption>
-      </figure>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="flowchart" src="flowchart.png">
+            <figcaption>Agent Experience Flowchart</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="Feedback form visual design" src="mockup-form-states@2x.png">
+            <figcaption>Feedback form visual design</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="User Picker interaction design mockups" src="mockup-user-picker@2x.png">
+            <figcaption>User Picker interaction design mockups</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <h4 id="navigation">Navigation</h4>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="Navigation Mockups" src="mockup-navigation@2x.png"></div>
-        <figcaption class="col-12">Navigation Mockups</figcaption>
-      </figure>
-      <figure class="grid-center">
-        <div class="col-4"><img alt="Navigation Animation" src="menu-animation.gif"></div>
-        <figcaption class="col-12">Navigation Animation</figcaption>
-      </figure>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="Navigation Mockups" src="mockup-navigation@2x.png">
+            <figcaption>Navigation Mockups</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="grid-center">
+        <div class="col-4">
+          <figure>
+            <img alt="Navigation Animation" src="menu-animation.gif">
+            <figcaption>Navigation Animation</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <h3 id="mmp"><del>MVP</del> MMP</h3>
@@ -388,28 +446,40 @@
           <h4 id="top-ideas">Top Ideas</h4>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="Ranked Ideas Chart" src="idea-rank-chart@2x.png" style="max-width: 827px; margin-left: auto; margin-right: auto;"></div>
-        <figcaption class="col-12">Exploratory chart design for ranked ideas</figcaption>
-      </figure>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="Ranked Ideas Chart" src="idea-rank-chart@2x.png" style="max-width: 827px; margin-left: auto; margin-right: auto;">
+            <figcaption>Exploratory chart design for ranked ideas</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <p>…</p>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="Top Ideas - First Pass" src="top-ideas-v1@2x.png"></div>
-        <figcaption class="col-12">Top Ideas - First Pass</figcaption>
-      </figure>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="Top Ideas - First Pass" src="top-ideas-v1@2x.png">
+            <figcaption>Top Ideas - First Pass</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <p>…</p>
         </div>
       </div>
-      <figure class="grid">
-        <div class="col"><img alt="Top Ideas - Second Pass" src="top-ideas-v2@2x.png"></div>
-        <figcaption class="col-12">Top Ideas - Second Pass</figcaption>
-      </figure>
+      <div class="grid">
+        <div class="col">
+          <figure>
+            <img alt="Top Ideas - Second Pass" src="top-ideas-v2@2x.png">
+            <figcaption>Top Ideas - Second Pass</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <p>…</p>
