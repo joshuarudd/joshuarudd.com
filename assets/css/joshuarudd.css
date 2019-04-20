@@ -81,9 +81,17 @@ section {
 }
 
 footer {
-  background: rgba(240, 240, 240, 1);
-  padding: 1px;
+  /* background: rgba(0, 0, 0, 1); */
+  background: rgba(29,34,36,1);
+  color: rgba(227, 238, 242, 1);
+  margin: 3em 0 0 0;
+  padding: 3em 0;
 }
+
+  footer a:link,
+  footer a:visited {
+    color: white;
+  }
 
 .title {
   font-size: 1.75em;
