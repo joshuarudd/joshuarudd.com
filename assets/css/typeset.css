@@ -1,11 +1,22 @@
 /*
   Typeset.css
   https://github.com/joshuarudd/typeset.css
-  v0.9.5
-  Last updated: 2019-04-01
+  v2.0
+  Last updated: 2019-04-10
   Author: Joshua Rudd - https://joshuarudd.com
   Twitter: @joshuarudd
 */
+
+/*
+  Color variables
+*/
+
+:root {
+  --typeset-background-color: #F3F6FA;
+  --typeset-border-color: #DBE2F2;
+  --typeset-color: #324354;
+  --typeset-blockquote-color: rgba(0,0,0,.2);
+}
 
 /*
   Reset .typeset element styles to avoid unwanted inheritance
@@ -16,10 +27,8 @@
   text-rendering: optimizeLegibility;
 }
 
-/* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* Adapted from http://paulirish.com/2012/box-sizing-border-box-ftw/ */
 .typeset * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -40,10 +49,10 @@
 }
 
 /*
-  Baseline grid (for debugging)
+  Baseline grid (for debugging baseline grid)
 */
 
-.typeset.baseline {
+.typeset.typeset-baseline {
   background-image: linear-gradient(to bottom, magenta 0, rgba(255, 255, 255, 0) 1px);
   background-repeat: repeat-y;
   background-size: 100% 1.5em;
@@ -63,13 +72,13 @@
   margin-left: 2.5em;
 }
 .typeset code, .typeset pre, .typeset th {
-  background-color: #F3F6FA;
+  background-color: var(--typeset-background-color);
 }
 .typeset code, .typeset pre, .typeset th, .typeset td {
-  color: #324354;
+  color: var(--typeset-color);
 }
 .typeset pre, .typeset table, .typeset th, .typeset td {
-  border: 1px solid #dbe2f2;
+  border: 1px solid var(--typeset-border-color);
 }
 
 /*
@@ -192,7 +201,7 @@
 .typeset h1 {
   font-size: 2em;
   line-height: 1.5;
-  margin: 1.5em 0 .75em 0;
+  margin: 2.25em 0 .75em 0;
 }
 .typeset h2 {
   font-size: 1.5em;
@@ -201,8 +210,8 @@
 }
 .typeset h3 {
   font-size: 1.25em;
-  line-height: 1.2;
-  margin: 1.2em 0 1.2em 0;
+  line-height: 2.4;
+  margin: 1.2em 0 0 0;
 }
 .typeset h4 {
   font-size: 1em;
@@ -225,30 +234,23 @@
   /* margin set above */
 }
 .typeset blockquote {
-  border-left: .2em solid rgba(0,0,0,.2);
+  border-left: .2em solid var(--typeset-blockquote-color);
   margin-left: .2em;
-  /* margin-left set above */
   opacity: .8;
   padding-left: .8em;
 }
 .typeset pre {
   /* background-color set above */
-  /* border set above */
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   /* color set above */
   display: block;
   font-family: monospace;
-  font-size: 12px;
-  /* line-height set above */
-  /* margin set above */
+  font-size: .75em;
+  line-height: 2;
+  margin: 0 0 2em 0;
   max-width: 100%;
   overflow: scroll;
-  padding: .7em;
-  /* Mozilla, since 1999 */
-  white-space: -moz-pre-wrap !important;
-  /* css-3 */
+  padding: calc(1em - 1px) 1.5em;
   white-space: pre-wrap;
 }
 
@@ -283,7 +285,7 @@
   /* border set above */
   /* color set above */
   /* line-height set above */
-  padding: .7em;
+  padding: calc(.75em - .5px);
   text-align: left;
 }
 .typeset th {
@@ -303,7 +305,6 @@
   max-width: 100%;
 }
 .typeset figure {
-  /* display: block; */
   max-width: 100%;
   /* margin set above */
 }
@@ -317,7 +318,6 @@
 /*
   Cleanup
 */
-
 
 /* Remove top-margin from first element in typeset block so that it can align with other parts of the page */
 .typeset > :first-child {
