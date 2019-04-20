@@ -115,15 +115,13 @@ As we moved towards building and testing, we formed a team of three engineers, a
 
 ### Generative Research
 
-In the spring and summer of 2015, while testing a major overhaul of our admin tools, I spent a considerable amount of time conducting customer interviews to learn how they used the product, what their teams’ workflows were, how UserVoice helped them get their job done, and what challenges they had along the way. 
+In the spring and summer of 2015, while testing a major overhaul of our admin tools, I spent a considerable amount of time conducting customer interviews to learn how they used the product, what their teams’ workflows were, how UserVoice helped them get their job done, and what challenges they had along the way.
 
 When a customer would bring up an issue or make a request, I’d follow up with the following questions:
 
-- What is your suggested solution? 
-- What goal does this help you achieve? 
-- What are you doing today to achieve/overcome it? 
-
-
+- What is your suggested solution?
+- What goal does this help you achieve?
+- What are you doing today to achieve/overcome it?
 
 While customers’ suggested solutions were most often not how we’d address their problems, it did give us big insight into what *they* thought would be helpful. Additional *why* questions helped reveal the root of the issue – but ==the biggest eye openers were always *learning what their goals were,* and *what they were doing today to achieve their goals.*== If we could help them achieve their goals faster and more effectively, then there might be an opportunity for us.
 
@@ -231,7 +229,7 @@ However, this direction would introduce some risk factors with the existing data
 
 [^3]: Up to this point, the primary object in UserVoice were aggregate *ideas,* which were essentially forum topics that could be voted and commented on by others. The kind of feedback support agents would be logging were private and would not be visible to other customers. And at the time, there wasn’t any UI for managing large sets of uncategorized bits of feedback.
 
-In addition, two of our key customers wanted their support agents to link the feedback they were logging to existing ideas in their UserVoice accounts. Without other admin-facing tools to leverage feedback not linked to ideas This approach would require significant restructuring of our data model, and would also need new admin-facing tools to leverage this data. 
+In addition, two of our key customers wanted their support agents to link the feedback they were logging to existing ideas in their UserVoice accounts. Without other admin-facing tools to leverage feedback not linked to ideas This approach would require significant restructuring of our data model, and would also need new admin-facing tools to leverage this data.
 
 ##### Takeaway
 
@@ -333,7 +331,7 @@ While engineering team was building the functional prototype, I began working on
 
 ![Feedback form visual design](mockup-form-states@2x.png)
 
-#### 
+####
 
 ![User Picker interaction design mockups](mockup-user-picker@2x.png)
 
@@ -381,20 +379,20 @@ Needed to not only allow any employee at a company to capture customer feedback,
 
 
 
-#### New functionality
+### New functionality
 1. Bookmarklet
 2. Improved user management & invitation flow
 3. New license type
 
 
 
-#### New source of revenue
+### New source of revenue
 UserVoice was losing lots of sales opportunities where prospective customers wanted a tools for sales teams to capture feedback rather than providing a customer-facing feedback tool.
 
 1. Doubled size of new deals. Rather than a handful of user licenses for new business, we started getting deals for hundreds of licenses.
 2. Expansion/revenue model. Lead to new deals and expansion.
 
-#### Foundation for new features
+### Foundation for new features
 New channel that opened up opportunities for UserVoice to provide additional value to customers - internal status, roadmap, etc.
 
 ## Learnings and insights
@@ -416,7 +414,6 @@ New channel that opened up opportunities for UserVoice to provide additional val
 *Internally, we were also running into our own issue for how to prioritize our product initiatives. When the leadership team would get together to discuss the top product improvements each team wanted, it was difficult to determine what was biased by recency. Sales would say they were losing deals because of “X”, and Support would say the biggest problem customers had was “Y”, but none of these could be backed up by the feedback we had in our system that customers had submitted directly.*
 
 
-- [ ] Timeline, year
 
 ### Materials list
 1. LucidChart - User Story Mapping [1] & User flows
