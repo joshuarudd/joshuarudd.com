@@ -17,12 +17,11 @@ article {
 .typeset h1 {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  /* font-size: 4em; */
 }
 .typeset h2,
 h2 {
   font-family: 'Inter', sans-serif;
-  margin-top: 0;
+  text-align: center;
 }
 .typeset h3 {
   font-family: 'Inter', sans-serif;
