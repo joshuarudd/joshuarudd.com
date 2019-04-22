@@ -64,8 +64,8 @@
           <h1 class="title">UserVoice Sidebar</h1>
           <p class="subtitle centered">A case study by Joshua Rudd</p>
           <div class="summary typeset">
-            <p class="bigger">UserVoice was one the first web services to help companies collect feedback directly from customers through in-app widgets and feedback forums. However, a significant amount of feedback was still being received through other sales and support channels customer-facing teams used, leaving a significant gap in the amount of feedback product teams had access to.</p>
-            <p class="bigger">To address this, UserVoice created a browser plugin that allowed customer-facing teams to capture customer feedback from any webpage, attribute it to the person who gave the feedback, and make it available for other team members in UserVoice – giving product teams the data they needed to make informed decisions.</p>
+            <p class="bigger">UserVoice was one the first web services to help companies collect feedback directly from customers through in-app widgets and feedback forums. However, a significant amount of customer feedback given directly to sales and support teams was not making it into UserVoice, creating a gap in feedback for product teams.</p>
+            <p class="bigger">To address this, UserVoice created a browser plugin that allowed customer-facing teams to capture customer feedback from any webpage – giving product teams the data they needed to make informed decisions.</p>
           </div>
         </div>
       </div>
@@ -80,8 +80,7 @@
         <div class="col _sm-6">
           <p class="microheader">Position</p>
           <ul class="tinylist">
-            <li>VP, Product</li>
-            <li>Director, User Experience</li>
+            <li>Director, User Experience<sup><a id="^1" href="#^1:">1</a></sup></li>
           </ul>
           <p class="microheader">Company</p>
           <ul class="tinylist">
@@ -124,14 +123,13 @@
           <p>The more feedback companies have in UserVoice, the easier it is for them to discover the top unmet needs of their customers.</p>
           <p>However, <em>UserVoice wasn’t the only way users were submitting feedback.</em> A significant amount of feedback companies were receiving was coming from channels other than UserVoice – most often through support tickets and sales calls, but also through chat, social media, online reviews, blog comments, and more.</p>
           <h3>Observations</h3>
-          <p>People are going to use whatever method is most accessible and convenient to them in the moment to give feedback.</p>
+          <p><mark>People are going to use whatever method is most accessible and convenient to them in the moment to give feedback.</mark></p>
           <p>When someone would request a feature or give feedback directly to a sales or support agent rather than submitting it through UserVoice, we observed two primary workarounds team members would use to get that feedback into UserVoice.</p>
-          <p>One method was to tell their customer to go to the UserVoice forum to post the same feedback they’d already given. However, telling customers that had already given feedback to give it again using the forum was frustrating to both the customer and the team member. Their customers felt like their feedback was just going to a black hole since the person they were trying to get help from was just redirecting them, and team members reported to us that their customers would often no end up giving the feedback again in UserVoice.</p>
-          <p>Another method we saw was for the team member to create an idea in UserVoice themselves with that customer’s feedback. Unfortunately, the current tools did not allow that feedback to be attributed to the customer who actually gave it (it was instead attributed to the team member who created it), making it difficult to differentiate between internal vs. customer feedback, reducing the value of other insights and segmentation tools.</p>
-          <p>Also, when product and support/sales would get together to discuss priorities, it would be difficult to determine how much recency bias played in to the feedback they were conveying. Sales would say, “We’re losing sales because we don’t have X,“ and support would say, “The biggest problem customers have is Y,” but there was no meaningful data to back it up.</p>
+          <p>One method was to tell their customer to go to the UserVoice forum to post the same feedback they’d already given. However, telling a customer that just gave feedback to go somewhere else and give it again was frustrating to both the customer and the team member. Their customers didn’t trust that their feedback was important, and team members reported to us that their customers would often give up.</p>
+          <p>Another method we saw was for the team member to create an idea in UserVoice themselves with the customer’s feedback. Unfortunately, the current tools did not allow that feedback to be attributed to the customer who actually gave it (it was instead attributed to the team member who created it), making it difficult for product teams to differentiate between internal vs. customer feedback, reducing the value of other insights and segmentation tools.</p>
           <h3>The Problem</h3>
-          <p>Product teams didn’t trust the information that they were getting from sales teams. Sales teams didn’t feel like product was listening to them.</p>
-          <p>UserVoice’s customers <em>wanted</em> their customers’ feedback in UserVoice, but did not have effective ways to redirect feedback they were receiving into UserVoice.</p>
+          <p>Product teams didn’t trust the information that they were getting from sales teams. Sales teams didn’t feel like product was listening to them.<sup><a id="^2" href="#^2:">2</a></sup></p>
+          <p>Product teams <em>wanted</em> their customers’ feedback in UserVoice, but did not have effective ways for customer-facing teams to capture customer feedback in UserVoice.</p>
           <p>How might we allow team members to continue using their existing tools and channels to communicate with customers, while giving them a quick way to add this feedback to UserVoice?</p>
           <h3>Hypothesis</h3>
           <p><mark>We saw an opportunity to <em>become the system of record for all product feedback.</mark></em></p>
@@ -160,11 +158,7 @@
             <li>Feedback is always attributed to the person who gave it, allowing companies to leverage that data for greater insights.</li>
           </ol>
           <h3 id="constraints">Constraints</h3>
-          <p>Constraints were not known at the beginning of the project, but we soon realized that our initial solution could not require us to rewrite our core data model (yet). This became a big challenge because it resulted in requiring additional steps for the team member capturing the customer’s feedback.</p>
-
-          <h2 id="role">Role</h2>
-          <p>This project was unique experience for me because my role changed (due to product and engineering team restructuring) from product manager—where I performed generative research and opportunity assessment for this project—to lead designer as we began ideating, prototyping, and testing our solutions.</p>
-          <p>As we moved towards building and testing, we formed a team of three engineers, a new product manager, and myself as lead designer. We committed to weekly sprints.</p>
+          <p>Constraints were not known at the beginning of the project, but we soon realized that our initial solution shouldn’t depend on rewriting our core data model. This became a big challenge because it resulted in requiring additional steps for the team member capturing the customer’s feedback.</p>
 
           <h2 id="process">Process</h2>
           <ol>
@@ -176,17 +170,6 @@
             <li><a href="#iterative-design-and-development">Iterative design and development</a></li>
             <li><a href="#mmp">MMP</a></li>
           </ol>
-        </div>
-      </div>
-      <div class="grid">
-        <div class="col">
-          <figure>
-            <img src="" alt="Illustration of process flow">
-          </figure>
-        </div>
-      </div>
-      <div class="grid-center-noBottom">
-        <div class="col-8 _sm-12 typeset">
           <h3 id="generative-research">Generative Research</h3>
           <p>In the spring and summer of 2015, while testing a major overhaul of our admin tools, I spent a considerable amount of time conducting customer interviews to learn how they used the product, what their teams’ workflows were, how UserVoice helped them get their job done, and what challenges they had along the way. </p>
           <p>When a customer would bring up an issue or make a request, I’d follow up with the following questions:</p>
@@ -195,14 +178,14 @@
             <li>What goal does this help you achieve? </li>
             <li>What are you doing today to achieve/overcome it? </li>
           </ul>
-          <p>While customers’ suggested solutions were most often not how we’d address their problems, it did give us big insight into what <em>they</em> thought would be helpful. Additional <em>why</em> questions helped reveal the root of the issue – but <mark>the biggest eye openers were always <em>learning what their goals were,</em> and <em>what they were doing today to achieve their goals.</em></mark> If we could help them achieve their goals faster and more effectively, then there might be an opportunity for us.</p>
+          <p>While customers’ suggested solutions were most often <em>not</em> how we’d address their problems, it did give us good understanding of what they thought would be helpful. Additional <em>why</em>-type questions helped reveal the root of the issue – but <mark>the biggest eye openers were <em>learning what their goals were,</em> and <em>what they were doing today to achieve their goals.</em></mark> If we could help them achieve their goals faster and more effectively, then there might be an opportunity for us.</p>
           <p>Several themes emerged very quickly during this research. Our sales and support execs said they’d heard similar feedback from customers and prospects, and offered valuable insights about how additional customers and prospective buyers were trying to achieve similar results.</p>
           <h3 id="opportunity-assessment">Opportunity Assessment</h3>
           <blockquote>
             <p>The purpose of a good product opportunity assessment is either to a) prevent the company from wasting time and money on poor opportunities; or b) for those that are good opportunities, to understand what will be required to succeed.</p>
           </blockquote>
           <p><em><a href="https://svpg.com/assessing-product-opportunities/">Assessing Product Opportunities</a>, by Marty Cagan</em></p>
-          <p>Once I had a general idea of the unmet needs our customers were having, we needed to decide if this was a problem we should tackle. I’m a huge Marty Cagan fan, and used his template for Product Opportunity Assessments.</p>
+          <p>Once I had a general idea of the unmet needs our customers were having, we needed to decide if this was a problem we should tackle. I’m a huge Marty Cagan fan, and used his Product Opportunity Assessments template.</p>
           <p>Our assessment set out to answer these 10 questions:</p>
           <ol>
             <li>Exactly what problem will this solve? (value proposition)</li>
@@ -221,11 +204,10 @@
           <p>Now that we had decided to tackle this opportunity, we had an endless stream of questions.</p>
           <p>Using the feedback we already had in our own UserVoice account I was able to identify customers with related unmet needs, and used that list to set up customer calls and on-site interviews.</p>
           <p>One of the initial questions we had was, <strong>What tools are sales and support teams already using to communicate with customers?</strong></p>
-          <p>We learned that Zendesk and Salesforce were at the most common tools, but there were so many others (including UserVoice Tickets, Intercom, Gmail, and bespoke solutions) that we felt like creating an integration with a single product might limit the number of customers we could deliver a solution for.</p>
-          <p>We decided to build a basic solution that could work anywhere, and focus on tighter integrations later. Now we just needed to figure out what that experience would be.</p>
+          <p>We learned that Zendesk and Salesforce were at the most common tools, but there were so many others—including UserVoice Tickets, Intercom, Gmail, and bespoke solutions—that we felt like starting with a single integration might limit the number of customers we could deliver a solution for.</p>
+          <p>Given this, we decided to prove out a basic solution that could work anywhere and focus on tighter integrations later. Now we just needed to figure out what that experience would be.</p>
           <h3 id="user-story-mapping">User Story Mapping</h3>
-          <p>One exercise I use to help get PMs, designers, and engineers on the same page is User Story Mapping, a concept coined by Jeff Patton. [^1] <mark>I like user story mapping because it helps the team focus on the steps necessary for a person to achieve their desired outcome.</mark></p>
-          <p>[^1]: <a href="https://www.jpattonassociates.com/user-story-mapping/">User Story Mapping</a> by Jeff Patton</p>
+          <p>One exercise I use to help get PMs, designers, and engineers on the same page is User Story Mapping<sup><a id="^3" href="#^3:">3</a></sup>, a concept coined by Jeff Patton. <mark>I like user story mapping because it helps the team focus on the steps necessary for a person to achieve their desired outcome.</mark></p>
           <p>We identified four primary personas/roles impacted by this project and created user story maps for each:</p>
           <ol>
             <li>The Customer</li>
@@ -233,26 +215,24 @@
             <li>The Support Manager</li>
             <li>The Product Manager</li>
           </ol>
-          <p>The primary one was to answer <em>How might a support agent log customer feedback?</em></p>
+          <p>The primary User Story Map set out to to answer <em>How might a support agent log customer feedback?</em></p>
         </div>
       </div>
       <div class="grid">
         <div class="col">
           <figure>
             <img alt="User Story Map" src="user-story-map-v1.png">
-            <figcaption class="col-12">User Story Map – Support Agent</figcaption>
+            <figcaption class="col-12">User Story Map – Support Agent, created in LucidChart<sup><a id="^4" href="#^4:">4</a></sup></figcaption>
           </figure>
         </div>
       </div>
       <div class="grid-center">
         <div class="col-8 _sm-12 typeset">
-          <p>(I prefer to create user story maps on a whiteboard with sticky notes, but because some of our team members were remote we decided to use LucidChart so everyone could contribute and reference it.)</p>
           <p>Once we got all the tasks, risks, and questions down, we “sliced” them into releasable/testable chunks, prioritized by what we needed to learn next.</p>
           <h3 id="concept-testing">Concept Testing</h3>
           <p>Once we had the user story map, our engineers were able to start exploring a lot of the technical requirements needed to deliver a solution, and I set out to put together some quick wireframe concepts to test both internally and with select customers.</p>
           <h4 id="concept-1-simple-form">Concept 1: Simple form</h4>
-          <p>The first concept focussed on only asking support agents for the most essential information needed: [^2]</p>
-          <p>[^2]: Behind the scenes, we also knew who was logging the feedback on behalf of the customer, but we didn’t need to ask for this information.</p>
+          <p>The first concept focussed on only asking support agents for the most essential information needed:</p>
           <ol>
             <li><strong>Who</strong> the feedback was from.</li>
             <li><strong>What</strong> their feedback was.</li>
@@ -277,12 +257,11 @@
             <li>In many cases we could automatically populate every field for them.</li>
           </ol>
           <h5>Cons</h5>
-          <p>However, this direction would introduce some risk factors with the existing data model that would also require us to create new admin-facing tools. While we ultimately felt we needed to also simplify our data model, we weren’t confident this was the right time to do it. [^3]</p>
-          <p>[^3]: Up to this point, the primary object in UserVoice were aggregate <em>ideas,</em> which were essentially forum topics that could be voted and commented on by others. The kind of feedback support agents would be logging were private and would not be visible to other customers. And at the time, there wasn’t any UI for managing large sets of uncategorized bits of feedback.</p>
-          <p>In addition, two of our key customers wanted their support agents to link the feedback they were logging to existing ideas in their UserVoice accounts. Without other admin-facing tools to leverage feedback not linked to ideas This approach would require significant restructuring of our data model, and would also need new admin-facing tools to leverage this data. </p>
+          <p>Unfortunately, this direction introduced some significatn changes to our existing data model<sup><a id="^5" href="#^5:">5</a></sup>.</p>
+          <p>In addition, two of our key customers wanted their customer-facing teams to link the feedback they were capturing to existing ideas. Without also creating additional feedback management tools to leverage unlinked feedback, this feedback would, indeed, go into a black hole.</p>
           <h5>Takaway</h5>
-          <p>While we preferred the UX of this direction most, we would have to rework a lot of our infrastructure to deliver valuable insights for our customers. We ultimately wanted to do this work, but it wasn’t the right time.</p>
-          <p>We decided to require support agents to link feedback to a related idea, so we went back to our user story map and added some additional tasks.</p>
+          <p>While we preferred the UX of this direction most and ultimately felt we needed to also simplify our data model, we weren’t confident this was the right time to do it.</p>
+          <p>We decided to require support agents to link feedback to a related idea, so we went back to our user story map and added some additional steps.</p>
         </div>
       </div>
       <div class="grid-noBottom">
@@ -358,8 +337,7 @@
         </div>
         <div class="col-8 _sm-12 typeset">
           <h4 id="functional-prototype">Functional Prototype</h4>
-          <p>Alongside the concept work, the engineering team starting working on a “walking skeleton” [^4] version of the support agent’s experience. Our initial focus was just on what was necessary for the support agent to successfully log their customer’s feedback so we could start testing our assumptions on the experience as quickly as possible, and highlight any risk areas.</p>
-          <p>[^4]: (Define walking skeleton…)</p>
+          <p>Alongside the concept work, the engineering team starting working on a “walking skeleton”<sup><a id="^6" href="#^6:">6</a></sup> version of the support agent’s experience. Our initial focus was just on what was necessary for the support agent to successfully log their customer’s feedback so we could start testing our assumptions on the experience as quickly as possible, and highlight any risk areas.</p>
         </div>
       </div>
       <div class="grid">
@@ -574,8 +552,31 @@
           <div class="col-8 _md-10 _sm-12 typeset">
             <h2 id="endnotes">Endnotes</h2>
             <ol>
+              <li id="^1:">
+                This project was unique experience for me because my role changed (due to product and engineering team restructuring) from VP, Product—where I performed generative research and opportunity assessment for this project—to Director, User Experience and lead designer on this project as we began ideating, prototyping, and testing our solutions.
+                &nbsp;<a class="endnoteBackLink" href="#^1" title="Jump back to context">↩︎</a>
+              </li>
+              <li id="^2:">
+                Internally, we were also running into our own issue for how to prioritize our product initiatives. When the leadership team would get together to discuss the top product improvements each team wanted, it was difficult to determine what was biased by recency. Sales would say they were losing deals because of “X”, and Support would say the biggest problem customers had was “Y”, but none of these could be backed up by the feedback we had in our system that customers had submitted directly.
+                &nbsp;<a class="endnoteBackLink" href="#^2" title="Jump back to context">↩︎</a>
+              </li>
+              <li id="^3:">
+                <em><a href="https://www.jpattonassociates.com/user-story-mapping/">User Story Mapping</a></em> by Jeff Patton
+                &nbsp;<a class="endnoteBackLink" href="#^3" title="Jump back to context">↩︎</a>
+              </li>
+              <li id="^4:">
+                I prefer to create user story maps on a whiteboard with sticky notes, but because some of our team members were remote we decided to use LucidChart so everyone could contribute and reference it.
+                &nbsp;<a class="endnoteBackLink" href="#^4" title="Jump back to context">↩︎</a>
+              </li>
+              <li id="^5:">
+                Up to this point, the primary object in UserVoice were aggregate <em>ideas,</em> which were essentially forum topics that could be voted and commented on by others. The kind of feedback support agents would be logging were private and would not be visible to other customers. And at the time, there wasn’t any UI for managing large sets of uncategorized bits of feedback.
+                &nbsp;<a class="endnoteBackLink" href="#^5" title="Jump back to context">↩︎</a>
+              </li>
+              <li id="^6:">
+                A walking skeleton is essentially the smallest possible system you could build that would give you end-to-end functionality. It was coined by Alistair Cockburn in <em>Crystal Clear: A Human Powered Methodology for Small Teams,</em> and is a method promoted by Jeff Patton in <em>User Story Mapping.</em>
+                &nbsp;<a class="endnoteBackLink" href="#^6" title="Jump back to context">↩︎</a>
+              </li>
               <li>For each customer call, I’d summarize learnings and create ideas in UserVoice but, just like the problems our customers expressing, I wasn’t able to easily capture quotes and feedback from those calls in UserVoice in a way that would make it easy to attribute that feedback to the customer.</li>
-              <li>Internally, we were also running into our own issue for how to prioritize our product initiatives. When the leadership team would get together to discuss the top product improvements each team wanted, it was difficult to determine what was biased by recency. Sales would say they were losing deals because of “X”, and Support would say the biggest problem customers had was “Y”, but none of these could be backed up by the feedback we had in our system that customers had submitted directly.</li>
             </ol>
           </div>
         </div>
