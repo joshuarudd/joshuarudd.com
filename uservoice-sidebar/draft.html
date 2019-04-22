@@ -210,19 +210,19 @@
           <p>One exercise I use to help get PMs, designers, and engineers on the same page is User Story Mapping<sup><a id="^3" href="#^3:">3</a></sup>, a concept coined by Jeff Patton. <mark>I like user story mapping because it helps the team focus on the steps necessary for a person to achieve their desired outcome.</mark></p>
           <p>We identified four primary personas/roles impacted by this project and created user story maps for each:</p>
           <ol>
-            <li>The Customer</li>
-            <li>The Support Agent</li>
-            <li>The Support Manager</li>
-            <li>The Product Manager</li>
+            <li>The customer</li>
+            <li>The customer-facing team member</li>
+            <li>The team manager</li>
+            <li>The product manager</li>
           </ol>
-          <p>The primary User Story Map set out to to answer <em>How might a support agent log customer feedback?</em></p>
+          <p>The primary User Story Map set out to to answer <em>How might a team member capture customer feedback?</em></p>
         </div>
       </div>
       <div class="grid">
         <div class="col">
           <figure>
             <img alt="User Story Map" src="user-story-map-v1.png">
-            <figcaption class="col-12">User Story Map – Support Agent, created in LucidChart<sup><a id="^4" href="#^4:">4</a></sup></figcaption>
+            <figcaption class="col-12">User Story Map – Team Member, created in LucidChart<sup><a id="^4" href="#^4:">4</a></sup></figcaption>
           </figure>
         </div>
       </div>
@@ -232,7 +232,7 @@
           <h3 id="concept-testing">Concept Testing</h3>
           <p>Once we had the user story map, our engineers were able to start exploring a lot of the technical requirements needed to deliver a solution, and I set out to put together some quick wireframe concepts to test both internally and with select customers.</p>
           <h4 id="concept-1-simple-form">Concept 1: Simple form</h4>
-          <p>The first concept focussed on only asking support agents for the most essential information needed:</p>
+          <p>The first concept focussed on only asking customer-facing team members for the most essential information needed:</p>
           <ol>
             <li><strong>Who</strong> the feedback was from.</li>
             <li><strong>What</strong> their feedback was.</li>
@@ -253,15 +253,15 @@
           <h5>Pros</h5>
           <ol>
             <li>This experience required minimal interaction and could be delivered very quickly.</li>
-            <li>Support agents only had to provide information they already had.</li>
+            <li>Team members only had to provide information they already had.</li>
             <li>In many cases we could automatically populate every field for them.</li>
           </ol>
           <h5>Cons</h5>
-          <p>Unfortunately, this direction introduced some significatn changes to our existing data model<sup><a id="^5" href="#^5:">5</a></sup>.</p>
+          <p>Unfortunately, this direction introduced some significant changes to our existing data model<sup><a id="^5" href="#^5:">5</a></sup>.</p>
           <p>In addition, two of our key customers wanted their customer-facing teams to link the feedback they were capturing to existing ideas. Without also creating additional feedback management tools to leverage unlinked feedback, this feedback would, indeed, go into a black hole.</p>
           <h5>Takaway</h5>
           <p>While we preferred the UX of this direction most and ultimately felt we needed to also simplify our data model, we weren’t confident this was the right time to do it.</p>
-          <p>We decided to require support agents to link feedback to a related idea, so we went back to our user story map and added some additional steps.</p>
+          <p>We decided to require team members to link feedback to a related idea, so we went back to our user story map and added some additional steps.</p>
         </div>
       </div>
       <div class="grid-noBottom">
@@ -275,7 +275,7 @@
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <h4 id="concept-2-multi-step-form">Concept 2: Multi-step form</h4>
-          <p>For the next concept, we tried to keep the simplicity of the first one, but add a second step which would ask the support agent to link to a related idea, or create a new idea if an existing one didn’t exist.</p>
+          <p>For the next concept, we tried to keep the simplicity of the first one, but add a second step which would ask the team members to link to a related idea, or create a new idea if an existing one didn’t exist.</p>
           <p>This flow was somewhat similar to our end-user-facing widget, which would ask the person to enter their feedback, click next, and then display a list of related ideas (if any existed). If one did, they could vote for it instead of creating a new idea in the system.</p>
         </div>
       </div>
@@ -291,12 +291,12 @@
         <div class="col-8 _sm-12 typeset">
           <h5 id="pros">Pros</h5>
           <ol>
-            <li>Similar experience to end-user-facing widget.</li>
-            <li>Less visual complexity than Concept 3 on each step of the form.</li>
+            <li>Minimal fields were displayed during each step, keeping the experience fairly straight-forward.</li>
+            <li>It had a similar experience as our end-user-facing widget.</li>
           </ol>
           <h5 id="cons">Cons</h5>
           <ol>
-            <li>It wasn’t obvious to testers that there was a second step, or how many more steps there would be.</li>
+            <li>Early user testing revealed it wasn’t obvious that there was a second step, or how many more steps there would be, giving the impression that this was a time consuming process.</li>
             <li>Initial engineering estimates were higher than we hoped.</li>
           </ol>
           <h4 id="concept-3-dynamic-form">Concept 3: Dynamic form</h4>
@@ -315,29 +315,29 @@
         <div class="col-8 _sm-12 typeset">
           <h5 id="pros">Pros</h5>
           <ol>
-            <li>Agent could see all fields they needed to enter on a single screen.</li>
-            <li>In cases where the feedback field was auto-populated, we could immediately display related ideas rather than the support agent having advance the form (in Concept 2).</li>
+            <li>Peopel could see all fields they needed to enter on a single screen.</li>
+            <li>In cases where the feedback field was auto-populated, we could immediately display related ideas rather than waiting for the person to advance the form.</li>
           </ol>
           <h5 id="cons">Cons</h5>
           <ol>
-            <li>Would require a lot more fitness and conditional logic to get the interaction and experience just right.</li>
-            <li>Potentially confusing experience switching between linking an existing idea and creating a new one.</li>
+            <li>This direction would require a lot more finess and conditional logic to get the interaction and experience just right.</li>
+            <li>In cases where someone was creating a new idea to link the customer’s feedback to, there were a lot of fields on the screen.</li>
           </ol>
           <h5>Decision</h5>
-          <p>Based on the perceived need to require support agents to link feedback to an idea, and positive tests both internally and with customers, we decided to move forward with the third concept for our first functional implementation</p>
+          <p>Based on the perceived need to require team members to link feedback to an idea, and positive tests both internally and with customers, we decided to move forward with the third concept for our first functional implementation.</p>
           <h3 id="iterative-design-and-development">Iterative Design &amp; Development</h3>
-        </div>
+        <!-- </div>
       </div>
       <div class="grid-noBottom">
         <div class="col-3">
           <figure>
-            <img alt="Functional Prototype" src="functional-prototype@2x.png">
-            <figcaption class="col-12">Functional Prototype</figcaption>
+            <img alt="Functional prototype" src="functional-prototype@2x.png">
+            <figcaption class="col-12">Functional prototype</figcaption>
           </figure>
         </div>
-        <div class="col-8 _sm-12 typeset">
+        <div class="col-8 _sm-12 typeset"> -->
           <h4 id="functional-prototype">Functional Prototype</h4>
-          <p>Alongside the concept work, the engineering team starting working on a “walking skeleton”<sup><a id="^6" href="#^6:">6</a></sup> version of the support agent’s experience. Our initial focus was just on what was necessary for the support agent to successfully log their customer’s feedback so we could start testing our assumptions on the experience as quickly as possible, and highlight any risk areas.</p>
+          <p>Alongside the concept work, the engineering team starting working on a “walking skeleton”<sup><a id="^6" href="#^6:">6</a></sup> version of the customer-facing teams’ experience. Our initial focus was just on what was necessary for a team member to successfully capture their customer’s feedback so we could start testing our assumptions on the experience as quickly as possible, and highlight any risk areas.</p>
         </div>
       </div>
       <div class="grid">
@@ -350,7 +350,7 @@
       </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
-          <p>In addition to getting content into the system, we also began thinking through all the scenarios where things could go wrong for the person logging feedback, and how to guide them towards success.</p>
+          <p>In addition to getting content into the system, we also began thinking through all the scenarios where things could go wrong for the person capturing feedback, and how to guide them towards success.</p>
         </div>
       </div>
       <div class="grid">
@@ -365,7 +365,7 @@
         <div class="col-8 _sm-12 typeset">
           <h4 id="interaction-and-visual-design-iterations">Interaction and Visual Design Iterations</h4>
           <p>While engineering team was building the functional prototype, I began working on iterations for capturing feedback from within existing websites.</p>
-          <p>The idea was that support agents (and other team members) would be able to log customer feedback from any website, so we decided to go with a minimal “sidebar” experience.</p>
+          <p>The idea was that team members would be able to capture customer feedback from any website, so we decided to go with a minimal “sidebar” experience that could be loaded via browser bookmarklet.</p>
         </div>
       </div>
       <div class="grid">
@@ -391,11 +391,11 @@
       </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
-          <p>It also became clear that we could auto-populate most of the data the support agent neededto fill in to the form by pulling that information from the website, including:</p>
+          <p>It also became clear that we could auto-populate most of the data the team member needed to fill in to the form by pulling that information from the website, including:</p>
           <ol>
             <li>The customer’s email address</li>
             <li>What the customer said</li>
-            <li>The original URL where the customer gave the feedback (allowing people who read the feedback to get back to the original cotext)</li>
+            <li>The original URL where the customer gave the feedback – allowing people who read the feedback to get back to the original cotext</li>
           </ol>
         </div>
       </div>
@@ -406,22 +406,22 @@
             <figcaption>Auto-populating content from parent page</figcaption>
           </figure>
           <figure>
-            <img alt="Flowchart of agent experience" src="flowchart.png">
-            <figcaption>Flowchart of agent experience</figcaption>
+            <img alt="Flowchart describing the sidebar’s conditional logic" src="flowchart.png">
+            <figcaption>Flowchart describing the sidebar’s conditional logic</figcaption>
           </figure>
           <figure>
-            <img alt="Feedback form visual design" src="mockup-form-states@2x.png">
-            <figcaption>Feedback form visual design</figcaption>
+            <img alt="Visual designs of the various states of the feedback form" src="mockup-form-states@2x.png">
+            <figcaption>Mockups of the various states of the feedback form</figcaption>
           </figure>
           <figure>
-            <img alt="User Picker interaction design mockups" src="mockup-user-picker@2x.png">
-            <figcaption>User Picker interaction design mockups</figcaption>
+            <img alt="Annotated mockups of the User Picker’s interaction design" src="mockup-user-picker@2x.png">
+            <figcaption>Annotated mockups of the User Picker’s interaction design</figcaption>
           </figure>
         </div>
       </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
-          <p>In addition to auto-populating content, we realized there were other opportunities to bring more value to the person using the sidebar by pulling relevant data from UserVoice into their current context (I.e., email or support ticket). For example, we could show them what feedback the person they were talking to already has, so they could understand what challenges their customer is having and provide better support.</p>
+          <p>In addition to auto-populating content, I wanted to offer more value to the person using the sidebar by pulling relevant data from UserVoice into their current context. For example, we could show them what feedback the person they were talking to already has, so they could understand what challenges their customer is having and provide better support.</p>
         </div>
       </div>
       <div class="grid">
@@ -434,7 +434,7 @@
       </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
-          <p>Of course, now that we were doing more than just allowing support agent to log customer feedback, we needed to start thinking about how they would navigate between all this information.</p>
+          <p>Of course, now that we were doing more than just allowing team members to capture customer feedback, we needed to start thinking about how they would navigate between all this information.</p>
         </div>
       </div>
       <div class="grid">
@@ -456,11 +456,11 @@
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <h3 id="mmp"><del>MVP</del> MMP (Minimum Marketable Product)</h3>
-          <p>While all this functionality was great, and many of our beta customers were starting to use this new functionality, we still didn’t have a meaningful way to demonstrate the value of having all this new data in UserVoice.</p>
-          <p>The ultimate goal of having other departments log customer feedback in UserVoice was so that product teams could make more informed decisions about what to prioritized.</p>
+          <p>While all this functionality was great and many of our beta customers were starting to capture feedback with it, we still hadn’t demonstrated the value of having all this new data in UserVoice.</p>
+          <p>The ultimate goal of having other departments capture customer feedback in UserVoice was so that product teams could make more informed decisions about what to prioritized.</p>
           <p>Since we wanted these departments to also be able to see this data, we decided to start by displaying how ideas were trending in the sidebar.</p>
-          <h4 id="top-ideas">Top Ideas</h4>
-          <p>As I set out to work on this problem, I started by focussing on how we could display the top ideas more visually.</p>
+          <h4 id="top-ideas">“Top Ideas”</h4>
+          <p>As I set out to work on this idea, I started by focussing on how we could display the top ideas more visually.</p>
         </div>
       </div>
       <div class="grid">
@@ -473,7 +473,7 @@
       </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
-          <p>Because ideas need a bit of content, such as what forum & category they belong to, as well as current status, I came up with this design:</p>
+          <p>Because ideas need a bit of context, such as what forum & category they belong to and what their current status is, I came up with this design:</p>
         </div>
       </div>
       <div class="grid">
@@ -499,7 +499,7 @@
       </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
-          <p>People using the sidebar could also see the overall top ideas, or filter them down by team and time.</p>
+          <p>Now, anyone with access to the sidebar could also see the overall top ideas, or filter them down by team and time.</p>
           <h4 id="user-management">User Management</h4>
           <p>I also led discovery and design for two additional related projects that were needed to get the UserVoice Sidebar to marketable release:</p>
           <ol>
@@ -520,20 +520,20 @@
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <p>And, because we wanted to sell a new, less expensive license type for “Contributors” who could have access to the new sidebar but not all of the other admin tools our customers usually used, we needed a way for account admins to invite contributors and manage permissions.</p>
-          <p>I won’t go into all the details of those additional projects at this time.</p>
+          <p>(I won’t go into all the details of those additional projects at this time.)</p>
           <h2 id="outcomes">Outcomes</h2>
           <p>This was one of the most exciting projects I worked on at UserVoice, most in part because it solved a major shortcoming of our existing platform and opened up a path for us to become the system of record of all product feedback for our customers.</p>
           <h3>New insights</h3>
-          <p>Companies that rolled out the UserVoice Sidebar saw the amount of feedback coming into their systems double, and for the first time they could quickly identify the top unmet needs being reported by specific teams.</p>
+          <p>Many of our existing customers that rolled out the UserVoice Sidebar saw the amount of feedback coming into their systems double, and for the first time they could quickly identify the top unmet needs being reported by specific teams.</p>
           <h3 id="new-source-of-revenue">A new source of revenue</h3>
           <p>By launching the sidebar with a new, less expensive license type, we saw a significant upswing in the size of new business deals. Rather than a handful of user licenses, we started getting deals for hundreds of licenses.</p>
           <h3 id="foundation-for-new-features">A foundation for new features</h3>
-          <p>Shortly after releasing the sidebar via a browser bookmarklet, we created first class integrations with Zendesk and Salesforce. We also started building ways to improve internal communication between product teams and other departments using the sidebar experience.</p>
+          <p>Shortly after releasing the sidebar via a browser bookmarklet, we created first-class integrations with Zendesk and Salesforce. We also started building ways to improve internal communication between product teams and other departments leveraging the sidebar experience.</p>
           <h2 id="learnings-and-insights">Learnings and insights</h2>
           <p>You learn a lot after releasing something into the wild. Some of what we learned was:</p>
           <ol>
-            <li>Only ask people for what they know. When logging a customer’s feedback, support agents didn’t have time to figure out how to organize the feedback. The step we added based on early feedback to require support agents to link it to an idea lead to 1) added time for form completion, 2) the creation of duplicate ideas, 3) team members creating ideas for their own solutions that didn’t accurately reflect the customer’s problem.</li>
-            <li>People didn’t remember to open the sidebar via bookmarklet. We addressed this for Zendesk and Salesforce customers through tight integrations, and planned to eventually create browser extensions that could help remind and further automate the logging of customer feedback.</li>
+            <li>Only ask people for what they know. When capturing customer feedback, support agents and sales reps didn’t have time to figure out how to organize the feedback. The step we added based on early feedback to require team members to link it to an idea lead to 1) added time for form completion, 2) the creation of duplicate ideas, 3) the creation of ideas that didn’t accurately reflect the customer’s problem.</li>
+            <li>Many people didn’t remember to open the sidebar via bookmarklet. We addressed this for Zendesk and Salesforce customers through tight integrations, and planned to eventually create browser extensions that could help remind and further automate the capturing of customer feedback.</li>
           </ol>
           <h3>Ideas for next time</h3>
           <ol>
@@ -553,7 +553,7 @@
             <h2 id="endnotes">Endnotes</h2>
             <ol>
               <li id="^1:">
-                This project was unique experience for me because my role changed (due to product and engineering team restructuring) from VP, Product—where I performed generative research and opportunity assessment for this project—to Director, User Experience and lead designer on this project as we began ideating, prototyping, and testing our solutions.
+                This project was unique experience for me because my role changed (due to product and engineering team restructuring) from VP, Product—where I performed generative research and opportunity assessment for this project—to Director of User Experience and lead designer as we began ideating, prototyping, and testing our solutions.
                 &nbsp;<a class="endnoteBackLink" href="#^1" title="Jump back to context">↩︎</a>
               </li>
               <li id="^2:">
@@ -569,7 +569,7 @@
                 &nbsp;<a class="endnoteBackLink" href="#^4" title="Jump back to context">↩︎</a>
               </li>
               <li id="^5:">
-                Up to this point, the primary object in UserVoice were aggregate <em>ideas,</em> which were essentially forum topics that could be voted and commented on by others. The kind of feedback support agents would be logging were private and would not be visible to other customers. And at the time, there wasn’t any UI for managing large sets of uncategorized bits of feedback.
+                Up to this point, the primary object in UserVoice were aggregate <em>ideas,</em> which were essentially forum topics that could be voted and commented on by others. The kind of feedback support agents would be capturing were private and would not be visible to other customers. And at the time, there wasn’t any UI for managing large sets of uncategorized bits of feedback.
                 &nbsp;<a class="endnoteBackLink" href="#^5" title="Jump back to context">↩︎</a>
               </li>
               <li id="^6:">
