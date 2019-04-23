@@ -38,6 +38,32 @@ a:visited {
   max-width: 1028px;
 }
 
+nav {
+  position: fixed;
+  bottom: 2em;
+  left: 2em;
+  /* z-index: 10000; */
+}
+
+nav .home {
+  background-image: url('/assets/images/nav-home.svg');
+  background-size: contain;
+  display: block;
+  height: 48px;
+  width: 48px;
+}
+
+nav .home span {
+  display: none;
+}
+
+@media screen and (max-width: 36em) {
+  nav {
+    bottom: 1em;
+    left: 1em;
+  }
+}
+
 header {
   margin: 6rem auto;
 }
@@ -194,6 +220,7 @@ figure {
 
 figcaption {
   font-size: 12px;
+  margin-top: 1em;
   text-align: center;
 }
 
