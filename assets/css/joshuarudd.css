@@ -17,7 +17,7 @@ body {
 @supports (font-variation-settings: normal) {
   body { font-family: 'Inter var', sans-serif; }
 }
-@media (max-width: 36em) {
+@media screen and (max-width: 36em) {
   body {
     font-size: 14px;
   }
@@ -62,7 +62,7 @@ header {
     max-width: 228px;
   }
 
-@media (max-width: 36em) {
+@media screen and (max-width: 36em) {
   header {
     margin: 0 auto;
     padding: 3rem 0;
@@ -93,6 +93,17 @@ footer {
     color: white;
   }
 
+@media print {
+  footer {
+    background: inherit;
+    color: inherit;
+  }
+  footer a:link,
+  footer a:visited {
+    color: inherit;
+  }
+}
+
 .title {
   font-size: 1.75em;
   font-weight: 800;
@@ -118,7 +129,7 @@ footer {
   margin: 0 0 3rem 0;
   padding: 0;
 }
-@media (max-width: 36em) {
+@media screen and (max-width: 36em) {
   .tinylist {
     font-size: 14px;
   }

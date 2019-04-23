@@ -23,6 +23,13 @@ h2 {
   font-family: 'Inter', sans-serif;
   text-align: center;
 }
+@media print {
+  .typeset h2,
+  h2 {
+    break-before: page;
+    padding-top: 1em;
+  }
+}
 .typeset h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
@@ -95,7 +102,7 @@ figure table td {
   width: 250px;
 }
 
-.grid {
+/* .grid {
   display: flex;
   flex-flow: row wrap;
 }
@@ -112,4 +119,37 @@ figure table td {
 
   .grid figcaption {
     flex: 100%;
+  } */
+
+@media print {
+  body,
+  .typeset {
+    font-size: 10pt !important;
   }
+  image {
+    display: block;
+    max-width: 50% !important;
+    margin: 0 auto;
+  }
+  @page {
+    padding: 20em 0;
+  }
+  .container {
+    max-width: 960pt !important;
+  }
+  h2 {
+    break-before: page;
+    page-break-before: always;
+  }
+  h2, h3 {
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+  p {
+    orphans: 2;
+    widows: 2;
+  }
+  ._sm-12 {
+    /* flex: 100% !important; */
+  }
+}
