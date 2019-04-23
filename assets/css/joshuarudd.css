@@ -1,5 +1,4 @@
 @import url('https://rsms.me/inter/inter.css');
-/* @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600,700'); */
 
 html {
   box-sizing: border-box;
@@ -15,14 +14,22 @@ body {
   margin: 0;
   padding: 0;
 }
-@media (max-width: 36em) {
+@supports (font-variation-settings: normal) {
+  body { font-family: 'Inter var', sans-serif; }
+}
+@media screen and (max-width: 36em) {
   body {
     font-size: 14px;
   }
 }
 
-a {
-  color: rgba(29,34,36,1);
+a:link {
+  /* color: rgba(29,34,36,1); */
+  color: black;
+  font-weight: bolder;
+}
+a:visited {
+  color: black;
 }
 
 .container {
@@ -35,15 +42,15 @@ header {
   margin: 6rem auto;
 }
 
-  header h1 {
-    display: none;
+.hide {
+  display: none;
+}
+
+  .summary a {
+    /* font-weight: 400; */
   }
 
-  .bio a {
-    font-weight: 400;
-  }
-
-  .bio p:first-child {
+  .summary .bigger {
     font-size: 1.25em;
   }
 
@@ -55,7 +62,7 @@ header {
     max-width: 228px;
   }
 
-@media (max-width: 36em) {
+@media screen and (max-width: 36em) {
   header {
     margin: 0 auto;
     padding: 3rem 0;
@@ -63,7 +70,7 @@ header {
   .avatar {
     max-width: 120px;
   }
-  .bio {
+  .summary {
     font-size: 16px;
     padding-top: 2rem;
   }
@@ -74,10 +81,36 @@ section {
 }
 
 footer {
-  background: rgba(240, 240, 240, 1);
-  padding: 1px;
+  /* background: rgba(0, 0, 0, 1); */
+  background: rgba(29,34,36,1);
+  color: rgba(227, 238, 242, 1);
+  margin: 3em 0 0 0;
+  padding: 3em 0;
 }
 
+  footer a:link,
+  footer a:visited {
+    color: white;
+  }
+
+@media print {
+  footer {
+    background: inherit;
+    color: inherit;
+  }
+  footer a:link,
+  footer a:visited {
+    color: inherit;
+  }
+}
+
+.title {
+  font-size: 1.75em;
+  font-weight: 800;
+  margin: 0 0 .25em 0;
+}
+
+.subtitle,
 .microheader {
   color: rgba(58,118,156,1);
   font-size: 12px;
@@ -86,6 +119,9 @@ footer {
   text-transform: uppercase;
   margin: 0 0 .5em 0;
 }
+.subtitle {
+  margin-bottom: 3rem;
+}
 
 .tinylist {
   font-size: 12px;
@@ -93,7 +129,7 @@ footer {
   margin: 0 0 3rem 0;
   padding: 0;
 }
-@media (max-width: 36em) {
+@media screen and (max-width: 36em) {
   .tinylist {
     font-size: 14px;
   }
@@ -140,14 +176,14 @@ footer {
     color: rgba(58,118,156,1);
   }
 
-  .summary {
+  .description {
     margin-top: 1em;
   }
 
 
 
 figure {
-  margin: 0;
+  margin: 0 0 1.5em 0;
   padding: 0;
 }
 

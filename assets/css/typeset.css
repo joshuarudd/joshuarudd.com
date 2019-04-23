@@ -321,5 +321,5 @@
 
 /* Remove top-margin from first element in typeset block so that it can align with other parts of the page */
 .typeset > :first-child {
-  margin-top: 0;
+  /* margin-top: 0; */
 }
