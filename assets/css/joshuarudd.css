@@ -64,7 +64,7 @@ nav .home span {
   }
 }
 
-header {
+.header {
   margin: 6rem auto;
 }
 
@@ -89,7 +89,7 @@ header {
   }
 
 @media screen and (max-width: 36em) {
-  header {
+  .header {
     margin: 0 auto;
     padding: 3rem 0;
   }
@@ -137,7 +137,7 @@ footer {
 }
 
 .subtitle,
-.microheader {
+.microheading {
   color: rgba(58,118,156,1);
   font-size: 12px;
   font-weight: 500;
