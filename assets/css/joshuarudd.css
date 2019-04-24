@@ -224,6 +224,15 @@ figcaption {
   text-align: center;
 }
 
+.selected-work a img {
+  background-color: #FAB81F;
+  display: block;
+  transition: all .2s ease-in-out;
+}
+.selected-work a:hover img,
+.selected-work a:focus img {
+  background-color: rgba(58,118,156,1);
+}
 
 
 /* .row {
