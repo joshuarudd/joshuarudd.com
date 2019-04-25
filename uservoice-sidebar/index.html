@@ -83,7 +83,7 @@
         <div class="col _sm-6">
           <p class="microheading">Position</p>
           <ul class="tinylist">
-            <li>Director, User Experience<sup><a id="1" href="#1:">1</a></sup></li>
+            <li>Director, User Experience&nbsp;<sup><a id="1" href="#1:">1</a></sup></li>
           </ul>
         </div>
         <div class="col _sm-6">
@@ -127,7 +127,7 @@
           <p>One method was to tell their customer to go to the UserVoice forum to post the same feedback they’d already given. However, telling a customer that just gave feedback to go somewhere else and give it again was frustrating to both the customer and the team member. Their customers didn’t trust that their feedback was important, and team members reported to us that their customers would often give up.</p>
           <p>Another method we saw was for the team member to create an idea in UserVoice themselves with the customer’s feedback. Unfortunately, the current tools did not allow that feedback to be attributed to the customer who actually gave it (it was instead attributed to the team member who created it), making it difficult for product teams to differentiate between internal vs. customer feedback, reducing the value of other insights and segmentation tools.</p>
           <h3>The Problem</h3>
-          <p>Product teams didn’t trust the information that they were getting from sales teams. Sales teams didn’t feel like product was listening to them.<sup><a id="2" href="#2:">2</a></sup></p>
+          <p>Product teams didn’t trust the information that they were getting from sales teams. Sales teams didn’t feel like product was listening to them.&nbsp;<sup><a id="2" href="#2:">2</a></sup></p>
           <p>Product teams <em>wanted</em> their customers’ feedback in UserVoice, but did not have effective ways for customer-facing teams to capture customer feedback in UserVoice.</p>
           <p>How might we allow team members to continue using their existing tools and channels to communicate with customers, while giving them a quick way to add this feedback to UserVoice?</p>
           <h3>Hypothesis</h3>
@@ -206,7 +206,7 @@
           <p>We learned that Zendesk and Salesforce were at the most common tools, but there were so many others—including UserVoice Tickets, Intercom, Gmail, and bespoke solutions—that we felt like starting with a single integration might limit the number of customers we could deliver a solution for.</p>
           <p>Given this, we decided to prove out a basic solution that could work anywhere and focus on tighter integrations later. Now we just needed to figure out what that experience would be.</p>
           <h3 id="user-story-mapping">User Story Mapping</h3>
-          <p>One exercise I use to help get PMs, designers, and engineers on the same page is User Story Mapping<sup><a id="3" href="#3:">3</a></sup>, a concept coined by Jeff Patton. <mark>I like user story mapping because it helps the team focus on the steps necessary for a person to achieve their desired outcome.</mark></p>
+          <p>One exercise I use to help get PMs, designers, and engineers on the same page is User Story Mapping&nbsp;<sup><a id="3" href="#3:">3</a></sup>, a concept coined by Jeff Patton. <mark>I like user story mapping because it helps the team focus on the steps necessary for a person to achieve their desired outcome.</mark></p>
           <p>We identified four primary personas/roles impacted by this project and created user story maps for each:</p>
           <ol>
             <li>The customer</li>
@@ -221,7 +221,7 @@
         <div class="col">
           <figure>
             <img alt="User Story Map" src="user-story-map-v1.png">
-            <figcaption class="col-12">User Story Map – Team Member, created in LucidChart<sup><a id="4" href="#4:">4</a></sup></figcaption>
+            <figcaption class="col-12">User Story Map – Team Member, created in LucidChart&nbsp;<sup><a id="4" href="#4:">4</a></sup></figcaption>
           </figure>
         </div>
       </div>
@@ -256,9 +256,9 @@
             <li>In many cases we could automatically populate every field for them.</li>
           </ol>
           <h5>Cons</h5>
-          <p>Unfortunately, this direction introduced some significant changes to our existing data model<sup><a id="5" href="#5:">5</a></sup>.</p>
+          <p>Unfortunately, this direction introduced some significant changes to our existing data model&nbsp;<sup><a id="5" href="#5:">5</a></sup>.</p>
           <p>In addition, two of our key customers wanted their customer-facing teams to link the feedback they were capturing to existing ideas. Without also creating additional feedback management tools to leverage unlinked feedback, this feedback would, indeed, go into a black hole.</p>
-          <h5>Takaway</h5>
+          <h5>Takeaway</h5>
           <p>While we preferred the UX of this direction most and ultimately felt we needed to also simplify our data model, we weren’t confident this was the right time to do it.</p>
           <p>We decided to require team members to link feedback to a related idea, so we went back to our user story map and added some additional steps.</p>
         </div>
@@ -314,12 +314,12 @@
         <div class="col-8 _sm-12 typeset">
           <h5>Pros</h5>
           <ol>
-            <li>Peopel could see all fields they needed to enter on a single screen.</li>
+            <li>People could see all fields they needed to enter on a single screen.</li>
             <li>In cases where the feedback field was auto-populated, we could immediately display related ideas rather than waiting for the person to advance the form.</li>
           </ol>
           <h5>Cons</h5>
           <ol>
-            <li>This direction would require a lot more finess and conditional logic to get the interaction and experience just right.</li>
+            <li>This direction would require a lot more finesse and conditional logic to get the interaction and experience just right.</li>
             <li>In cases where someone was creating a new idea to link the customer’s feedback to, there were a lot of fields on the screen.</li>
           </ol>
           <h5>Decision</h5>
@@ -336,7 +336,7 @@
         </div>
         <div class="col-8 _sm-12 typeset"> -->
           <h4 id="functional-prototype">Functional Prototype</h4>
-          <p>Alongside the concept work, the engineering team starting working on a “walking skeleton”<sup><a id="6" href="#6:">6</a></sup> version of the customer-facing teams’ experience. Our initial focus was just on what was necessary for a team member to successfully capture their customer’s feedback so we could start testing our assumptions on the experience as quickly as possible, and highlight any risk areas.</p>
+          <p>Alongside the concept work, the engineering team starting working on a “walking skeleton”&nbsp;<sup><a id="6" href="#6:">6</a></sup> version of the customer-facing teams’ experience. Our initial focus was just on what was necessary for a team member to successfully capture their customer’s feedback so we could start testing our assumptions on the experience as quickly as possible, and highlight any risk areas.</p>
         </div>
       </div>
       <div class="grid">
@@ -394,7 +394,7 @@
           <ol>
             <li>The customer’s email address</li>
             <li>What the customer said</li>
-            <li>The original URL where the customer gave the feedback – allowing people who read the feedback to get back to the original cotext</li>
+            <li>The original URL where the customer gave the feedback – allowing people who read the feedback to get back to the original context</li>
           </ol>
         </div>
       </div>
