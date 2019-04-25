@@ -1,8 +1,8 @@
 /*
   Typeset.css
   https://github.com/joshuarudd/typeset.css
-  v2.0
-  Last updated: 2019-04-10
+  v2.0b
+  Last updated: 2019-04-25
   Author: Joshua Rudd - https://joshuarudd.com
   Twitter: @joshuarudd
 */
@@ -16,6 +16,7 @@
   --typeset-border-color: #DBE2F2;
   --typeset-color: #324354;
   --typeset-blockquote-color: rgba(0,0,0,.2);
+  --typeset-mark-color: rgba(0, 140, 255, 0.1);
 }
 
 /*
@@ -125,7 +126,7 @@
   font-family: monospace;
 }
 .typeset mark {
-  background-color: yellow;
+  background-color: var(--typeset-mark-color);
   color: black;
 }
 .typeset samp {
@@ -133,7 +134,7 @@
 }
 .typeset small {
   color: gray;
-  font-size: 80%;
+  font-size: .75em;
 }
 .typeset s {
   text-decoration: line-through;
@@ -143,7 +144,7 @@
   vertical-align: sub;
 }
 .typeset sup {
-  font-size: 80%;
+  font-size: .75em;
   vertical-align: super;
 }
 .typeset var {

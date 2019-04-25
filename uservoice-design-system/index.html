@@ -124,7 +124,7 @@
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
           <h2>The challenge</h2>
-          <p>For years UserVoice remained small and didn’t have much turnover. It had been relatively easy to keep the design and user experience consistent and for everyone to be on the same page. However, as we began to grow and feature development divided between multiple cross-functional teams, it quickly became apparent: <mark class="highlight">we needed to a better way to scale our teams while keeping our platform cohesive and consistent.</mark></p>
+          <p>For years UserVoice remained small and didn’t have much turnover. It had been relatively easy to keep the design and user experience consistent and for everyone to be on the same page. However, as we began to grow and feature development divided between multiple cross-functional teams, it quickly became apparent: <mark>we needed to a better way to scale our teams while keeping our platform cohesive and consistent.</mark></p>
           <p>Our objectives were to:</p>
           <ol>
             <li>Empower cross-functional teams to autonomously deliver new features while increasing overall cohesiveness of the platform.</li>
@@ -158,7 +158,7 @@
             <figcaption>Design System layers</figcaption>
           </figure>
           <h3>Layer 1: Design Principles</h3>
-          <p>It’s always tempting to start with what’s visible first, but we quickly learned that <mark class="highlight">we needed to figure out what our <em>design principles</em> were in order to guide the process and output of work being done.</mark></p>
+          <p>It’s always tempting to start with what’s visible first, but we quickly learned that <mark>we needed to figure out what our <em>design principles</em> were in order to guide the process and output of work being done.</mark></p>
           <p>To start, each member of the design team did their own research and compiled ideas for our design principles. We then came together to share, find similarities and differences between them, and discuss which ones interested us most as a team. I then took these and compiled a single Google document, combining and incorporating the ideas that resonated most.</p>
           <p>At this point we had about two dozen principles—way more than we needed! Through a couple of follow-up discussions—both in person and via comments on the doc—and some heavy editing, we were able to narrow them down to four primary design principles (each had additional notes and examples):</p>
           <ol>
@@ -171,13 +171,13 @@
 
           <h3>Layer 2: Design Patterns</h3>
           <p>As with any product that exists in the world, there were already countless inconsistencies across the UserVoice platform—such as how to display date and time formats, capitalization rules, and form validation and behavior. Each time a feature team set out to tackle a new problem, the same questions would come up: <em>How should we format this?</em> and <em>How should this behave?</em></p>
-          <p>To address this, we set out to describe UserVoice’s design patterns. Similar to software design patterns, <mark class="highlight">these were not specific visual styles or implementation details, but rather formalized best practices describing how to solve common and repeated problems in many different situations—universal quality criteria for broad design mental models, content, and behavior.</mark> (In contrast, the component library detailed product-specific styles and implementation of these patterns.)</p>
+          <p>To address this, we set out to describe UserVoice’s design patterns. Similar to software design patterns, <mark>these were not specific visual styles or implementation details, but rather formalized best practices describing how to solve common and repeated problems in many different situations—universal quality criteria for broad design mental models, content, and behavior.</mark> (In contrast, the component library detailed product-specific styles and implementation of these patterns.)</p>
           <p>One example is Forms & Validation, which describes best practices, proper use of labels, validation behavior for fields and submit buttons, keyboard controls, and other accessibility requirements. Additional patterns included Capitalization, Confirmations, Date & Timestamps, Flash Messages, Keyboard Controls, Hidden & Disabled Features, Page Titles, Undo, and more.</p>
           <p>Unlike our finite set of design principles, our design patterns were a much larger set of living documents. Because of this, the design team committed to defining patterns as part of their ongoing work. For example, when a project needed a form, if pattern documentation for forms didn’t exist we’d work together to audit existing patterns and behaviors, refine them as necessary, and document the desired pattern. The next time a form was created, the designers and developers could reference the existing “Forms and Validation” design pattern.</p>
 
           <h3>Layer 3: Component Library</h3>
           <p>With our principles and foundation for documented patterns in place, our next challenge was to unify our visual design toolbox, or component library. Because each application in the UserVoice platform targeted different audiences, contexts and had different styles, we created separate libraries for each (e.g., Admin Console, Sidebar, Widget, Mobile SDKs).</p>
-          <p>For the previous 6 years at UserVoice mockups had been primarily designed with Adobe Illustrator. Sometimes designers would share files with each other to reuse the same objects someone else had created (buttons, menus, dialogs, etc.), but there was no central management, and oftentimes it was easier for each person to recreate these on the fly, creating small inconsistencies between each designer. If someone needed a form field, they created it from scratch, <em>trying</em> to make it look like the others. <mark class="highlight">This resulted in an inconsistent and incomplete set of components to work from, and often led to developers wondering how representative the designs were to how they should actually be implemented.</mark></p>
+          <p>For the previous 6 years at UserVoice mockups had been primarily designed with Adobe Illustrator. Sometimes designers would share files with each other to reuse the same objects someone else had created (buttons, menus, dialogs, etc.), but there was no central management, and oftentimes it was easier for each person to recreate these on the fly, creating small inconsistencies between each designer. If someone needed a form field, they created it from scratch, <em>trying</em> to make it look like the others. <mark>This resulted in an inconsistent and incomplete set of components to work from, and often led to developers wondering how representative the designs were to how they should actually be implemented.</mark></p>
           <p>By 2016 Sketch had not only gained the admiration of designers everywhere, its performance, nested symbol handling, and transition to using single files (rather than packaged contents) finally made the switch from Illustrator very compelling. Still, we had to figure out how might we create a source of truth for our common components and make it really easy for designers to both use and contribute to the component library. This was still long before Sketch had released external symbol library files.</p>
 
           <h4>Creating a Source of Truth</h4>
@@ -214,11 +214,11 @@
       </div>
       <div class="grid-center-noBottom">
         <div class="col-8 _sm-12 typeset">
-          <p><mark class="highlight">A huge benefit of having full version control of our component library was that changes and conflicts were easy to track, discuss, and resolve (if necessary).</mark> In addition to our regular critiques, when a designer’s project was ready to merge back into Master the whole team would come together for a design merge ceremony to review changes to the component library. It kept everyone mentally in sync of how each designer’s work would affect the others’.</p>
+          <p><mark>A huge benefit of having full version control of our component library was that changes and conflicts were easy to track, discuss, and resolve (if necessary).</mark> In addition to our regular critiques, when a designer’s project was ready to merge back into Master the whole team would come together for a design merge ceremony to review changes to the component library. It kept everyone mentally in sync of how each designer’s work would affect the others’.</p>
 
           <h3>Pulling it all together</h3>
           <p>So where did we publish and share our design principles, patterns, and component libraries?</p>
-          <p><mark class="highlight">Documentation is only useful it helps people get their job done. If they don’t know about it or reference it, there’s no point in having it.</mark> Since the audience for these were primarily designers and developers, it needed to be somewhere both parties would remember to access it and easily contribute to it.</p>
+          <p><mark>Documentation is only useful it helps people get their job done. If they don’t know about it or reference it, there’s no point in having it.</mark> Since the audience for these were primarily designers and developers, it needed to be somewhere both parties would remember to access it and easily contribute to it.</p>
           <p>After some informal discussions, I came up with this list of must-haves:</p>
           <ol>
             <li>Available to anyone at the company</li>
@@ -328,7 +328,7 @@
         <div class="col-8 _md-10 _sm-12 typeset">
           <h2>Outcomes</h2>
           <p>So, did the design system help us achieve our objectives? <strong>No.</strong></p>
-          <p>But we <em>did</em> achieve our objectives.* While we saw significant improvements in sprint velocity, improved platform cohesiveness, and bonding of the design team over the course of the year we developed the UserVoice Design System, <mark class="highlight">these achievements could not be attributed to the design system itself — but rather to the habits and process of conversation.</mark> The documented design system was simply a recorded artifact of that work.</p>
+          <p>But we <em>did</em> achieve our objectives.* While we saw significant improvements in sprint velocity, improved platform cohesiveness, and bonding of the design team over the course of the year we developed the UserVoice Design System, <mark>these achievements could not be attributed to the design system itself — but rather to the habits and process of conversation.</mark> The documented design system was simply a recorded artifact of that work.</p>
           <p><em>* (You’ll have to take my word for this because we relied more on anecdotal evidence rather than performing quantitative analysis — something I’d do differently next time.)</em></p>
 
           <h3>Shared understanding</h3>
@@ -337,7 +337,7 @@
             <img src="jeff-patton-shared-understanding.png" alt="Four-panel illustration of people thinking they’re on the same page but aren’t until they draw out what they’re thinking on a whiteboard.">
             <figcaption>Illustration from Jeff Patton’s book, <em><a href="">User Story Mapping</a></em></figcaption>
           </figure>
-          <p><mark class="highlight">I believe shared understanding happens through conversation</mark>, so we started making a habit of referencing our design system during design exercises and development sprints. During design critiques, we began discussing design decisions in light of our principles and patterns. Slowly, over time, it became a resource we could pull from and contribute to as a team.</p>
+          <p><mark>I believe shared understanding happens through conversation</mark>, so we started making a habit of referencing our design system during design exercises and development sprints. During design critiques, we began discussing design decisions in light of our principles and patterns. Slowly, over time, it became a resource we could pull from and contribute to as a team.</p>
 
           <h3>New habits</h3>
           <ol>
@@ -346,13 +346,13 @@
           </ol>
 
           <h2>Learnings and insights</h2>
-          <p><mark class="highlight">Separating design patterns from the styled components helped us separate form from function,</mark> making it much easier to update our styles and components over time, and apply different ones to different applications—much like how CSS can apply radically different styles to well formed HTML without changing the structure of the content.</p>
-          <p>Also, it probably goes without saying, but no design system or process is perfect. While having a design system helps reduce the number of decisions that need to be made, it is not infallible. New problems and challenges can’t always be solved with existing solutions, so <mark class="highlight">it’s important to recognize when you’re trying to force an existing pattern or component to do things it wasn’t intended to.</mark> We ran into this a couple of times, and the results weren’t great.</p>
+          <p><mark>Separating design patterns from the styled components helped us separate form from function,</mark> making it much easier to update our styles and components over time, and apply different ones to different applications—much like how CSS can apply radically different styles to well formed HTML without changing the structure of the content.</p>
+          <p>Also, it probably goes without saying, but no design system or process is perfect. While having a design system helps reduce the number of decisions that need to be made, it is not infallible. New problems and challenges can’t always be solved with existing solutions, so <mark>it’s important to recognize when you’re trying to force an existing pattern or component to do things it wasn’t intended to.</mark> We ran into this a couple of times, and the results weren’t great.</p>
 
           <h3>Ideas for next time</h3>
           <ol>
             <li>Find ways for tighter integration between coded components and design prototypes - <a href="https://www.uxpin.com/merge" target="_blank">UXPin’s forthcoming “Merge” functionality</a> seems particularly interesting.</li>
-            <li><mark class="highlight">Our fourth design principle, <em>Consistency and Structure,</em> became a major point of contention</mark> during early design critiques. Doing or using something once does not make it a pattern, but our conversations often veered towards making designs consistent with other things we’ve designed rather than, as Jared Spool posed, “Will the user’s current knowledge help them understand how to use what I’m designing?” <mark class="highlight">Next time I’d push for removing <em>consistency</em> from the design principles and focus more on <em>familiarity</em>,</mark> with an emphasis on the user’s current knowledge, or “sum of all their previous experiences with relevant products and designs.” <sup><a id="2" href="#2:" title="Jump to endnote">2</a></sup></li>
+            <li><mark>Our fourth design principle, <em>Consistency and Structure,</em> became a major point of contention</mark> during early design critiques. Doing or using something once does not make it a pattern, but our conversations often veered towards making designs consistent with other things we’ve designed rather than, as Jared Spool posed, “Will the user’s current knowledge help them understand how to use what I’m designing?” <mark>Next time I’d push for removing <em>consistency</em> from the design principles and focus more on <em>familiarity</em>,</mark> with an emphasis on the user’s current knowledge, or “sum of all their previous experiences with relevant products and designs.” <sup><a id="2" href="#2:" title="Jump to endnote">2</a></sup></li>
           </ol>
         </div>
       </div>
