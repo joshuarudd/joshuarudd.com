@@ -8,10 +8,16 @@ article {
   text-align: center;
 }
 
-.typeset {
+section .typeset {
   font-family: 'Noto Serif KR', serif;
   font-size: 20px;
   font-weight: 200;
+}
+
+footer .typeset {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .typeset h1 {

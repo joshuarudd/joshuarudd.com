@@ -108,15 +108,19 @@ section {
 
 footer {
   /* background: rgba(0, 0, 0, 1); */
-  background: rgba(29,34,36,1);
-  color: rgba(227, 238, 242, 1);
+  color: rgba(29,34,36,1);
+  /* background: rgba(227, 238, 242, 1); */
+  background: rgba(0, 140, 255, 0.1);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
   margin: 3em 0 0 0;
   padding: 3em 0;
 }
 
   footer a:link,
   footer a:visited {
-    color: white;
+    /* color: white; */
   }
 
 @media print {

@@ -35,10 +35,19 @@
     }
 
   </style>
+  <script type="text/javascript">
+    // Analytics
+    if (location.hostname == 'joshuarudd.com') {
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+      analytics.load("xApzXF386HEmlVSn8MZcHh5BdkDluiYv");
+      analytics.page();
+      }}();
+    }
+  </script>
 </head>
 <body>
 
-  <header class="header typeset typeset-baseline">
+  <header class="header typeset">
     <h1>Typeset.css</h1>
     <p>A no-nonsense CSS typography reset for styling user-generated content like blog posts, comments, and forum content.</p>
     <nav>
@@ -85,7 +94,7 @@
     </div> -->
   </header>
 
-  <article class="main typeset typeset-baseline">
+  <article class="main typeset">
 
     <h2>Inline elements</h2>
     <p>Common user-generated content includes <a href="#">anchors</a>, <b>bold</b> and <i>italic</i> text.</p>
