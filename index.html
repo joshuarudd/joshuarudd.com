@@ -43,6 +43,53 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
   <link rel="stylesheet" href="/assets/css/typeset.css">
   <link rel="stylesheet" href="/assets/css/joshuarudd.css">
+  <style media="screen">
+    .selected-work a img {
+      background-color: rgba(250,184,31,1);
+      transition: all .2s ease-in-out;
+    }
+    .selected-work a:hover img,
+    .selected-work a:focus img {
+      background-color: rgba(58,118,156,1);
+    }
+
+    .experience {
+      font-size: 14px;
+      list-style: none;
+      margin: 2rem 0 3rem 0;
+      padding: 0;
+    }
+
+      .experience li {
+        background-image: linear-gradient(90deg, rgba(0, 135, 143, .1) 2px, rgba(255, 255, 255, 0) 0);
+        background-position: calc(1.5em - 1px);
+        padding: 0 0 3rem 4em;
+        position: relative;
+      }
+      .experience li:last-child {
+        background: none;
+        padding-bottom: 0;
+      }
+
+      .experience img {
+        background: white;
+        padding: .5em 0;
+        position: absolute;
+        top: -.5em;
+        left: 0;
+        height: 3em;
+        width: 3em;
+      }
+
+      .experience .duration,
+      .experience .location {
+        color: rgba(58,118,156,1);
+      }
+
+      .experience .description {
+        margin-top: 1em;
+      }
+  </style>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1722632-1"></script>
   <script>
@@ -76,24 +123,30 @@
   <section>
     <h2 class="microheading centered">Selected Work</h2>
     <div class="grid container selected-work">
-      <figure class="col _xs-12">
-        <a href="/uservoice-design-system/">
-          <img src="/assets/images/uservoice-design-system-isometric-preview.png" alt="">
-          <figcaption>UserVoice Design System</figcaption>
-        </a>
-      </figure>
-      <figure class="col _xs-12">
-        <a href="/uservoice-sidebar/">
-          <img src="/assets/images/uservoice-sidebar-isometric-preview.png" alt="">
-          <figcaption>UserVoice Sidebar</figcaption>
-        </a>
-      </figure>
-      <figure class="col _xs-12">
-        <a href="/typeset.css/">
-          <img src="/assets/images/typeset-isometric-preview.png" alt="">
-          <figcaption>Typeset.css</figcaption>
-        </a>
-      </figure>
+      <div class="col _xs-12">
+        <figure>
+          <a href="/uservoice-design-system/">
+            <img src="/assets/images/uservoice-design-system-isometric-preview.png" alt="">
+            <figcaption>UserVoice Design System</figcaption>
+          </a>
+        </figure>
+      </div>
+      <div class="col _xs-12">
+        <figure>
+          <a href="/uservoice-sidebar/">
+            <img src="/assets/images/uservoice-sidebar-isometric-preview.png" alt="">
+            <figcaption>UserVoice Sidebar</figcaption>
+          </a>
+        </figure>
+      </div>
+      <div class="col _xs-12">
+        <figure>
+          <a href="/typeset.css/">
+            <img src="/assets/images/typeset-isometric-preview.png" alt="">
+            <figcaption>Typeset.css</figcaption>
+          </a>
+        </figure>
+      </div>
     </div>
   </section>
 

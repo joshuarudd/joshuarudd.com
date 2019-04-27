@@ -38,7 +38,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
   <link rel="stylesheet" href="/assets/css/typeset.css">
   <link rel="stylesheet" href="/assets/css/joshuarudd.css">
-  <link rel="stylesheet" href="styles.css">
+  <style media="screen">
+    .horizontal-scroll {
+      overflow-x: scroll;
+      /* Following scroll shadows from https://jsbin.com/kodabupozu/edit?html,css,output */
+      /* background-image: -webkit-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0)), -webkit-linear-gradient(right, #ffffff, rgba(255, 255, 255, 0)), -webkit-linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), -webkit-linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
+      background-position: 0 0, 100% 0, 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-color: white;
+      background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
+      background-attachment: local, local, scroll, scroll; */
+    }
+
+    .horizontal-scroll::-webkit-scrollbar {
+      -webkit-appearance: none;
+      height: 10px;
+    }
+    .horizontal-scroll::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgba(0,0,0,.25);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+
+    figure table td {
+      width: 250px;
+    }
+  </style>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1722632-1"></script>
   <script>
