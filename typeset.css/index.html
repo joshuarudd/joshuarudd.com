@@ -5,7 +5,7 @@
   <title>Typeset.css – a no-nonsense CSS typography reset for styling user-generated content like blog posts, comments, and forum content</title>
   <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
   <meta name="description" content="Typeset.css is a no-nonsense CSS typography reset for styling user-generated content like blog posts, comments, and forum content.">
-  <link rel="stylesheet" href="/assets/css/typeset.css">
+  <link rel="stylesheet" href="https://typeset-css.netlify.com/typeset.css">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <style type="text/css" media="screen">
 
@@ -82,16 +82,8 @@
       </ul>
     </ul>
     <p>
-      You can download this project in either
-      <a href="https://github.com/joshuarudd/typeset.css/zipball/master">zip</a> or
-      <a href="https://github.com/joshuarudd/typeset.css/tarball/master">tar</a> formats.
+      Download Typeset.css (<a href="https://github.com/joshuarudd/typeset.css/zipball/master">zip</a>, <a href="https://github.com/joshuarudd/typeset.css/tarball/master">tar</a>), or check it out on <a href="https://github.com/joshuarudd/typeset.css/">github.com/joshuarudd/typeset.css/</a>.
     </p>
-    <!-- <div class="download">
-      <a href="https://github.com/joshuarudd/typeset.css/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/joshuarudd/typeset.css/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div> -->
   </header>
 
   <article class="main typeset">
@@ -112,7 +104,7 @@
       <li><em>emphasis</em></li>
       <li><i>italic</i></li>
       <li><kbd>keyboard input</kbd></li>
-      <li><mark>marked</mark> (i.e., highlighted)</li>
+      <li><mark>mark</mark></li>
       <li><samp>sample output</samp></li>
       <li><small>small</small></li>
       <li><s>strike</s></li>
@@ -165,7 +157,11 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <h3>Blockquote</h3>
-    <blockquote><p>Because WYSIWYG editors use <code>&lt;blockquote&gt;</code> to indent content, we haven’t styled other than a left margin.</p></blockquote>
+    <blockquote><p>This is a <code>&lt;blockquote&gt;</code>.</p></blockquote>
+    <p>If you use typeset with a WYSIWYG editor, which oftentimes use <code>&lt;blockquote&gt;</code> to indent content, add <code>typeset-wysiwyg</code> to the surrounding editor element to remove the left border and adjust the left margin accordingly:</p>
+    <div class="typeset-wysiwyg">
+      <blockquote><p>This is a <code>&lt;blockquote&gt;</code> with the <code>typeset-wysiwyg</code> modifier class applied to the container.</p></blockquote>
+    </div>
     <h3>Preformatted text</h3>
     <pre>Text in a &lt;pre&gt; element
 is displayed in a fixed-width
@@ -199,14 +195,14 @@ line breaks</pre>
 
     <h2 id="media">Media</h2>
     <h3>Image</h3>
-    <!-- <p><a href="http://instagr.am/p/IhykNHE-vg/"><img alt="“He’ll never know #happyfriday” by chadbercea" src="https://s3.amazonaws.com/uploads.hipchat.com/15604/60386/xurwgqrz8ydm3y7/upload.png"></a></p> -->
+    <p><img alt="Family at art gallery" src="image.jpg"></a></p>
     <h3>Figure</h3>
     <figure>
-      <!-- <img alt="I Will Never Lego" src="http://media-cache8.pinterest.com/upload/18858892159635318_W2l4cnIX_f.jpg"> -->
-      <figcaption><a href="http://www.etsy.com/listing/86109981/i-will-never-lego-print">I Will Never Lego - print</a></figcaption>
+      <img alt="Car parked way over the line" src="nailed-it.jpg">
+      <figcaption>Nailed it.</figcaption>
     </figure>
     <h3>Embed</h3>
-    <!-- <embed src="http://www.youtube.com/v/e4X5z8AQc3s?version=3&feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"> -->
+    <embed src="https://www.youtube.com/embed/B1yeOnhPUAY?version=3&feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="560" height="315">
 
   </article>
 
