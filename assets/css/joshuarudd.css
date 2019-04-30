@@ -7,6 +7,7 @@
   --summary-font-size: 18px;
   --article-font-size: 20px;
   --article-font-weight: 200;
+  --footer-font-size: 14px;
   --sans-serif: 'Inter', sans-serif;
   --serif: 'Noto Serif KR', serif;
 }
@@ -18,6 +19,7 @@
     --summary-font-size: 14px;
     --article-font-size: 16px;
     --article-font-weight: 300;
+    --footer-font-size: 12px;
   }
 }
 
@@ -143,52 +145,10 @@ nav .home span {
   .avatar {
     max-width: 120px;
   }
-  .summary {
-    font-size: 16px;
-    padding-top: 2rem;
-  }
 }
 
-section {
-  margin-bottom: 3rem;
-}
-
-footer {
-  /* background: rgba(0, 0, 0, 1); */
-  color: rgba(29,34,36,1);
-  /* background: rgba(227, 238, 242, 1); */
-  background: rgba(0, 140, 255, 0.1);
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  margin: 3em 0 0 0;
-  padding: 3em 0;
-}
-
-  footer a:link,
-  footer a:visited {
-    /* color: white; */
-  }
-
-@media print {
-  footer {
-    background: inherit;
-    color: inherit;
-  }
-  footer a:link,
-  footer a:visited {
-    color: inherit;
-  }
-}
-
-.title {
-  font-size: 1.75em;
-  font-weight: 800;
-  margin: 0 0 .25em 0;
-}
-
-.subtitle,
-.microheading {
+.microheading,
+.subtitle {
   color: rgba(58,118,156,1);
   font-size: 12px;
   font-weight: 500;
@@ -269,7 +229,8 @@ figure,
   figure img,
   .typeset figure img {
     display: block;
-    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
 
 figcaption,
@@ -285,21 +246,36 @@ figcaption,
 
 /* Footer */
 
-footer {
-  /* background: rgba(0, 0, 0, 1); */
-  background: rgba(29,34,36,1);
-  color: rgba(227, 238, 242, 1);
-  margin: 3em 0 0 0;
-  padding: 3em 0;
+.endnotes {
+  /* background: rgba(29,34,36,1); */
+  /* background: rgba(0, 140, 255, 0.1); */
+  /* color: rgba(227, 238, 242, 1); */
+  /* color: rgba(29,34,36,1); */
+  color: rgba(29,34,36,.8);
+  font-family: var(--sans-serif);
+  font-size: var(--footer-font-size);
+  font-weight: 300;
+  /* margin: 3em 0 0 0; */
+  padding: 3em 0 6em 0;
+}
+.endnotes .typeset {
+  font-family: var(--sans-serif);
 }
 
-footer a:link,
-footer a:visited {
-  color: white;
+.endnotes hr {
+  background: rgba(29,34,36,.1);
+  border: none;
+  height: 1px;
+  margin-bottom: 2em;
+}
+
+.endnotes h2 {
+  display: none;
 }
 
 li:target { /* Highlight selected endnote */
-  background-color: rgba(0, 140, 255, .5);
+  background-color: rgba(0, 140, 255, .1);
+  color: rgba(29,34,36,1);
 }
 
 a.endnoteBackLink {
