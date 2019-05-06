@@ -35,7 +35,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="icon" type="image/png" href="https://secure.gravatar.com/avatar/0f293ef22eff1c0b1af19ccd88cae234?s=32">
 
-  <link rel="stylesheet" href="/assets/css/grid.css">
+  <link rel="stylesheet" href="/assets/css/flexlib.css">
   <link rel="stylesheet" href="/assets/css/typeset.css">
   <link rel="stylesheet" href="/assets/css/joshuarudd.css">
 
@@ -59,8 +59,8 @@
   </nav>
   <article>
     <section class="header">
-      <div class="grid container">
-        <div class="col-10 sm-col-12">
+      <div class="flex container">
+        <div class="box-10 sm-box-12">
           <h1 class="title">UserVoice Sidebar</h1>
           <p class="subtitle centered">A case study by Joshua Rudd</p>
           <div class="summary typeset">
@@ -69,21 +69,21 @@
           </div>
         </div>
       </div>
-      <div class="grid container">
+      <div class="flex container">
         <div class="col">
           <figure>
             <img src="sidebar-preview@2x.png" alt="UserVoice Sidebar preview" lazyload="on">
           </figure>
         </div>
       </div>
-      <div class="grid container">
-        <div class="col sm-col-6">
+      <div class="flex container">
+        <div class="col sm-box-6">
           <p class="microheading">Position</p>
           <ul class="tinylist">
             <li>Director, User Experience&nbsp;<sup><a id="1" href="#1:">1</a></sup></li>
           </ul>
         </div>
-        <div class="col sm-col-6">
+        <div class="col sm-box-6">
           <p class="microheading">Responsibilities</p>
           <ul class="tinylist">
             <li>Generative Research</li>
@@ -92,7 +92,7 @@
             <li>User Testing</li>
           </ul>
         </div>
-        <div class="col sm-col-6">
+        <div class="col sm-box-6">
           <p class="microheading">Tools</p>
           <ul class="tinylist">
             <li>LucidChart</li>
@@ -101,7 +101,7 @@
             <li>Principle for Mac</li>
           </ul>
         </div>
-        <div class="col sm-col-6">
+        <div class="col sm-box-6">
           <p class="microheading">Date</p>
           <ul class="tinylist">
             <li>2015-2016</li>
@@ -111,8 +111,8 @@
     </section>
 
     <section class="container">
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <h2>The Challenge</h2>
           <h3>Background</h3>
           <p>UserVoice is a platform for gathering user feedback and making sense of it. From 2008 to 2015, the primary way UserVoice gathered feedback was by allowing companies to set up forums and embed widgets that their end-users could use to submit feedback and vote on ideas.</p>
@@ -131,7 +131,7 @@
           <p><mark>We saw an opportunity to <em>become the system of record for all product feedback.</em></mark></p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img src="feedback-flows.png" alt="Diagram of multiple ways feedback flows from customers into UserVoice" lazyload="on">
@@ -139,8 +139,8 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>We believed that if we could provide a method for team members capture important feedback from customers within the same tools they were already using to communicate with customers, we would see 1) an increase in the amount of product feedback coming into UserVoice, and 2) improved quality of that data. With these, we could provide better insights for product teams, and empower them to make data-driven decisions.</p>
           <h3>Business Goals</h3>
           <ol>
@@ -214,16 +214,16 @@
           <p>The primary User Story Map set out to to answer <em>How might a team member capture customer feedback?</em></p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="User Story Map" src="user-story-map-v1.png" lazyload="on">
-            <figcaption class="col-12">User Story Map – Team Member, created in LucidChart&nbsp;<sup><a id="4" href="#4:">4</a></sup></figcaption>
+            <figcaption class="box-12">User Story Map – Team Member, created in LucidChart&nbsp;<sup><a id="4" href="#4:">4</a></sup></figcaption>
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>Once we got all the tasks, risks, and questions down, we “sliced” them into releasable/testable chunks, prioritized by what we needed to learn next.</p>
           <h3 id="concept-testing">Concept Testing</h3>
           <p>Once we had the user story map, our engineers were able to start exploring a lot of the technical requirements needed to deliver a solution, and I set out to put together some quick wireframe concepts to test both internally and with select customers.</p>
@@ -236,7 +236,7 @@
           </ol>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Concept 1: Simple form" src="concept-simple-form@2x.png" lazyload="on">
@@ -244,8 +244,8 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <h5>Pros</h5>
           <ol>
             <li>This experience required minimal interaction and could be delivered very quickly.</li>
@@ -260,7 +260,7 @@
           <p>We decided to require team members to link feedback to a related idea, so we went back to our user story map and added some additional steps.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Revised User Story Map" src="user-story-map-v2.png" lazyload="on">
@@ -268,14 +268,14 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <h4 id="concept-2-multi-step-form">Concept 2: Multi-step form</h4>
           <p>For the next concept, we tried to keep the simplicity of the first one, but add a second step which would ask the team members to link to a related idea, or create a new idea if an existing one didn’t exist.</p>
           <p>This flow was somewhat similar to our end-user-facing widget, which would ask the person to enter their feedback, click next, and then display a list of related ideas (if any existed). If one did, they could vote for it instead of creating a new idea in the system.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Concept 2: Multi-step form" src="concept-multi-step-form@2x.png" lazyload="on">
@@ -283,8 +283,8 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <h5>Pros</h5>
           <ol>
             <li>Minimal fields were displayed during each step, keeping the experience fairly straight-forward.</li>
@@ -299,7 +299,7 @@
           <p>The third concept was created in tandem with the second, but focussed on providing a single-page form that displayed related ideas on the same screen as the feedback field.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Dynamic form" src="concept-dynamic-form@2x.png" lazyload="on">
@@ -307,8 +307,8 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <h5>Pros</h5>
           <ol>
             <li>People could see all fields they needed to enter on a single screen.</li>
@@ -326,7 +326,7 @@
           <p>Alongside the concept work, the engineering team starting working on a “walking skeleton”&nbsp;<sup><a id="6" href="#6:">6</a></sup> version of the customer-facing teams’ experience. Our initial focus was just on what was necessary for a team member to successfully capture their customer’s feedback so we could start testing our assumptions on the experience as quickly as possible, and highlight any risk areas.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Annotated wireframes for functional prototype" src="functional-prototype-annotations@2x.png" lazyload="on">
@@ -334,12 +334,12 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>In addition to getting content into the system, we also began thinking through all the scenarios where things could go wrong for the person capturing feedback, and how to guide them towards success.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Validation scenarios for functional prototype" src="functional-prototype-validation@2x.png" lazyload="on">
@@ -347,14 +347,14 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <h4 id="interaction-and-visual-design-iterations">Interaction and Visual Design Iterations</h4>
           <p>While engineering team was building the functional prototype, I began working on iterations for capturing feedback from within existing websites.</p>
           <p>The idea was that team members would be able to capture customer feedback from any website, so we decided to go with a minimal “sidebar” experience that could be loaded via browser bookmarklet.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Mockup of sidebar on website" src="design-sidebar-website@2x.png" lazyload="on">
@@ -362,12 +362,12 @@
           </figure>
         </div>
       </div>
-      <div class="grid-center-noBottom">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>I also started thinking through how people might need to interact with the sidebar in relation to the browser window – minimizing it access content beneath it, popping it out into another window, etc.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Annotations for interacting with the sidebar" src="design-minimize-popout@2x.png" lazyload="on">
@@ -375,8 +375,8 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>It also became clear that we could auto-populate most of the data the team member needed to fill in to the form by pulling that information from the website, including:</p>
           <ol>
             <li>The customer’s email address</li>
@@ -385,7 +385,7 @@
           </ol>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Auto-populating content from parent page" src="design-auto-populated-form@2x.png" lazyload="on">
@@ -405,12 +405,12 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>In addition to auto-populating content, I wanted to offer more value to the person using the sidebar by pulling relevant data from UserVoice into their current context. For example, we could show them what feedback the person they were talking to already has, so they could understand what challenges their customer is having and provide better support.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Mockup of user details view" src="mockup-user-details@2x.png" lazyload="on">
@@ -418,12 +418,12 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>Of course, now that we were doing more than just allowing team members to capture customer feedback, we needed to start thinking about how they would navigate between all this information.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Navigation Mockups" src="mockup-navigation@2x.png" lazyload="on">
@@ -431,16 +431,16 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-4">
+      <div class="flex">
+        <div class="box-4">
           <figure>
             <img alt="Navigation Animation" src="menu-animation.gif" lazyload="on">
             <figcaption>Navigation Animation</figcaption>
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <h3 id="mmp"><del>MVP</del> MMP (Minimum Marketable Product)</h3>
           <p>While all this functionality was great and many of our beta customers were starting to capture feedback with it, we still hadn’t demonstrated the value of having all this new data in UserVoice.</p>
           <p>The ultimate goal of having other departments capture customer feedback in UserVoice was so that product teams could make more informed decisions about what to prioritized.</p>
@@ -449,7 +449,7 @@
           <p>As I set out to work on this idea, I started by focussing on how we could display the top ideas more visually.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Ranked Ideas Chart" src="idea-rank-chart@2x.png" style="width: 827px; margin-left: auto; margin-right: auto;" lazyload="on">
@@ -457,12 +457,12 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>Because ideas need a bit of context, such as what forum & category they belong to and what their current status is, I came up with this design:</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Top Ideas - First Pass" src="top-ideas-v1@2x.png" lazyload="on">
@@ -470,12 +470,12 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>However, because of time, we decided we needed to pair down the visuals and focus on delivering just the content first:</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Top Ideas - Second Pass" src="top-ideas-v2@2x.png" lazyload="on">
@@ -483,8 +483,8 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>Now, anyone with access to the sidebar could also see the overall top ideas, or filter them down by team and time.</p>
           <h4 id="user-management">User Management</h4>
           <p>I also led discovery and design for two additional related projects that were needed to get the UserVoice Sidebar to marketable release:</p>
@@ -495,7 +495,7 @@
           <p>Team management allowed companies to categorize team members by department (or team), and enabled us to deliver the Top Ideas report, showing the top ideas by team/department.</p>
         </div>
       </div>
-      <div class="grid">
+      <div class="flex">
         <div class="col">
           <figure>
             <img alt="Mockup of user management" src="mockup-user-management@2x.png" lazyload="on">
@@ -503,8 +503,8 @@
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>And, because we wanted to sell a new, less expensive license type for “Contributors” who could have access to the new sidebar but not all of the other admin tools our customers usually used, we needed a way for account admins to invite contributors and manage permissions.</p>
           <p>(I won’t go into all the details of those additional projects at this time.)</p>
           <h2 id="outcomes">Outcomes</h2>
@@ -545,8 +545,8 @@
     </section>
 
     <section class="endnotes container">
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <hr>
           <h2 id="endnotes">Endnotes</h2>
           <ol>

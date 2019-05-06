@@ -35,7 +35,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="icon" type="image/png" href="https://secure.gravatar.com/avatar/0f293ef22eff1c0b1af19ccd88cae234?s=32">
 
-  <link rel="stylesheet" href="/assets/css/grid.css">
+  <link rel="stylesheet" href="/assets/css/flexlib.css">
   <link rel="stylesheet" href="/assets/css/typeset.css">
   <link rel="stylesheet" href="/assets/css/joshuarudd.css">
   <style media="screen">
@@ -85,8 +85,8 @@
   </nav>
   <article>
     <section class="header">
-      <div class="grid container">
-        <div class="col-10 sm-col-12">
+      <div class="flex container">
+        <div class="box-10 sm-box-12">
           <h1 class="title">UserVoice Design System</h1>
           <p class="subtitle centered">A case study by Joshua Rudd</p>
           <div class="summary typeset">
@@ -94,15 +94,15 @@
           </div>
         </div>
       </div>
-      <div class="grid container">
-        <div class="col">
+      <div class="flex container">
+        <div class="box">
           <figure>
             <img src="design-system-preview@2x.png" alt="UserVoice Design System preview" height="640" width="1280" lazyload="on">
           </figure>
         </div>
       </div>
-      <div class="grid container">
-        <div class="col sm-col-6">
+      <div class="flex container">
+        <div class="box sm-box-6">
           <p class="microheading">Position</p>
           <ul class="tinylist">
             <li>Director, User Experience</li>
@@ -112,7 +112,7 @@
             <li>UserVoice</li>
           </ul>
         </div>
-        <div class="col sm-col-6">
+        <div class="box sm-box-6">
           <p class="microheading">Responsibilities</p>
           <ul class="tinylist">
             <li>Documentation</li>
@@ -121,7 +121,7 @@
             <li>UI design</li>
           </ul>
         </div>
-        <div class="col sm-col-6">
+        <div class="box sm-box-6">
           <p class="microheading">Tools</p>
           <ul class="tinylist">
             <li>Confluence</li>
@@ -129,7 +129,7 @@
             <li>Abstract</li>
           </ul>
         </div>
-        <div class="col sm-col-6">
+        <div class="box sm-box-6">
           <p class="microheading">Date</p>
           <ul class="tinylist">
             <li>2016-2017</li>
@@ -139,8 +139,8 @@
     </section>
 
     <section class="container">
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <h2>The challenge</h2>
           <p>For years UserVoice remained small and didn’t have much turnover. It had been relatively easy to keep the design and user experience consistent and for everyone to be on the same page. However, as we began to grow and feature development divided between multiple cross-functional teams, it quickly became apparent: <mark>we needed to a better way to scale our teams while keeping our platform cohesive and consistent.</mark></p>
           <p>Our objectives were to:</p>
@@ -167,8 +167,8 @@
     </section>
 
     <section class="container">
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <h2>Process</h2>
           <p>For this initiative, we focussed on three aspects (or layers) to our design system: <em>design principles, design patterns, and the component library.</em> Once those were established, we then focussed on how to deliver and maintain the design system.</p>
           <figure>
@@ -202,36 +202,36 @@
           <p>We tried both Git and Dropbox, but quickly dropped Git because it didn’t handle binary files very efficiently. The challenge with Dropbox was that there was no clear way for multiple people to contribute to the same library without running into conflicts, and it still didn’t solve the problem of ensuring everyone’s separate design projects were using the same components. We also tried creating a component library project with InVision, which we’d already been using since 2011, and using its source files sync, but that was even more cumbersome than Dropbox.</p>
         </div>
       </div>
-      <div class="grid">
-        <div class="col">
+      <div class="flex">
+        <div class="box">
           <figure>
             <img src="dropbox-multiple-versions-of-files.png" alt="Finder window with multiple working copies of the same file." style="display: block; margin: 0 auto; width: 759px;" lazyload="on">
             <figcaption>Trying to maintain a source of truth using Dropbox was a nightmare.</figcaption>
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p>Fortunately, along came <a href="https://www.abstract.com" target="_blank">Abstract App</a>, a new Git-like version control system for Sketch files. In November 2016 we began testing the private alpha, and committed to adopted it beginning January 2017. With Abstract, we were able to create a different project (repository) for each of our primary applications. Each project consisted of a single Sketch file that contained all the symbols necessary for that application’s component library (again, this was before Sketch introduced external symbol library files).</p>
           <p>Each time a designer began working on a new project, they’d create a new branch based off the Master file and go to town. All the symbols/components they needed to work from were available in their file. When any components were updated in the Master file during the life of a designer’s project, they could easily pull in those changes to their working file and all of the components would be updated to reflect the source of truth. Likewise, any new or modified components they worked on would become available to everyone else once their work was completed.</p>
           <p>Finally, we had all the benefits our developers had with Git. As with our design patterns, the team committed to building out the component library alongside existing projects.</p>
         </div>
       </div>
-      <div class="grid">
-        <div class="col">
+      <div class="flex">
+        <div class="box">
           <figure>
-            <div class="grid">
-              <a class="col-6" href="abstract-branches@2x.png"><img src="abstract-branches@2x.png" alt="" lazyload="on"></a>
-              <a class="col-6" href="abstract-commenting@2x.png"><img src="abstract-commenting@2x.png" alt="" lazyload="on"></a>
-              <a class="col-6" href="abstract-component-library@2x.png"><img src="abstract-component-library@2x.png" alt="" lazyload="on"></a>
-              <a class="col-6" href="sketch-componont-library@2x.png"><img src="sketch-componont-library@2x.png" alt="" lazyload="on"></a>
+            <div class="flex">
+              <a class="box-6" href="abstract-branches@2x.png"><img src="abstract-branches@2x.png" alt="" lazyload="on"></a>
+              <a class="box-6" href="abstract-commenting@2x.png"><img src="abstract-commenting@2x.png" alt="" lazyload="on"></a>
+              <a class="box-6" href="abstract-component-library@2x.png"><img src="abstract-component-library@2x.png" alt="" lazyload="on"></a>
+              <a class="box-6" href="sketch-componont-library@2x.png"><img src="sketch-componont-library@2x.png" alt="" lazyload="on"></a>
             </div>
             <figcaption>With Sketch and Abstract app, we were able to create a version controlled system of truth for our component library assets.</figcaption>
           </figure>
         </div>
       </div>
-      <div class="grid">
-        <div class="col-8 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 sm-box-12 typeset">
           <p><mark>A huge benefit of having full version control of our component library was that changes and conflicts were easy to track, discuss, and resolve (if necessary).</mark> In addition to our regular critiques, when a designer’s project was ready to merge back into Master the whole team would come together for a design merge ceremony to review changes to the component library. It kept everyone mentally in sync of how each designer’s work would affect the others’.</p>
 
           <h3>Pulling it all together</h3>
@@ -248,8 +248,8 @@
         </div>
       </div>
 
-      <div class="grid typeset">
-        <div class="col-12">
+      <div class="flex typeset">
+        <div class="box-12">
           <figure>
             <div class="horizontal-scroll">
               <table style="width: calc(4 * 250px); margin: 0 auto;">
@@ -323,18 +323,18 @@
         </div>
       </div>
 
-      <div class="grid">
-        <div class="col-8 md-col-10 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 md-box-10 sm-box-12 typeset">
           <p>At first we tried using an internal Github project, but the learning curve for some designers was a bit high, and it wasn’t familiar to most non-developers. Google Docs was commonplace, but notoriously difficult for people to find and discover things. After a few months, the engineering team began using Confluence for some of their own documentation, so we quickly adopted it for documenting, discussing, and refining design patterns as well.</p>
         </div>
       </div>
 
       <figure>
-        <div class="grid">
-          <a class="col-6" href="design-system-design-philosophy@2x.png"><img src="design-system-design-philosophy@2x.png" alt="" lazyload="on"></a>
-          <a class="col-6" href="design-system-colors@2x.png"><img src="design-system-colors@2x.png" alt="" lazyload="on"></a>
-          <a class="col-6" href="design-system-forms-and-validation@2x.png"><img src="design-system-forms-and-validation@2x.png" alt="" lazyload="on"></a>
-          <a class="col-6" href="design-system-form-fields-component@2x.png"><img src="design-system-form-fields-component@2x.png" alt="" lazyload="on"></a>
+        <div class="flex">
+          <a class="box-6" href="design-system-design-philosophy@2x.png"><img src="design-system-design-philosophy@2x.png" alt="" lazyload="on"></a>
+          <a class="box-6" href="design-system-colors@2x.png"><img src="design-system-colors@2x.png" alt="" lazyload="on"></a>
+          <a class="box-6" href="design-system-forms-and-validation@2x.png"><img src="design-system-forms-and-validation@2x.png" alt="" lazyload="on"></a>
+          <a class="box-6" href="design-system-form-fields-component@2x.png"><img src="design-system-form-fields-component@2x.png" alt="" lazyload="on"></a>
         </div>
         <figcaption>We used Confluence to pull all the documentation and assets together.</figcaption>
       </figure>
@@ -342,8 +342,8 @@
     </section>
 
     <section class="container">
-      <div class="grid">
-        <div class="col-8 md-col-10 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 md-box-10 sm-box-12 typeset">
           <h2>Outcomes</h2>
           <p>So, did the design system help us achieve our objectives? <strong>No.</strong></p>
           <p>But we <em>did</em> achieve our objectives.* While we saw significant improvements in sprint velocity, improved platform cohesiveness, and bonding of the design team over the course of the year we developed the UserVoice Design System, <mark>these achievements could not be attributed to the design system itself — but rather to the habits and process of conversation.</mark> The documented design system was simply a recorded artifact of that work.</p>
@@ -381,8 +381,8 @@
     </section>
 
     <section class="endnotes container">
-      <div class="grid">
-        <div class="col-8 md-col-10 sm-col-12 typeset">
+      <div class="flex">
+        <div class="box-8 md-box-10 sm-box-12 typeset">
           <hr>
           <h2>Endnotes</h2>
           <ol>
