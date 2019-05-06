@@ -5,7 +5,7 @@
   --body-font-size: 18px;
   --tinylist-font-size: 12px;
   --summary-font-size: 18px;
-  --article-font-size: 20px;
+  --article-font-size: 18px;
   --article-font-weight: 200;
   --footer-font-size: 14px;
   --sans-serif: 'Inter', sans-serif;
@@ -68,11 +68,11 @@ a:visited {
 
 /* Layout */
 
-.container {
+/* .container {
   margin: 0 auto;
   padding: 0 1em;
   max-width: 1028px;
-}
+} */
 
 
 
