@@ -14,24 +14,21 @@
       font: normal normal 300 16px/1.5em 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      /* display: grid; */
-      /* grid-template-columns: 33% auto; */
-      /* grid-template-rows: auto; */
-      display: flex;
+      display: grid;
+      grid-template-columns: 33% auto;
+      grid-template-rows: 33% auto 10%;
     }
 
     .header {
       box-sizing: border-box;
-      flex-basis: 33.333%;
       min-width: 240px;
       max-width: 360px;
       background: #FAB81F;
-      /* grid-column: 1; */
-      /* grid-row: 1; */
+      grid-column: 1;
+      grid-row: 1;
       overflow-y: auto;
       padding: 2em;
       height: 100vh;
-      /* width: 300px; */
     }
 
       .header h1 {
@@ -44,21 +41,11 @@
 
     .main {
       box-sizing: border-box;
-      /* flex-basis: 66.666%; */
-      flex: 1 1 66.666%;
-      /* background: lightblue; */
-      /* grid-column: 2; */
-      /* grid-row: 1; */
+      grid-column: 2;
+      grid-row: 2;
       overflow-y: auto;
       padding: 2em;
-      /* max-width: 70ex; */
       height: 100vh;
-
-      /* position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 300px; */
 
     }
 
