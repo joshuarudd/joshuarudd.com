@@ -101,17 +101,21 @@
         opacity: 0;
         max-height: 0;
         font-size: 0;
-        transition: .15s ease;
+        transition: opacity .5s ease, font-size .1s ease;
       }
       .read-more-state:checked ~ .description .read-more {
         opacity: 1;
         font-size: inherit;
         max-height: 999em;
       }
+
+      .read-more-toggle {
+        cursor: pointer;
+        color: rgba(58,118,156,1);
+      }
       .read-more-state ~ .description .read-more-toggle:before {
         font-size: 12px;
-        font-weight: bolder;
-        /* text-decoration: underline; */
+        font-weight: 500;
         content: '… more';
         white-space: nowrap;
         cursor: help;
@@ -278,7 +282,7 @@
               </ul>
               <p>Open Source Projects</p>
               <ul>
-                <li><a href="/typeset.css/" target="_blank">Typeset.css</a></li>
+                <li><a href="https://github.com/joshuarudd/typeset.css" target="_blank">Typeset.css</a></li>
                 <li><a href="https://github.com/uservoice/uservoice-ios-sdk" target="_blank">iOS</a> &amp; <a href="https://github.com/uservoice/uservoice-android-sdk" target="_blank">Android</a> SDKs</li>
               </ul>
               <p>Skills &amp; Responsibilities</p>
