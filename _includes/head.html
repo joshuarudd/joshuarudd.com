@@ -1,0 +1,19 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="icon" type="image/png" href="https://secure.gravatar.com/avatar/0f293ef22eff1c0b1af19ccd88cae234?s=32">
+  <link href="https://www.google.com/accounts/o8/ud" rel="openid2.provider">
+  <link href="https://www.google.com/profiles/joshuarudd" rel="openid2.local_id">
+  <link href="https://www.google.com/accounts/o8/ud" rel="openid.server">
+  <link href="https://www.google.com/profiles/joshuarudd" rel="openid.delegate">
+  <link rel="stylesheet" href="{{ "/assets/css/flexlib.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/typeset.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/joshuarudd.css" | relative_url }}">
+  {%- feed_meta -%}
+
+  {%- if jekyll.environment == 'production' -%}
+    {%- include analytics.html -%}
+  {%- endif -%}
+  
+</head>
