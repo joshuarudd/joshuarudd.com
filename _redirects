@@ -6,6 +6,7 @@
 /linkedin https://www.linkedin.com/in/joshuarudd/ 301
 /medium https://medium.com/@joshuarudd 301
 /meetup https://calendly.com/joshuarudd/schedule 302
+/notes/*  https://publish.obsidian.md/serve?url=joshuarudd.com/notes/:splat  200
 /office-hours https://calendly.com/joshuarudd/schedule 302
 /schedule https://calendly.com/joshuarudd/schedule 302
 /twitter https://twitter.com/joshuarudd 301
